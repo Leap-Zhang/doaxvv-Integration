@@ -1,0 +1,1205 @@
+[
+  {
+    "name": "驚異のスタミナA", "type": "A", "effect": "発動確率35%/スタミナ消費量－60%", "cname": "惊人体力A", "ceffect": "35%概率 自身体力消耗－60%", "zhs_name": "惊人的体力A", "zhs_effect": "发动概率35%/体力消耗量－60%", "zht_name": "驚人的體力A", "zht_effect": "發動機率35%/體力消耗量－60%", "en_name": "Miraculous Stamina A", "en_effect": "35% chance thatStamina Consumption －60%", "kr_name": "경이로운 스태미너 A", "kr_effect": "발동 확률 35%/스태미너 소비량 －60%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナB", "type": "A", "effect": "発動確率40%/スタミナ消費量－55%", "cname": "惊人体力B", "ceffect": "40%概率 自身体力消耗－55%", "zhs_name": "惊人的体力B", "zhs_effect": "发动概率40%/体力消耗量－55%", "zht_name": "驚人的體力B", "zht_effect": "發動機率40%/體力消耗量－55%", "en_name": "Miraculous Stamina B", "en_effect": "40% chance thatStamina Consumption －55%", "kr_name": "경이로운 스태미너 B", "kr_effect": "발동 확률 40%/스태미너 소비량 －55%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナC", "type": "A", "effect": "発動確率45%/スタミナ消費量－50%", "cname": "惊人体力C", "ceffect": "45%概率 自身体力消耗－50%", "zhs_name": "惊人的体力C", "zhs_effect": "发动概率45%/体力消耗量－50%", "zht_name": "驚人的體力C", "zht_effect": "發動機率45%/體力消耗量－50%", "en_name": "Miraculous Stamina C", "en_effect": "45% chance thatStamina Consumption －50%", "kr_name": "경이로운 스태미너 C", "kr_effect": "발동 확률 45%/스태미너 소비량 －50%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナD", "type": "A", "effect": "発動確率50%/スタミナ消費量－45%", "cname": "惊人体力D", "ceffect": "50%概率 自身体力消耗－45%", "zhs_name": "惊人的体力D", "zhs_effect": "发动概率50%/体力消耗量－45%", "zht_name": "驚人的體力D", "zht_effect": "發動機率50%/體力消耗量－45%", "en_name": "Miraculous Stamina D", "en_effect": "50% chance thatStamina Consumption －45%", "kr_name": "경이로운 스태미너 D", "kr_effect": "발동 확률 50%/스태미너 소비량 －45%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナE", "type": "A", "effect": "発動確率55%/スタミナ消費量－40%", "cname": "惊人体力E", "ceffect": "55%概率 自身体力消耗－40%", "zhs_name": "惊人的体力E", "zhs_effect": "发动概率55%/体力消耗量－40%", "zht_name": "驚人的體力E", "zht_effect": "發動機率55%/體力消耗量－40%", "en_name": "Miraculous Stamina E", "en_effect": "55% chance thatStamina Consumption －40%", "kr_name": "경이로운 스태미너 E", "kr_effect": "발동 확률 55%/스태미너 소비량 －40%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナE＋", "type": "A", "effect": "発動確率55%/スタミナ消費量－45%", "cname": "惊人体力E＋", "ceffect": "55%概率 自身体力消耗－45%", "zhs_name": "惊人的体力E＋", "zhs_effect": "发动概率55%/体力消耗量－45%", "zht_name": "驚人的體力E＋", "zht_effect": "發動機率55%/體力消耗量－45%", "en_name": "Miraculous Stamina E＋", "en_effect": "Probability 55% make Stamina Consumption －45%", "kr_name": "경이로운 스태미너 E＋", "kr_effect": "발동 확률 55%/스태미너 소비량 －45%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナF", "type": "A", "effect": "発動確率60%/スタミナ消費量－35%", "cname": "惊人体力F", "ceffect": "60%概率 自身体力消耗－35%", "zhs_name": "惊人的体力F", "zhs_effect": "发动概率60%/体力消耗量－35%", "zht_name": "驚人的體力F", "zht_effect": "發動機率60%/體力消耗量－35%", "en_name": "Miraculous Stamina F", "en_effect": "60% chance thatStamina Consumption －35%", "kr_name": "경이로운 스태미너 F", "kr_effect": "발동 확률 60%/스태미너 소비량 －35%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "驚異のスタミナJ", "type": "A", "effect": "発動確率70%/スタミナ消費量－50%", "cname": "惊人体力J", "ceffect": "70%概率 自身体力消耗－50%", "zhs_name": "惊人的体力J", "zhs_effect": "发动概率70%/体力消耗量－50%", "zht_name": "驚人的體力J", "zht_effect": "發動機率70%/體力消耗量－50%", "en_name": "Miraculous Stamina J", "en_effect": "70% chance thatStamina Consumption －50%", "kr_name": "경이로운 스태미너 J", "kr_effect": "발동 확률 70%/스태미너 소비량 －50%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "裏の裏を突くフェイントA", "type": "A", "effect": "アタック時発動確率35%/テクニック＋60%", "cname": "背身假动作A", "ceffect": "攻击时35%概率 自身技巧＋60%", "zhs_name": "出其不意×2的假动作A", "zhs_effect": "攻击时发动概率35%/技术＋60%", "zht_name": "攻其不備的假動作A", "zht_effect": "攻擊時發動機率35%/技巧＋60%", "en_name": "Double Reverse Attack Feint A", "en_effect": "35% chance when Attacking,Technique ＋60%", "kr_name": "의표의 의표를 찌르는 페인트 A", "kr_effect": "어택 시 발동 확률 35%/테크닉 ＋60%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントB", "type": "A", "effect": "アタック時発動確率40%/テクニック＋55%", "cname": "背身假动作B", "ceffect": "攻击时40%概率 自身技巧＋55%", "zhs_name": "出其不意×2的假动作B", "zhs_effect": "攻击时发动概率40%/技术＋55%", "zht_name": "攻其不備的假動作B", "zht_effect": "攻擊時發動機率40%/技巧＋55%", "en_name": "Double Reverse Attack Feint B", "en_effect": "40% chance when Attacking,Technique ＋55%", "kr_name": "의표의 의표를 찌르는 페인트 B", "kr_effect": "어택 시 발동 확률 40%/테크닉 ＋55%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントC", "type": "A", "effect": "アタック時発動確率45%/テクニック＋50%", "cname": "背身假动作C", "ceffect": "攻击时45%概率 自身技巧＋50%", "zhs_name": "出其不意×2的假动作C", "zhs_effect": "攻击时发动概率45%/技术＋50%", "zht_name": "攻其不備的假動作C", "zht_effect": "攻擊時發動機率45%/技巧＋50%", "en_name": "Double Reverse Attack Feint C", "en_effect": "45% chance when Attacking,Technique ＋50%", "kr_name": "의표의 의표를 찌르는 페인트 C", "kr_effect": "어택 시 발동 확률 45%/테크닉 ＋50%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントD", "type": "A", "effect": "アタック時発動確率50%/テクニック＋45%", "cname": "背身假动作D", "ceffect": "攻击时50%概率 自身技巧＋45%", "zhs_name": "出其不意×2的假动作D", "zhs_effect": "攻击时发动概率50%/技术＋45%", "zht_name": "攻其不備的假動作D", "zht_effect": "攻擊時發動機率50%/技巧＋45%", "en_name": "Double Reverse Attack Feint D", "en_effect": "50% chance when Attacking,Technique ＋45%", "kr_name": "의표의 의표를 찌르는 페인트 D", "kr_effect": "어택 시 발동 확률 50%/테크닉 ＋45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントE", "type": "A", "effect": "アタック時発動確率55%/テクニック＋45%", "cname": "背身假动作E", "ceffect": "攻击时55%概率 自身技巧＋45%", "zhs_name": "出其不意×2的假动作E", "zhs_effect": "攻击时发动概率55%/技术＋45%", "zht_name": "攻其不備的假動作E", "zht_effect": "攻擊時發動機率55%/技巧＋45%", "en_name": "Double Reverse Attack Feint E", "en_effect": "55% chance when Attacking,Technique ＋45%", "kr_name": "의표의 의표를 찌르는 페인트 E", "kr_effect": "어택 시 발동 확률 55%/테크닉 ＋45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントF", "type": "A", "effect": "アタック時発動確率60%/テクニック＋35%", "cname": "背身假动作F", "ceffect": "攻击时60%概率 自身技巧＋35%", "zhs_name": "出其不意×2的假动作F", "zhs_effect": "攻击时发动概率60%/技术＋35%", "zht_name": "攻其不備的假動作F", "zht_effect": "攻擊時發動機率60%/技巧＋35%", "en_name": "Double Reverse Attack Feint F", "en_effect": "60% chance when Attacking,Technique ＋35%", "kr_name": "의표의 의표를 찌르는 페인트 F", "kr_effect": "어택 시 발동 확률 60%/테크닉 ＋35%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントG", "type": "A", "effect": "アタック時発動確率55%/テクニック＋50%", "cname": "背身假动作G", "ceffect": "攻击时55%概率 自身技巧＋50%", "zhs_name": "出其不意×2的假动作G", "zhs_effect": "攻击时发动概率55%/技术＋50%", "zht_name": "攻其不備的假動作G", "zht_effect": "攻擊時發動機率55%/技巧＋50%", "en_name": "Double Reverse Attack Feint G", "en_effect": "55% chance when Attacking,Technique ＋50%", "kr_name": "의표의 의표를 찌르는 페인트 G", "kr_effect": "어택 시 발동 확률 55%/테크닉 ＋50%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントH", "type": "A", "effect": "アタック時発動確率55%/テクニック＋60%", "cname": "背身假动作H", "ceffect": "攻击时55%概率 自身技巧＋60%", "zhs_name": "出其不意×2的假动作H", "zhs_effect": "攻击时发动概率55%/技术＋60%", "zht_name": "攻其不備的假動作H", "zht_effect": "攻擊時發動機率55%/技巧＋60%", "en_name": "Double Reverse Attack Feint H", "en_effect": "55% chance when Attacking,Technique ＋60%", "kr_name": "의표의 의표를 찌르는 페인트 H", "kr_effect": "어택 시 발동 확률 55%/테크닉 ＋60%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントI", "type": "A", "effect": "アタック時発動確率60%/テクニック＋55%", "cname": "背身假动作I", "ceffect": "攻击时60%概率 自身技巧＋55%", "zhs_name": "出其不意×2的假动作I", "zhs_effect": "攻击时发动概率60%/技术＋55%", "zht_name": "攻其不備的假動作I", "zht_effect": "攻擊時發動機率60%/技巧＋55%", "en_name": "Double Reverse Attack Feint I", "en_effect": "60% chance when Attacking,Technique ＋55%", "kr_name": "의표의 의표를 찌르는 페인트 I", "kr_effect": "어택 시 발동 확률 60%/테크닉 ＋55%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "裏の裏を突くフェイントJ", "type": "A", "effect": "アタック時発動確率70%/テクニック＋50%", "cname": "背身假动作J", "ceffect": "攻击时70%概率 自身技巧＋50%", "zhs_name": "出其不意×2的假动作J", "zhs_effect": "攻击时发动概率70%/技术＋50%", "zht_name": "攻其不備的假動作J", "zht_effect": "攻擊時發動機率70%/技巧＋50%", "en_name": "Double Reverse Attack Feint J", "en_effect": "70% chance when Attacking,Technique ＋50%", "kr_name": "의표의 의표를 찌르는 페인트 J", "kr_effect": "어택 시 발동 확률 70%/테크닉 ＋50%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "完璧なレシーブA", "type": "A", "effect": "レシーブ時発動確率35%/テクニック＋60%", "cname": "完美防守A", "ceffect": "防御时35%概率 自身技巧＋60%", "zhs_name": "完美的接球A", "zhs_effect": "接球时发动概率35%/技术＋60%", "zht_name": "完美的接球A", "zht_effect": "接球時發動機率35%/技巧＋60%", "en_name": "Perfect Receive A", "en_effect": "35% chance when Receiving,Technique ＋60%", "kr_name": "완벽한 리시브 A", "kr_effect": "리시브 시 발동 확률 35%/테크닉 ＋60%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "完璧なレシーブB", "type": "A", "effect": "レシーブ時発動確率40%/テクニック＋55%", "cname": "完美防守B", "ceffect": "防御时40%概率 自身技巧＋55%", "zhs_name": "完美的接球B", "zhs_effect": "接球时发动概率40%/技术＋55%", "zht_name": "完美的接球B", "zht_effect": "接球時發動機率40%/技巧＋55%", "en_name": "Perfect Receive B", "en_effect": "40% chance when Receiving,Technique ＋55%", "kr_name": "완벽한 리시브 B", "kr_effect": "리시브 시 발동 확률 40%/테크닉 ＋55%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "完璧なレシーブD", "type": "A", "effect": "レシーブ時発動確率50%/テクニック＋45%", "cname": "完美防守D", "ceffect": "防御时50%概率 自身技巧＋45%", "zhs_name": "完美的接球D", "zhs_effect": "接球时发动概率50%/技术＋45%", "zht_name": "完美的接球D", "zht_effect": "接球時發動機率50%/技巧＋45%", "en_name": "Perfect Receive D", "en_effect": "50% chance when Receiving,Technique ＋45%", "kr_name": "완벽한 리시브 D", "kr_effect": "리시브 시 발동 확률 50%/테크닉 ＋45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "完璧なレシーブE", "type": "A", "effect": "レシーブ時発動確率55%/テクニック＋45%", "cname": "完美防守E", "ceffect": "防御时55%概率 自身技巧＋45%", "zhs_name": "完美的接球E", "zhs_effect": "接球时发动概率55%/技术＋45%", "zht_name": "完美的接球E", "zht_effect": "接球時發動機率55%/技巧＋45%", "en_name": "Perfect Receive E", "en_effect": "55% chance when Receiving,Technique ＋45%", "kr_name": "완벽한 리시브 E", "kr_effect": "리시브 시 발동 확률 55%/테크닉 ＋45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "完璧なレシーブF", "type": "A", "effect": "レシーブ時発動確率60%/テクニック＋35%", "cname": "完美防守F", "ceffect": "防御时60%概率 自身技巧＋35%", "zhs_name": "完美的接球F", "zhs_effect": "接球时发动概率60%/技术＋35%", "zht_name": "完美的接球F", "zht_effect": "接球時發動機率60%/技巧＋35%", "en_name": "Perfect Receive F", "en_effect": "60% chance when Receiving,Technique ＋35%", "kr_name": "완벽한 리시브 F", "kr_effect": "리시브 시 발동 확률 60%/테크닉 ＋35%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "灼熱のダンスA", "type": "A", "effect": "発動確率35%/相手のスタミナ消費量＋60%", "cname": "灼热之舞A", "ceffect": "35%概率 对手体力消耗＋60%", "zhs_name": "灼热的舞蹈A", "zhs_effect": "发动概率35%/对手的体力消耗量＋60%", "zht_name": "火熱舞蹈A", "zht_effect": "發動機率35%/對手的體力消耗量＋60%", "en_name": "Incandescent Dance A", "en_effect": "35% chance that Opponent's Stamina Consumption ＋60%", "kr_name": "작열하는 댄스 A", "kr_effect": "발동 확률 35%/상대방의 스태미너 소비량 ＋60%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "灼熱のダンスB", "type": "A", "effect": "発動確率40%/相手のスタミナ消費量＋55%", "cname": "灼热之舞B", "ceffect": "40%概率 对手体力消耗＋55%", "zhs_name": "灼热的舞蹈B", "zhs_effect": "发动概率40%/对手的体力消耗量＋55%", "zht_name": "火熱舞蹈B", "zht_effect": "發動機率40%/對手的體力消耗量＋55%", "en_name": "Incandescent Dance B", "en_effect": "40% chance that Opponent's Stamina Consumption ＋55%", "kr_name": "작열하는 댄스 B", "kr_effect": "발동 확률 40%/상대방의 스태미너 소비량 ＋55%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "灼熱のダンスC", "type": "A", "effect": "発動確率45%/相手のスタミナ消費量＋50%", "cname": "灼热之舞C", "ceffect": "45%概率 对手体力消耗＋50%", "zhs_name": "灼热的舞蹈C", "zhs_effect": "发动概率45%/对手的体力消耗量＋50%", "zht_name": "火熱舞蹈C", "zht_effect": "發動機率45%/對手的體力消耗量＋55%", "en_name": "Incandescent Dance C", "en_effect": "45% chance that Opponent's Stamina Consumption ＋50%", "kr_name": "작열하는 댄스 C", "kr_effect": "발동 확률 45%/상대방의 스태미너 소비량 ＋50%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "灼熱のダンスD", "type": "A", "effect": "発動確率50%/相手のスタミナ消費量＋45%", "cname": "灼热之舞D", "ceffect": "50%概率 对手体力消耗＋45%", "zhs_name": "灼热的舞蹈D", "zhs_effect": "发动概率50%/对手的体力消耗量＋45%", "zht_name": "火熱舞蹈D", "zht_effect": "發動機率50%/對手的體力消耗量＋45%", "en_name": "Incandescent Dance D", "en_effect": "50% chance that Opponent's Stamina Consumption ＋45%", "kr_name": "작열하는 댄스 D", "kr_effect": "발동 확률 50%/상대방의 스태미너 소비량 ＋45%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "灼熱のダンスE", "type": "A", "effect": "発動確率55%/相手のスタミナ消費量＋45%", "cname": "灼热之舞E", "ceffect": "55%概率 对手体力消耗＋45%", "zhs_name": "灼热的舞蹈E", "zhs_effect": "发动概率55%/对手的体力消耗量＋45%", "zht_name": "火熱舞蹈E", "zht_effect": "發動機率55%/對手的體力消耗量＋45%", "en_name": "Incandescent Dance E", "en_effect": "55% chance that Opponent's Stamina Consumption ＋45%", "kr_name": "작열하는 댄스 E", "kr_effect": "발동 확률 55%/상대방의 스태미너 소비량 ＋45%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "灼熱のダンスF", "type": "A", "effect": "発動確率60%/相手のスタミナ消費量＋35%", "cname": "灼热之舞F", "ceffect": "60%概率 对手体力消耗＋35%", "zhs_name": "灼热的舞蹈F", "zhs_effect": "发动概率60%/对手的体力消耗量＋35%", "zht_name": "火熱舞蹈F", "zht_effect": "發動機率60%/對手的體力消耗量＋35%", "en_name": "Incandescent Dance F", "en_effect": "60% chance that Opponent's Stamina Consumption ＋35%", "kr_name": "작열하는 댄스 F", "kr_effect": "발동 확률 60%/상대방의 스태미너 소비량 ＋35%", "pp_type": "", "property": "stm"
+  },
+  {
+    "name": "強烈なプレッシャーA", "type": "A", "effect": "レシーブ時発動確率35%/相手のパワー－60%", "cname": "强大压力A", "ceffect": "防御时35%概率 对手力量－60%", "zhs_name": "强烈的压力A", "zhs_effect": "接球时发动概率35%/对手的力量－60%", "zht_name": "強烈的壓力A", "zht_effect": "接球時發動機率35%/對手的力量－60%", "en_name": "Intense Pressure A", "en_effect": "35% chance when Receiving, Opponent's Power －60%", "kr_name": "강렬한 압박 A", "kr_effect": "리시브 시 발동 확률 35%/상대방의 파워 －60%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈なプレッシャーB", "type": "A", "effect": "レシーブ時発動確率40%/相手のパワー－55%", "cname": "强大压力B", "ceffect": "防御时40%概率 对手力量－55%", "zhs_name": "强烈的压力B", "zhs_effect": "接球时发动概率40%/对手的力量－55%", "zht_name": "強烈的壓力B", "zht_effect": "接球時發動機率40%/對手的力量－55%", "en_name": "Intense Pressure B", "en_effect": "40% chance when Receiving, Opponent's Power －55%", "kr_name": "강렬한 압박 B", "kr_effect": "리시브 시 발동 확률 40%/상대방의 파워 －55%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈なプレッシャーC", "type": "A", "effect": "レシーブ時発動確率45%/相手のパワー－50%", "cname": "强大压力C", "ceffect": "防御时45%概率 对手力量－50%", "zhs_name": "强烈的压力C", "zhs_effect": "接球时发动概率45%/对手的力量－50%", "zht_name": "強烈的壓力C", "zht_effect": "接球時發動機率45%/對手的力量－50%", "en_name": "Intense Pressure C", "en_effect": "45% chance when Receiving, Opponent's Power －50%", "kr_name": "강렬한 압박 C", "kr_effect": "리시브 시 발동 확률 45%/상대방의 파워 －50%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈なプレッシャーD", "type": "A", "effect": "レシーブ時発動確率50%/相手のパワー－45%", "cname": "强大压力D", "ceffect": "防御时50%概率 对手力量－45%", "zhs_name": "强烈的压力D", "zhs_effect": "接球时发动概率50%/对手的力量－45%", "zht_name": "強烈的壓力D", "zht_effect": "接球時發動機率50%/對手的力量－45%", "en_name": "Intense Pressure D", "en_effect": "50% chance when Receiving, Opponent's Power －45%", "kr_name": "강렬한 압박 D", "kr_effect": "리시브 시 발동 확률 50%/상대방의 파워 －45%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈なプレッシャーE", "type": "A", "effect": "レシーブ時発動確率55%/相手のパワー－40%", "cname": "强大压力E", "ceffect": "防御时55%概率 对手力量－40%", "zhs_name": "强烈的压力E", "zhs_effect": "接球时发动概率55%/对手的力量－40%", "zht_name": "強烈的壓力E", "zht_effect": "接球時發動機率55%/對手的力量－40%", "en_name": "Intense Pressure E", "en_effect": "55% chance when Receiving, Opponent's Power －40%", "kr_name": "강렬한 압박 E", "kr_effect": "리시브 시 발동 확률 55%/상대방의 파워 －40%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈なプレッシャーF", "type": "A", "effect": "レシーブ時発動確率60%/相手のパワー－35%", "cname": "强大压力F", "ceffect": "防御时60%概率 对手力量－35%", "zhs_name": "强烈的压力F", "zhs_effect": "接球时发动概率60%/对手的力量－35%", "zht_name": "強烈的壓力F", "zht_effect": "接球時發動機率60%/對手的力量－35%", "en_name": "Intense Pressure F", "en_effect": "60% chance when Receiving, Opponent's Power －35%", "kr_name": "강렬한 압박 F", "kr_effect": "리시브 시 발동 확률 60%/상대방의 파워 －35%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクA", "type": "A", "effect": "アタック時発動確率35%/パワー＋60%", "cname": "强力扣杀A", "ceffect": "攻击时35%概率 自身力量＋60%", "zhs_name": "强力杀球A", "zhs_effect": "攻击时发动概率35%/力量＋60%", "zht_name": "強力殺球A", "zht_effect": "攻擊時發動機率35%/力量＋60%", "en_name": "Powerful Spike A", "en_effect": "35% chance when Attacking, Power ＋60%", "kr_name": "강렬 스파이크 A", "kr_effect": "어택 시 발동 확률 35%/파워 ＋60%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクB", "type": "A", "effect": "アタック時発動確率40%/パワー＋55%", "cname": "强力扣杀B", "ceffect": "攻击时40%概率 自身力量＋55%", "zhs_name": "强力杀球B", "zhs_effect": "攻击时发动概率40%/力量＋55%", "zht_name": "強力殺球B", "zht_effect": "攻擊時發動機率40%/力量＋55%", "en_name": "Powerful Spike B", "en_effect": "40% chance when Attacking, Power ＋55%", "kr_name": "강렬 스파이크 B", "kr_effect": "어택 시 발동 확률 40%/파워 ＋55%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクC", "type": "A", "effect": "アタック時発動確率45%/パワー＋50%", "cname": "强力扣杀C", "ceffect": "攻击时45%概率 自身力量＋50%", "zhs_name": "强力杀球C", "zhs_effect": "攻击时发动概率45%/力量＋50%", "zht_name": "強力殺球C", "zht_effect": "攻擊時發動機率45%/力量＋50%", "en_name": "Powerful Spike C", "en_effect": "45% chance when Attacking, Power ＋50%", "kr_name": "강렬 스파이크 C", "kr_effect": "어택 시 발동 확률 45%/파워 ＋50%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクD", "type": "A", "effect": "アタック時発動確率50%/パワー＋45%", "cname": "强力扣杀D", "ceffect": "攻击时50%概率 自身力量＋45%", "zhs_name": "强力杀球D", "zhs_effect": "攻击时发动概率50%/力量＋45%", "zht_name": "強力殺球D", "zht_effect": "攻擊時發動機率50%/力量＋45%", "en_name": "Powerful Spike D", "en_effect": "50% chance when Attacking, Power ＋45%", "kr_name": "강렬 스파이크 D", "kr_effect": "어택 시 발동 확률 50%/파워 ＋45%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクE", "type": "A", "effect": "アタック時発動確率55%/パワー＋45%", "cname": "强力扣杀E", "ceffect": "攻击时55%概率 自身力量＋45%", "zhs_name": "强力杀球E", "zhs_effect": "攻击时发动概率55%/力量＋45%", "zht_name": "強力殺球E", "zht_effect": "攻擊時發動機率55%/力量＋45%", "en_name": "Powerful Spike E", "en_effect": "55% chance when Attacking, Power ＋45%", "kr_name": "강렬 스파이크 E", "kr_effect": "어택 시 발동 확률 55%/파워 ＋45%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクF", "type": "A", "effect": "アタック時発動確率60%/パワー＋35%", "cname": "强力扣杀F", "ceffect": "攻击时60%概率 自身力量＋35%", "zhs_name": "强力杀球F", "zhs_effect": "攻击时发动概率60%/力量＋35%", "zht_name": "強力殺球F", "zht_effect": "攻擊時發動機率60%/力量＋35%", "en_name": "Powerful Spike F", "en_effect": "60% chance when Attacking, Power ＋35%", "kr_name": "강렬 스파이크 F", "kr_effect": "어택 시 발동 확률 60%/파워 ＋35%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクG", "type": "A", "effect": "アタック時発動確率55%/パワー＋50%", "cname": "强力扣杀G", "ceffect": "攻击时55%概率 自身力量＋50%", "zhs_name": "强力杀球G", "zhs_effect": "攻击时发动概率55%/力量＋50%", "zht_name": "強力殺球G", "zht_effect": "攻擊時發動機率55%/力量＋50%", "en_name": "Powerful Spike G", "en_effect": "55% chance when Attacking, Power ＋50%", "kr_name": "강렬 스파이크 G", "kr_effect": "어택 시 발동 확률 55%/파워 ＋50%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクH", "type": "A", "effect": "アタック時発動確率55%/パワー＋60%", "cname": "强力扣杀H", "ceffect": "攻击时55%概率 自身力量＋60%", "zhs_name": "强力杀球H", "zhs_effect": "攻击时发动概率55%/力量＋60%", "zht_name": "強力殺球H", "zht_effect": "攻擊時發動機率55%/力量＋60%", "en_name": "Powerful Spike H", "en_effect": "55% chance when Attacking, Power ＋60%", "kr_name": "강렬 스파이크 H", "kr_effect": "어택 시 발동 확률 55%/파워 ＋60%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクI", "type": "A", "effect": "アタック時発動確率60%/パワー＋55%", "cname": "强力扣杀I", "ceffect": "攻击时60%概率 自身力量＋55%", "zhs_name": "强力杀球I", "zhs_effect": "攻击时发动概率60%/力量＋55%", "zht_name": "強力殺球I", "zht_effect": "攻擊時發動機率60%/力量＋55%", "en_name": "Powerful Spike I", "en_effect": "60% chance when Attacking, Power ＋55%", "kr_name": "강렬 스파이크 I", "kr_effect": "어택 시 발동 확률 60%/파워 ＋55%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "強烈スパイクJ", "type": "A", "effect": "アタック時発動確率70%/パワー＋50%", "cname": "强力扣杀J", "ceffect": "攻击时70%概率 自身力量＋50%", "zhs_name": "强力杀球J", "zhs_effect": "攻击时发动概率70%/力量＋50%", "zht_name": "強力殺球J", "zht_effect": "攻擊時發動機率70%/力量＋50%", "en_name": "Powerful Spike J", "en_effect": "70% chance when Attacking, Power ＋50%", "kr_name": "강렬 스파이크 J", "kr_effect": "어택 시 발동 확률 70%/파워 ＋50%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "高度な心理戦A", "type": "A", "effect": "アタック時発動確率35%/相手のテクニック－60%", "cname": "高等心战A", "ceffect": "攻击时35%概率 对手技巧－60%", "zhs_name": "高度心理战A", "zhs_effect": "攻击时发动概率35%/对手的技术－60%", "zht_name": "高明的心理戰A", "zht_effect": "攻擊時發動機率35%/對手的技巧－60%", "en_name": "Advanced Strategy A", "en_effect": "35% chance when Attacking, Opponent's Technique －60%", "kr_name": "고도의 심리전 A", "kr_effect": "어택 시 발동 확률 35%/상대방의 테크닉 －60%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "高度な心理戦B", "type": "A", "effect": "アタック時発動確率40%/相手のテクニック－55%", "cname": "高等心战B", "ceffect": "攻击时40%概率 对手技巧－55%", "zhs_name": "高度心理战B", "zhs_effect": "攻击时发动概率40%/对手的技术－55%", "zht_name": "高明的心理戰B", "zht_effect": "攻擊時發動機率40%/對手的技巧－55%", "en_name": "Advanced Strategy B", "en_effect": "40% chance when Attacking, Opponent's Technique －55%", "kr_name": "고도의 심리전 B", "kr_effect": "어택 시 발동 확률 40%/상대방의 테크닉 －55%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "高度な心理戦C", "type": "A", "effect": "アタック時発動確率45%/相手のテクニック－50%", "cname": "高等心战C", "ceffect": "攻击时45%概率 对手技巧－50%", "zhs_name": "高度心理战C", "zhs_effect": "攻击时发动概率45%/对手的技术－50%", "zht_name": "高明的心理戰C", "zht_effect": "攻擊時發動機率45%/對手的技巧－50%", "en_name": "Advanced Strategy C", "en_effect": "45% chance when Attacking, Opponent's Technique －50%", "kr_name": "고도의 심리전 C", "kr_effect": "어택 시 발동 확률 45%/상대방의 테크닉 －50%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "高度な心理戦D", "type": "A", "effect": "アタック時発動確率50%/相手のテクニック－45%", "cname": "高等心战D", "ceffect": "攻击时50%概率 对手技巧－45%", "zhs_name": "高度心理战D", "zhs_effect": "攻击时发动概率50%/对手的技术－45%", "zht_name": "高明的心理戰D", "zht_effect": "攻擊時發動機率50%/對手的技巧－45%", "en_name": "Advanced Strategy D", "en_effect": "50% chance when Attacking, Opponent's Technique －45%", "kr_name": "고도의 심리전 D", "kr_effect": "어택 시 발동 확률 50%/상대방의 테크닉 －45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "高度な心理戦E", "type": "A", "effect": "アタック時発動確率55%/相手のテクニック－40%", "cname": "高等心战E", "ceffect": "攻击时55%概率 对手技巧－40%", "zhs_name": "高度心理战E", "zhs_effect": "攻击时发动概率55%/对手的技术－40%", "zht_name": "高明的心理戰E", "zht_effect": "攻擊時發動機率55%/對手的技巧－40%", "en_name": "Advanced Strategy E", "en_effect": "55% chance when Attacking, Opponent's Technique －40%", "kr_name": "고도의 심리전 E", "kr_effect": "어택 시 발동 확률 55%/상대방의 테크닉 －40%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "高度な心理戦F", "type": "A", "effect": "アタック時発動確率60%/相手のテクニック－35%", "cname": "高等心战F", "ceffect": "攻击时60%概率 对手技巧－35%", "zhs_name": "高度心理战F", "zhs_effect": "攻击时发动概率60%/对手的技术－35%", "zht_name": "高明的心理戰F", "zht_effect": "攻擊時發動機率60%/對手的技巧－35%", "en_name": "Advanced Strategy F", "en_effect": "60% chance when Attacking, Opponent's Technique －35%", "kr_name": "고도의 심리전 F", "kr_effect": "어택 시 발동 확률 60%/상대방의 테크닉 －35%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "観客総立ちB", "type": "A", "effect": "発動確率40%/テンション上昇量＋55%", "cname": "观众欢呼B", "ceffect": "40%概率 蓄气量＋55%", "zhs_name": "观众全体起立B", "zhs_effect": "发动概率40%/情绪上升量＋55%", "zht_name": "全場觀眾起身站立B", "zht_effect": "發動機率40%/情緒上升量＋55%", "en_name": "Spectators All Standing B", "en_effect": "40% chance that Tension Gauge Increase ＋55%", "kr_name": "관객 전체 기립 B", "kr_effect": "발동 확률 40%/텐션 상승량 ＋55%", "pp_type": "", "property": "apl"
+  },
+  {
+    "name": "観客総立ちC", "type": "A", "effect": "発動確率45%/テンション上昇量＋50%", "cname": "观众欢呼C", "ceffect": "45%概率 蓄气量＋50%", "zhs_name": "观众全体起立C", "zhs_effect": "发动概率45%/情绪上升量＋50%", "zht_name": "全場觀眾起身站立C", "zht_effect": "發動機率45%/情緒上升量＋50%", "en_name": "Spectators All Standing C", "en_effect": "45% chance that Tension Gauge Increase ＋50%", "kr_name": "관객 전체 기립 C", "kr_effect": "발동 확률 45%/텐션 상승량 ＋50%", "pp_type": "", "property": "apl"
+  },
+  {
+    "name": "観客総立ちD", "type": "A", "effect": "発動確率50%/テンション上昇量＋45%", "cname": "观众欢呼D", "ceffect": "50%概率 蓄气量＋45%", "zhs_name": "观众全体起立D", "zhs_effect": "发动概率50%/情绪上升量＋45%", "zht_name": "全場觀眾起身站立D", "zht_effect": "發動機率50%/情緒上升量＋45%", "en_name": "Spectators All Standing D", "en_effect": "50% chance that Tension Gauge Increase ＋45%", "kr_name": "관객 전체 기립 D", "kr_effect": "발동 확률 50%/텐션 상승량 ＋45%", "pp_type": "", "property": "apl"
+  },
+  {
+    "name": "観客総立ちE", "type": "A", "effect": "発動確率55%/テンション上昇量＋45%", "cname": "观众欢呼E", "ceffect": "55%概率 蓄气量＋45%", "zhs_name": "观众全体起立E", "zhs_effect": "发动概率55%/情绪上升量＋45%", "zht_name": "全場觀眾起身站立E", "zht_effect": "發動機率55%/情緒上升量＋45%", "en_name": "Spectators All Standing E", "en_effect": "55% chance that Tension Gauge Increase ＋45%", "kr_name": "관객 전체 기립 E", "kr_effect": "발동 확률 55%/텐션 상승량 ＋45%", "pp_type": "", "property": "apl"
+  },
+  {
+    "name": "観客総立ちF", "type": "A", "effect": "発動確率60%/テンション上昇量＋35%", "cname": "观众欢呼F", "ceffect": "60%概率 蓄气量＋35%", "zhs_name": "观众全体起立F", "zhs_effect": "发动概率60%/情绪上升量＋35%", "zht_name": "全場觀眾起身站立F", "zht_effect": "發動機率60%/情緒上升量＋35%", "en_name": "Spectators All Standing F", "en_effect": "60% chance that Tension Gauge Increase ＋35%", "kr_name": "관객 전체 기립 F", "kr_effect": "발동 확률 60%/텐션 상승량 ＋35%", "pp_type": "", "property": "apl"
+  },
+  {
+    "name": "不動のレシーブA", "type": "A", "effect": "レシーブ時発動確率60%/パワー＋35%", "cname": "不动防御A", "ceffect": "防御时35%概率 自身力量＋60%", "zhs_name": "坚定的接球A", "zhs_effect": "接球时发动概率35%/力量＋60%", "zht_name": "平穩的接球A", "zht_effect": "接球時發動機率35%/力量＋60%", "en_name": "Firm Receive A", "en_effect": "35% chance when Receiving, Power ＋60%", "kr_name": "부동의 리시브 A", "kr_effect": "리시브 시 발동 확률 35%/파워 ＋60%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "不動のレシーブB", "type": "A", "effect": "レシーブ時発動確率40%/パワー＋55%", "cname": "不动防御B", "ceffect": "防御时40%概率 自身力量＋55%", "zhs_name": "坚定的接球B", "zhs_effect": "接球时发动概率40%/力量＋55%", "zht_name": "平穩的接球B", "zht_effect": "接球時發動機率40%/力量＋55%", "en_name": "Firm Receive B", "en_effect": "40% chance when Receiving, Power ＋55%", "kr_name": "부동의 리시브 B", "kr_effect": "리시브 시 발동 확률 40%/파워 ＋55%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "不動のレシーブC", "type": "A", "effect": "レシーブ時発動確率45%/パワー＋50%", "cname": "不动防御C", "ceffect": "防御时45%概率 自身力量＋50%", "zhs_name": "坚定的接球C", "zhs_effect": "接球时发动概率45%/力量＋50%", "zht_name": "平穩的接球C", "zht_effect": "接球時發動機率45%/力量＋50%", "en_name": "Firm Receive C", "en_effect": "45% chance when Receiving, Power ＋50%", "kr_name": "부동의 리시브 C", "kr_effect": "리시브 시 발동 확률 45%/파워 ＋50%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "不動のレシーブD", "type": "A", "effect": "レシーブ時発動確率50%/パワー＋45%", "cname": "不动防御D", "ceffect": "防御时50%概率 自身力量＋45%", "zhs_name": "坚定的接球D", "zhs_effect": "接球时发动概率50%/力量＋45%", "zht_name": "平穩的接球D", "zht_effect": "接球時發動機率50%/力量＋45%", "en_name": "Firm Receive D", "en_effect": "50% chance when Receiving, Power ＋45%", "kr_name": "부동의 리시브 D", "kr_effect": "리시브 시 발동 확률 50%/파워 ＋45%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "不動のレシーブE", "type": "A", "effect": "レシーブ時発動確率55%/パワー＋45%", "cname": "不动防御E", "ceffect": "防御时55%概率 自身力量＋45%", "zhs_name": "坚定的接球E", "zhs_effect": "接球时发动概率55%/力量＋45%", "zht_name": "平穩的接球E", "zht_effect": "接球時發動機率55%/力量＋45%", "en_name": "Firm Receive E", "en_effect": "55% chance when Receiving, Power ＋45%", "kr_name": "부동의 리시브 E", "kr_effect": "리시브 시 발동 확률 55%/파워 ＋45%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "不動のレシーブF", "type": "A", "effect": "レシーブ時発動確率60%/パワー＋35%", "cname": "不动防御F", "ceffect": "防御时60%概率 自身力量＋35%", "zhs_name": "坚定的接球F", "zhs_effect": "接球时发动概率60%/力量＋35%", "zht_name": "平穩的接球F", "zht_effect": "接球時發動機率60%/力量＋35%", "en_name": "Firm Receive F", "en_effect": "60% chance when Receiving, Power ＋35%", "kr_name": "부동의 리시브 F", "kr_effect": "리시브 시 발동 확률 60%/파워 ＋35%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "鉄壁のレシーブA", "type": "A", "effect": "レシーブ時発動確率35%/テクニック＋60%", "cname": "铁壁防守A", "ceffect": "防御时35%概率 自身技巧＋60%", "zhs_name": "铁壁的接球A", "zhs_effect": "接球时发动概率35%/技术＋60%", "zht_name": "鐵壁的接球A", "zht_effect": "接球時發動機率35%/技巧＋60%", "en_name": "Invulnerable Receive A", "en_effect": "35% chance when Receiving, Technique ＋60%", "kr_name": "철벽의 리시브 A", "kr_effect": "리시브 시 발동 확률 35%/테크닉 ＋60%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "鉄壁のレシーブB", "type": "A", "effect": "レシーブ時発動確率40%/テクニック＋55%", "cname": "铁壁防守B", "ceffect": "防御时40%概率 自身技巧＋55%", "zhs_name": "铁壁的接球B", "zhs_effect": "接球时发动概率40%/技术＋55%", "zht_name": "鐵壁的接球B", "zht_effect": "接球時發動機率40%/技巧＋55%", "en_name": "Invulnerable Receive B", "en_effect": "40% chance when Receiving, Technique ＋55%", "kr_name": "철벽의 리시브 B", "kr_effect": "리시브 시 발동 확률 40%/테크닉 ＋55%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "鉄壁のレシーブC", "type": "A", "effect": "レシーブ時発動確率45%/テクニック＋50%", "cname": "铁壁防守C", "ceffect": "防御时45%概率 自身技巧＋50%", "zhs_name": "铁壁的接球C", "zhs_effect": "接球时发动概率45%/技术＋50%", "zht_name": "鐵壁的接球C", "zht_effect": "接球時發動機率45%/技巧＋50%", "en_name": "Invulnerable Receive C", "en_effect": "45% chance when Receiving, Technique ＋50%", "kr_name": "철벽의 리시브 C", "kr_effect": "리시브 시 발동 확률 45%/테크닉 ＋50%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "鉄壁のレシーブD", "type": "A", "effect": "レシーブ時発動確率50%/テクニック＋45%", "cname": "铁壁防守D", "ceffect": "防御时50%概率 自身技巧＋45%", "zhs_name": "铁壁的接球D", "zhs_effect": "接球时发动概率50%/技术＋45%", "zht_name": "鐵壁的接球D", "zht_effect": "接球時發動機率50%/技巧＋45%", "en_name": "Invulnerable Receive D", "en_effect": "50% chance when Receiving, Technique ＋45%", "kr_name": "철벽의 리시브 D", "kr_effect": "리시브 시 발동 확률 50%/테크닉 ＋45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "鉄壁のレシーブE", "type": "A", "effect": "レシーブ時発動確率55%/テクニック＋45%", "cname": "铁壁防守E", "ceffect": "防御时55%概率 自身技巧＋45%", "zhs_name": "铁壁的接球E", "zhs_effect": "接球时发动概率55%/技术＋45%", "zht_name": "鐵壁的接球E", "zht_effect": "接球時發動機率55%/技巧＋45%", "en_name": "Invulnerable Receive E", "en_effect": "55% chance when Receiving, Technique ＋45%", "kr_name": "철벽의 리시브 E", "kr_effect": "리시브 시 발동 확률 55%/테크닉 ＋45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "鉄壁のレシーブF", "type": "A", "effect": "レシーブ時発動確率60%/テクニック＋35%", "cname": "铁壁防守F", "ceffect": "防御时60%概率 自身技巧＋35%", "zhs_name": "铁壁的接球F", "zhs_effect": "接球时发动概率60%/技术＋35%", "zht_name": "鐵壁的接球F", "zht_effect": "接球時發動機率60%/技巧＋35%", "en_name": "Invulnerable Receive F", "en_effect": "60% chance when Receiving, Technique ＋35%", "kr_name": "철벽의 리시브 F", "kr_effect": "리시브 시 발동 확률 60%/테크닉 ＋35%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "天才的な先読みA", "type": "A", "effect": "レシーブ時発動確率35%/相手のテクニック－60%", "cname": "天才预判A", "ceffect": "防御时35%概率 对手技巧－60%", "zhs_name": "天才的预判A", "zhs_effect": "接球时发动概率35%/对手的技术－60%", "zht_name": "天才的預判A", "zht_effect": "接球時發動機率35%/對手的技巧－60%", "en_name": "Ingenious Foresight A", "en_effect": "35% chance when Receiving, Opponent's Technique －60%", "kr_name": "천재적인 예측 A", "kr_effect": "리시브 시 발동 확률 35%/상대방의 테크닉 －60%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "天才的な先読みB", "type": "A", "effect": "レシーブ時発動確率40%/相手のテクニック－55%", "cname": "天才预判B", "ceffect": "防御时40%概率 对手技巧－55%", "zhs_name": "天才的预判B", "zhs_effect": "接球时发动概率40%/对手的技术－55%", "zht_name": "天才的預判B", "zht_effect": "接球時發動機率40%/對手的技巧－55%", "en_name": "Ingenious Foresight B", "en_effect": "40% chance when Receiving, Opponent's Technique －55%", "kr_name": "천재적인 예측 B", "kr_effect": "리시브 시 발동 확률 40%/상대방의 테크닉 －55%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "天才的な先読みC", "type": "A", "effect": "レシーブ時発動確率45%/相手のテクニック－50%", "cname": "天才预判C", "ceffect": "防御时45%概率 对手技巧－50%", "zhs_name": "天才的预判C", "zhs_effect": "接球时发动概率45%/对手的技术－50%", "zht_name": "天才的預判C", "zht_effect": "接球時發動機率45%/對手的技巧－50%", "en_name": "Ingenious Foresight C", "en_effect": "45% chance when Receiving, Opponent's Technique －50%", "kr_name": "천재적인 예측 C", "kr_effect": "리시브 시 발동 확률 45%/상대방의 테크닉 －50%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "天才的な先読みD", "type": "A", "effect": "レシーブ時発動確率50%/相手のテクニック－45%", "cname": "天才预判D", "ceffect": "防御时50%概率 对手技巧－45%", "zhs_name": "天才的预判D", "zhs_effect": "接球时发动概率50%/对手的技术－45%", "zht_name": "天才的預判D", "zht_effect": "接球時發動機率50%/對手的技巧－45%", "en_name": "Ingenious Foresight D", "en_effect": "50% chance when Receiving, Opponent's Technique －45%", "kr_name": "천재적인 예측 D", "kr_effect": "리시브 시 발동 확률 50%/상대방의 테크닉 －45%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "天才的な先読みE", "type": "A", "effect": "レシーブ時発動確率55%/相手のテクニック－40%", "cname": "天才预判E", "ceffect": "防御时55%概率 对手技巧－40%", "zhs_name": "天才的预判E", "zhs_effect": "接球时发动概率55%/对手的技术－40%", "zht_name": "天才的預判E", "zht_effect": "接球時發動機率55%/對手的技巧－40%", "en_name": "Ingenious Foresight E", "en_effect": "55% chance when Receiving, Opponent's Technique －40%", "kr_name": "천재적인 예측 E", "kr_effect": "리시브 시 발동 확률 55%/상대방의 테크닉 －40%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "天才的な先読みF", "type": "A", "effect": "レシーブ時発動確率60%/相手のテクニック－35%", "cname": "天才预判F", "ceffect": "防御时60%概率 对手技巧－35%", "zhs_name": "天才的预判F", "zhs_effect": "接球时发动概率60%/对手的技术－35%", "zht_name": "天才的預判F", "zht_effect": "接球時發動機率60%/對手的技巧－35%", "en_name": "Ingenious Foresight F", "en_effect": "60% chance when Receiving, Opponent's Technique －35%", "kr_name": "천재적인 예측 F", "kr_effect": "리시브 시 발동 확률 60%/상대방의 테크닉 －35%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "圧倒的な気迫A", "type": "A", "effect": "アタック時発動確率35%/相手のパワー－60%", "cname": "压倒性的气魄A", "ceffect": "攻击时35%概率 对手力量－60%", "zhs_name": "压倒性的气势A", "zhs_effect": "攻击时发动概率35%/对手的力量－60%", "zht_name": "壓倒性的氣勢A", "zht_effect": "攻擊時發動機率35%/對手的力量－60%", "en_name": "Overwhelming Spirit A", "en_effect": "35% chance when Attacking, Opponent's Power －60%", "kr_name": "압도적인 기백 A", "kr_effect": "어택 시 발동 확률 35%/상대방의 파워 －60%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "圧倒的な気迫B", "type": "A", "effect": "アタック時発動確率40%/相手のパワー－55%", "cname": "压倒性的气魄B", "ceffect": "攻击时40%概率 对手力量－55%", "zhs_name": "压倒性的气势B", "zhs_effect": "攻击时发动概率40%/对手的力量－55%", "zht_name": "壓倒性的氣勢B", "zht_effect": "攻擊時發動機率40%/對手的力量－55%", "en_name": "Overwhelming Spirit B", "en_effect": "40% chance when Attacking, Opponent's Power －55%", "kr_name": "압도적인 기백 B", "kr_effect": "어택 시 발동 확률 40%/상대방의 파워 －55%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "圧倒的な気迫C", "type": "A", "effect": "アタック時発動確率45%/相手のパワー－50%", "cname": "压倒性的气魄C", "ceffect": "攻击时45%概率 对手力量－50%", "zhs_name": "压倒性的气势C", "zhs_effect": "攻击时发动概率45%/对手的力量－50%", "zht_name": "壓倒性的氣勢C", "zht_effect": "攻擊時發動機率45%/對手的力量－50%", "en_name": "Overwhelming Spirit C", "en_effect": "45% chance when Attacking, Opponent's Power －50%", "kr_name": "압도적인 기백 C", "kr_effect": "어택 시 발동 확률 45%/상대방의 파워 －50%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "圧倒的な気迫D", "type": "A", "effect": "アタック時発動確率50%/相手のパワー－45%", "cname": "压倒性的气魄D", "ceffect": "攻击时50%概率 对手力量－45%", "zhs_name": "压倒性的气势D", "zhs_effect": "攻击时发动概率50%/对手的力量－45%", "zht_name": "壓倒性的氣勢D", "zht_effect": "攻擊時發動機率50%/對手的力量－45%", "en_name": "Overwhelming Spirit D", "en_effect": "50% chance when Attacking, Opponent's Power －45%", "kr_name": "압도적인 기백 D", "kr_effect": "어택 시 발동 확률 50%/상대방의 파워 －45%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "圧倒的な気迫E", "type": "A", "effect": "アタック時発動確率55%/相手のパワー－40%", "cname": "压倒性的气魄E", "ceffect": "攻击时55%概率 对手力量－40%", "zhs_name": "压倒性的气势E", "zhs_effect": "攻击时发动概率55%/对手的力量－40%", "zht_name": "壓倒性的氣勢E", "zht_effect": "攻擊時發動機率55%/對手的力量－40%", "en_name": "Overwhelming Spirit E", "en_effect": "55% chance when Attacking, Opponent's Power －40%", "kr_name": "압도적인 기백 E", "kr_effect": "어택 시 발동 확률 55%/상대방의 파워 －40%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "圧倒的な気迫F", "type": "A", "effect": "アタック時発動確率60%/相手のパワー－35%", "cname": "压倒性的气魄F", "ceffect": "攻击时60%概率 对手力量－35%", "zhs_name": "压倒性的气势F", "zhs_effect": "攻击时发动概率60%/对手的力量－35%", "zht_name": "壓倒性的氣勢F", "zht_effect": "攻擊時發動機率60%/對手的力量－35%", "en_name": "Overwhelming Spirit F", "en_effect": "60% chance when Attacking, Opponent's Power －35%", "kr_name": "압도적인 기백 F", "kr_effect": "어택 시 발동 확률 60%/상대방의 파워 －35%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "クリティカルヒットB", "type": "A", "effect": "アタック時発動確率25%/パワー＋40%", "cname": "强力一击B", "ceffect": "攻击时25%概率 自身力量＋40%", "zhs_name": "致命的击球B", "zhs_effect": "攻击时发动概率25%/力量＋40%", "zht_name": "會心一擊B", "zht_effect": "攻擊時發動機率25%/力量＋40%", "en_name": "Critical Hit B", "en_effect": "25% chance when Attacking, Power ＋40%", "kr_name": "크리티컬 힛 B", "kr_effect": "어택 시 발동 확률 25%/파워 ＋40%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "クリティカルヒットE", "type": "A", "effect": "アタック時発動確率40%/パワー＋25%", "cname": "强力一击E", "ceffect": "攻击时40%概率 自身力量＋25%", "zhs_name": "致命的击球E", "zhs_effect": "攻击时发动概率40%/力量＋25%", "zht_name": "會心一擊E", "zht_effect": "攻擊時發動機率40%/力量＋25%", "en_name": "Critical Hit E", "en_effect": "40% chance when Attacking, Power ＋35%", "kr_name": "크리티컬 힛 E", "kr_effect": "어택 시 발동 확률 40%/파워 ＋25%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "W・疲れ知らずの猛攻G", "type": "A", "effect": "アタック時発動確率40%/パワー＋40%、スタミナ消費量－40%", "cname": "W・不知疲倦的猛攻G", "ceffect": "攻击时40%概率 自身力量＋40%、自身体力消耗－40%（同时触发）", "zhs_name": "W·不知疲倦的猛攻G", "zhs_effect": "攻击时发动概率40%/力量＋40%、体力消耗量－40%", "zht_name": "W‧不知疲勞的猛攻G", "zht_effect": "攻擊時發動機率40%/力量＋40%、體力消耗量－40%", "en_name": "W Untiring Ferocious Attack G", "en_effect": "40% chance when Attacking,Power ＋40%, Stamina Consumption －40%", "kr_name": "W－지칠 줄 모르는 맹공 G", "kr_effect": "어택 시 발동 확률 40%/파워 ＋40%,스태미너 소비량 －40%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "W・洗練された技巧G", "type": "A", "effect": "アタック時発動確率40%/テクニック＋40%、スタミナ消費量－40%", "cname": "W・千锤百炼的技巧", "ceffect": "攻击时40%概率 自身技巧＋40%、自身体力消耗－40%（同时触发）", "zhs_name": "W·精炼的技巧G", "zhs_effect": "攻击时发动概率40%/技术＋40%、体力消耗量－40%", "zht_name": "W‧洗練的技巧G", "zht_effect": "攻擊時發動機率40%/技巧＋40%、體力消耗量－40%", "en_name": "W Refined Skill G", "en_effect": "40% chance when Attacking, Technique ＋40%,Stamina Consumption －40%", "kr_name": "W・세련된 기교 G", "kr_effect": "어택 시 발동 확률 40%/테크닉 ＋40%,스태미너 소비량 －40%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "内から湧き上がるスタミナ3", "type": "P", "effect": "スタミナ消費量－10%", "cname": "展现体力3", "ceffect": "自身体力消耗－10%", "zhs_name": "从深处涌现的体力3", "zhs_effect": "体力消耗量－10%", "zht_name": "從體內湧現出的體力3", "zht_effect": "體力消耗量－10%", "en_name": "Stamina from Within 3", "en_effect": "Stamina Consumption －10%", "kr_name": "솟아나는 스태미너 3", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "内から湧き上がるスタミナ4", "type": "P", "effect": "スタミナ消費量－10%", "cname": "展现体力4", "ceffect": "自身体力消耗－10%", "zhs_name": "从深处涌现的体力4", "zhs_effect": "体力消耗量－10%", "zht_name": "從體內湧現出的體力4", "zht_effect": "體力消耗量－10%", "en_name": "Stamina from Within 4", "en_effect": "Stamina Consumption －10%", "kr_name": "솟아나는 스태미너 4", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "内から湧き上がるスタミナ5", "type": "P", "effect": "スタミナ消費量－11%", "cname": "展现体力5", "ceffect": "自身体力消耗－11%", "zhs_name": "从深处涌现的体力5", "zhs_effect": "体力消耗量－11%", "zht_name": "從體內湧現出的體力5", "zht_effect": "體力消耗量－11%", "en_name": "Stamina from Within 5", "en_effect": "Stamina Consumption －11%", "kr_name": "솟아나는 스태미너 5", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "内から湧き上がるスタミナ6", "type": "P", "effect": "スタミナ消費量－11%", "cname": "展现体力6", "ceffect": "自身体力消耗－11%", "zhs_name": "从深处涌现的体力6", "zhs_effect": "体力消耗量－11%", "zht_name": "從體內湧現出的體力6", "zht_effect": "體力消耗量－11%", "en_name": "Stamina from Within 6", "en_effect": "Stamina Consumption －11%", "kr_name": "솟아나는 스태미너 6", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "隠しきれない魅力3", "type": "P", "effect": "アピール＋10%", "cname": "隐藏之美3", "ceffect": "魅力＋10%", "zhs_name": "无法遮掩的魅力3", "zhs_effect": "魅力＋10%", "zht_name": "藏不住的吸引力3", "zht_effect": "魅力＋10%", "en_name": "Unconcealable Charm 3", "en_effect": "Appeal ＋10%", "kr_name": "감출 수 없는 매력 3", "kr_effect": "어필 ＋10%", "pp_type": "7", "property": "apl"
+  },
+  {
+    "name": "隠しきれない魅力4", "type": "P", "effect": "アピール＋10%", "cname": "隐藏之美4", "ceffect": "魅力＋10%", "zhs_name": "无法遮掩的魅力4", "zhs_effect": "魅力＋10%", "zht_name": "藏不住的吸引力4", "zht_effect": "魅力＋10%", "en_name": "Unconcealable Charm 4", "en_effect": "Appeal ＋10%", "kr_name": "감출 수 없는 매력 4", "kr_effect": "어필 ＋10%", "pp_type": "7", "property": "apl"
+  },
+  {
+    "name": "隠しきれない魅力5", "type": "P", "effect": "アピール＋11%", "cname": "隐藏之美5", "ceffect": "魅力＋11%", "zhs_name": "无法遮掩的魅力5", "zhs_effect": "魅力＋11%", "zht_name": "藏不住的吸引力5", "zht_effect": "魅力＋11%", "en_name": "Unconcealable Charm 5", "en_effect": "Appeal ＋11%", "kr_name": "감출 수 없는 매력 5", "kr_effect": "어필 ＋11%", "pp_type": "8", "property": "apl"
+  },
+  {
+    "name": "隠しきれない魅力6", "type": "P", "effect": "アピール＋10%", "cname": "隐藏之美6", "ceffect": "魅力＋10%", "zhs_name": "无法遮掩的魅力6", "zhs_effect": "魅力＋11%", "zht_name": "藏不住的吸引力6", "zht_effect": "魅力＋11%", "en_name": "Unconcealable Charm 6", "en_effect": "Appeal ＋11%", "kr_name": "감출 수 없는 매력 6", "kr_effect": "어필 ＋11%", "pp_type": "7", "property": "apl"
+  },
+  {
+    "name": "閃きのテクニック3", "type": "P", "effect": "テクニック＋10%", "cname": "闪耀技巧3", "ceffect": "技巧＋10%", "zhs_name": "灵光一现的技术3", "zhs_effect": "技术＋10%", "zht_name": "靈光一閃的技巧3", "zht_effect": "技巧＋10%", "en_name": "Flashy Technique 3", "en_effect": "Technique ＋10%", "kr_name": "번뜩이는 테크닉 3", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "閃きのテクニック4", "type": "P", "effect": "テクニック＋10%", "cname": "闪耀技巧4", "ceffect": "技巧＋10%", "zhs_name": "灵光一现的技术4", "zhs_effect": "技术＋10%", "zht_name": "靈光一閃的技巧4", "zht_effect": "技巧＋10%", "en_name": "Flashy Technique 4", "en_effect": "Technique ＋10%", "kr_name": "번뜩이는 테크닉 4", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "閃きのテクニック5", "type": "P", "effect": "テクニック＋11%", "cname": "闪耀技巧5", "ceffect": "技巧＋11%", "zhs_name": "灵光一现的技术5", "zhs_effect": "技术＋11%", "zht_name": "靈光一閃的技巧5", "zht_effect": "技巧＋11%", "en_name": "Flashy Technique 5", "en_effect": "Technique ＋11%", "kr_name": "번뜩이는 테크닉 5", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "閃きのテクニック6", "type": "P", "effect": "テクニック＋11%", "cname": "闪耀技巧6", "ceffect": "技巧＋11%", "zhs_name": "灵光一现的技术6", "zhs_effect": "技术＋11%", "zht_name": "靈光一閃的技巧6", "zht_effect": "技巧＋11%", "en_name": "Flashy Technique 6", "en_effect": "Technique ＋11%", "kr_name": "번뜩이는 테크닉 6", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "秘められたパワー3", "type": "P", "effect": "パワー＋10%", "cname": "神秘之力3", "ceffect": "力量＋10%", "zhs_name": "隐藏的力量3", "zhs_effect": "力量＋10%", "zht_name": "隱藏的力量3", "zht_effect": "力量＋10%", "en_name": "Hidden Power 3", "en_effect": "Power ＋10%", "kr_name": "숨겨진 파워 3", "kr_effect": "파워 ＋10%", "pp_type": "7", "property": "pow"
+  },
+  {
+    "name": "秘められたパワー4", "type": "P", "effect": "パワー＋10%", "cname": "神秘之力4", "ceffect": "力量＋10%", "zhs_name": "隐藏的力量4", "zhs_effect": "力量＋10%", "zht_name": "隱藏的力量4", "zht_effect": "力量＋10%", "en_name": "Hidden Power 4", "en_effect": "Power ＋10%", "kr_name": "숨겨진 파워 4", "kr_effect": "파워 ＋10%", "pp_type": "7", "property": "pow"
+  },
+  {
+    "name": "秘められたパワー5", "type": "P", "effect": "パワー＋11%", "cname": "神秘之力5", "ceffect": "力量＋11%", "zhs_name": "隐藏的力量5", "zhs_effect": "力量＋11%", "zht_name": "隱藏的力量5", "zht_effect": "力量＋11%", "en_name": "Hidden Power 5", "en_effect": "Power ＋11%", "kr_name": "숨겨진 파워 5", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "秘められたパワー6", "type": "P", "effect": "パワー＋11%", "cname": "神秘之力6", "ceffect": "力量＋11%", "zhs_name": "隐藏的力量6", "zhs_effect": "力量＋11%", "zht_name": "隱藏的力量6", "zht_effect": "力量＋11%", "en_name": "Hidden Power 6", "en_effect": "Power ＋11%", "kr_name": "숨겨진 파워 6", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "生粋のレシーバー3", "type": "P", "effect": "レシーブ時、テクニック＋10%", "cname": "专业防守3", "ceffect": "防御时 技巧＋10%", "zhs_name": "天生的接球手3", "zhs_effect": "接球时、技术＋10%", "zht_name": "紮實的接球手3", "zht_effect": "接球時、技巧＋10%", "en_name": "Natural Receiver 3", "en_effect": "When Receiving , Technique ＋10%", "kr_name": "타고난 리시버 3", "kr_effect": "리시브 시,테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "生粋のレシーバー4", "type": "P", "effect": "レシーブ時、テクニック＋10%", "cname": "专业防守4", "ceffect": "防御时 技巧＋10%", "zhs_name": "天生的接球手4", "zhs_effect": "接球时、技术＋10%", "zht_name": "紮實的接球手4", "zht_effect": "接球時、技巧＋10%", "en_name": "Natural Receiver 4", "en_effect": "When Receiving , Technique ＋10%", "kr_name": "타고난 리시버 4", "kr_effect": "리시브 시,테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "メイリィのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "メイリィのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "スレーヌのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "スレーヌのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ロマンツァのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ロマンツァのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ソナスのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ソナスのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "メモワールのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "メモワールのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ラポールのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ラポールのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ラスティングのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ラスティングのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "ディザイアのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "シャルールのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "セグレットのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "クオーレのブレイクショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/パワー＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/力量＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Power ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "セグレットのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "カヴァッロのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "クオーレのトリックショット", "type": "P", "effect": "自身がアタッカーの時、作戦指示で指定のターゲットへの攻撃確率＋10%/テクニック＋11%", "cname": "", "ceffect": "此角色进攻时，对操作指令指定的目标攻击的概率＋10%/技巧＋11%", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "When you are attacker, Attack chance ＋10% to the target specified in the operation order/Technique ＋11%", "kr_name": "", "kr_effect": "", "pp_type": "18", "property": "SP"
+  },
+  {
+    "name": "プラチナアタッカー", "type": "P", "effect": "アタッカーになる確率＋15%", "cname": "白金进攻者", "ceffect": "成为攻击者的可能性＋15%", "zhs_name": "白金攻击手", "zhs_effect": "成为攻击手的概率＋15%", "zht_name": "白金攻擊手", "zht_effect": "成為攻擊手的機率為＋15%", "en_name": "Platinum Attacker", "en_effect": "Probability of being the attacker: ＋15%", "kr_name": "플래티넘 어태커", "kr_effect": "어태커가 될 확률 ＋15%", "pp_type": "10", "property": "SP"
+  },
+  {
+    "name": "プラチナレシーバー", "type": "P", "effect": "レシーバーになる確率＋15%", "cname": "白金防守者", "ceffect": "成为防守者的可能性＋15%", "zhs_name": "白金接球手", "zhs_effect": "成为接球手的概率为＋15%", "zht_name": "白金接球手", "zht_effect": "成為接球手的機率為＋15%", "en_name": "Platinum Receiver", "en_effect": "Probability of being the receiver: ＋15%", "kr_name": "플래티넘 리시버", "kr_effect": "리시버가 될 확률 ＋15%", "pp_type": "10", "property": "SP"
+  },
+  {
+    "name": "豪快なスパイク", "type": "F", "effect": "スパイク成功で獲得アピールポイント＋30%", "cname": "潇洒扣杀", "ceffect": "（此技能拥有角色 力量攻击成功）扣球成功时 获得分数＋30%", "zhs_name": "豪爽的杀球", "zhs_effect": "杀球成功后获得的魅力值＋30%", "zht_name": "豪快的殺球", "zht_effect": "殺球成功時獲得的魅力點數為＋30%", "en_name": "Killer Spike", "en_effect": "After a successful spike,Appeal Points gained＋30%", "kr_name": "호쾌한 스파이크", "kr_effect": "스파이크 성공 시 얻는 어필 포인트 ＋30%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "可憐なフェイント", "type": "F", "effect": "フェイント成功で獲得アピールポイント＋30%", "cname": "卖萌佯攻", "ceffect": "（此技能拥有角色 技巧攻击成功）佯攻成功时 获得分数＋30%", "zhs_name": "楚楚可怜的假动作", "zhs_effect": "假动作成功后获得的魅力值＋30%", "zht_name": "甜蜜的佯攻", "zht_effect": "佯攻成功時獲得的魅力點數為＋30%", "en_name": "Sweet Feint", "en_effect": "After a successful feint,Appeal Points gained＋30%", "kr_name": "가련한 페인트", "kr_effect": "페인트 성공 시 얻는 어필 포인트 ＋30%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "熱烈なエール", "type": "F", "effect": "チームメイト得点時、獲得アピールポイント＋30%", "cname": "强力辅助", "ceffect": "（非此技能拥有角色 不限定攻击类型 攻击成功）队友得分时 获得分数＋30%", "zhs_name": "热烈的欢呼", "zhs_effect": "队友得分时获得的魅力值＋30%", "zht_name": "熱烈的聲援", "zht_effect": "隊友得分時獲得的魅力點數為＋30%", "en_name": "Fierce Yell", "en_effect": "When a teammate scores,Appeal Points gained＋30%", "kr_name": "열렬한 성원", "kr_effect": "팀원 득점 시 얻는 어필 포인트 ＋30%", "pp_type": "", "property": "SP"
+  },
+  {
+    "name": "一致団結のスパイク＆エール", "type": "F", "effect": "スパイク成功で獲得アピールポイント＋15%/チームメイト得点時、獲得アピールポイント＋30%", "cname": "团结一心的杀球＆欢呼", "ceffect": "杀球成功后获得的魅力值＋15%/队友得分时获得的魅力值＋30%", "zhs_name": "", "zhs_effect": "杀球成功后获得的魅力值＋15%/队友得分时获得的魅力值＋30%", "zht_name": "", "zht_effect": "殺球成功時獲得的魅力點數為＋15%/隊友得分時獲得的魅力點數為＋30%", "en_name": "", "en_effect": "After a successful spike,Appeal Points gained＋15%/When a teammate scores,Appeal Points gained＋30%", "kr_name": "", "kr_effect": "스파이크 성공 시 얻는 어필 포인트 ＋15%/팀원 득점 시 얻는 어필 포인트 ＋30%", "pp_type": "", "property": "pow"
+  },
+  {
+    "name": "以心伝心のフェイント＆エール", "type": "F", "effect": "フェイント成功で獲得アピールポイント＋15%/チームメイト得点時、獲得アピールポイント＋30%", "cname": "心有灵犀的假动作＆欢呼", "ceffect": "假动作成功后获得的魅力值＋15%/队友得分时获得的魅力值＋30%", "zhs_name": "", "zhs_effect": "假动作成功后获得的魅力值＋15%/队友得分时获得的魅力值＋30%", "zht_name": "", "zht_effect": "佯攻成功時獲得的魅力點數為＋15%/隊友得分時獲得的魅力點數為＋30%", "en_name": "", "en_effect": "After a successful feint,Appeal Points gained＋15%/When a teammate scores,Appeal Points gained＋30%", "kr_name": "", "kr_effect": "페인트 성공 시 얻는 어필 포인트 ＋15%/팀원 득점 시 얻는 어필 포인트 ＋30%", "pp_type": "", "property": "tec"
+  },
+  {
+    "name": "エーテルのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "ラーシャのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "シュヴァリエのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "ホーリーのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "アストラのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "パシオンのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "アルシェのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "セツナのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "シャドウのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "バラッドのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "ウィズダムのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "シェンミーのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "エンジェルスパイク", "type": "P", "effect": "スパイク狙い指示時、スパイク攻撃の確率＋10%", "cname": "Angel Spike 天使一击", "ceffect": "下达扣杀指令时 扣杀（力量）攻击概率＋10%", "zhs_name": "天使杀球", "zhs_effect": "作出杀球指示时，杀球攻击的概率为＋10%", "zht_name": "天使殺球", "zht_effect": "指示專門殺球時，殺球攻擊的機率＋10%", "en_name": "Angel Spike", "en_effect": "Spike ATK probability ＋10% when ordered to spike", "kr_name": "엔젤 스파이크", "kr_effect": "스파이크 중시 지시 시 스파이크 공격 확률 ＋10%", "pp_type": "12", "property": "SP"
+  },
+  {
+    "name": "フェアリーフェイント", "type": "P", "effect": "フェイント狙い指示時、スパイク攻撃の確率－10%", "cname": "Fairy Feint 精灵假象", "ceffect": "下达佯攻指令时 扣杀（力量）攻击概率－10%", "zhs_name": "妖精佯攻", "zhs_effect": "作出佯攻指示时，杀球攻击的概率为－10%", "zht_name": "妖精佯攻", "zht_effect": "指示專門佯攻時，殺球攻擊的機率－10%", "en_name": "Fairy Feint", "en_effect": "Spike ATK probability －10% when ordered to feint", "kr_name": "페어리 페인트", "kr_effect": "페인트 중시 지시 시 스파이크 공격 확률 －10%", "pp_type": "12", "property": "SP"
+  },
+  {
+    "name": "団長のパワー", "type": "P", "effect": "パワー＋11%", "cname": "团长的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "スコルピオン・パワー", "type": "P", "effect": "パワー＋11%", "cname": "天蝎座・力量", "ceffect": "力量＋11%", "zhs_name": "天蝎之力", "zhs_effect": "力量＋11%", "zht_name": "天蠍之力", "zht_effect": "力量＋11%", "en_name": "Scorpion Power", "en_effect": "Power ＋11%", "kr_name": "스콜피온 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "サジタリウス・パワー", "type": "P", "effect": "パワー＋11%", "cname": "射手座・力量", "ceffect": "力量＋11%", "zhs_name": "射手之力", "zhs_effect": "力量＋11%", "zht_name": "射手之力", "zht_effect": "力量＋11%", "en_name": "Sagittarius Power", "en_effect": "Power ＋11%", "kr_name": "사지타리우스의 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "サジタリウス・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "射手座・技巧", "ceffect": "技巧＋11%", "zhs_name": "射手技术", "zhs_effect": "技术＋11%", "zht_name": "射手技巧", "zht_effect": "技巧＋11%", "en_name": "Sagittarius Technique", "en_effect": "Technique ＋11%", "kr_name": "사지타리우스의 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "アクアリウス・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "水瓶座・技巧", "ceffect": "技巧＋11%", "zhs_name": "水瓶技巧", "zhs_effect": "技术＋11%", "zht_name": "水瓶技巧", "zht_effect": "技巧＋11%", "en_name": "Aquarius Technique", "en_effect": "Technique ＋11%", "kr_name": "아쿠아리우스 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "とろけるほどのパワー", "type": "P", "effect": "パワー＋11%", "cname": "融化的力量", "ceffect": "力量＋11%", "zhs_name": "融情蜜意般的力量", "zhs_effect": "力量＋11%", "zht_name": "融情蜜意般的力量", "zht_effect": "力量＋11%", "en_name": "Power to Melt Hearts", "en_effect": "Power ＋11%", "kr_name": "황홀할 만큼의 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "ピスケス・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "双鱼座・技巧", "ceffect": "技巧＋11%", "zhs_name": "双鱼技术", "zhs_effect": "技术＋11%", "zht_name": "雙魚技巧", "zht_effect": "技巧＋11%", "en_name": "Pisces Technique", "en_effect": "Technique ＋11%", "kr_name": "피스케스 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "禁断の水着のパワー", "type": "P", "effect": "パワー＋11%", "cname": "禁忌泳装的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "アリエス・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "水瓶座・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "白羊体力", "zhs_effect": "体力消耗量－11%", "zht_name": "白羊體力", "zht_effect": "體力消耗量－11%", "en_name": "Aries Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "아리에스 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "タウルス・パワー", "type": "P", "effect": "パワー＋11%", "cname": "金牛座・力量", "ceffect": "力量＋11%", "zhs_name": "金牛力量", "zhs_effect": "力量＋11%", "zht_name": "金牛力量", "zht_effect": "力量＋11%", "en_name": "Taurus Power", "en_effect": "Power ＋11%", "kr_name": "타우루스 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "ジェミニ・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "双子座・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "双子体力", "zhs_effect": "体力消耗量－11%", "zht_name": "雙子體力", "zht_effect": "體力消耗量－11%", "en_name": "Gemini Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "제미니 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "ふわもこのパワー", "type": "P", "effect": "パワー＋11%", "cname": "轻飘飘的力量", "ceffect": "力量＋11%", "zhs_name": "蓬松的力量", "zhs_effect": "力量＋11%", "zht_name": "蓬鬆的力量", "zht_effect": "力量＋11%", "en_name": "Bubbly Power", "en_effect": "Power ＋11%", "kr_name": "부드러운 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "カンケル・パワー", "type": "P", "effect": "パワー＋11%", "cname": "巨蟹座・力量", "ceffect": "力量＋11%", "zhs_name": "巨蟹力量", "zhs_effect": "力量＋11%", "zht_name": "巨蟹力量", "zht_effect": "力量＋11%", "en_name": "Cancer Power", "en_effect": "Power ＋11%", "kr_name": "캔서 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "半蔵のパワー", "type": "P", "effect": "パワー＋11%", "cname": "半藏的力量", "ceffect": "力量＋11%", "zhs_name": "半藏的力量", "zhs_effect": "力量＋11%", "zht_name": "半藏的力量", "zht_effect": "力量＋11%", "en_name": "Hanzō's Power", "en_effect": "Power ＋11%", "kr_name": "한조 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "月閃のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "月闪的技巧", "ceffect": "技巧＋11%", "zhs_name": "月闪技术", "zhs_effect": "技术＋11%", "zht_name": "月閃技巧", "zht_effect": "技巧＋11%", "en_name": "Gessen's Technique", "en_effect": "Technique ＋11%", "kr_name": "월섬 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "紅蓮隊のパワー", "type": "P", "effect": "パワー＋11%", "cname": "红莲队的力量", "ceffect": "力量＋11%", "zhs_name": "焰红的力量", "zhs_effect": "力量＋11%", "zht_name": "焰紅的力量", "zht_effect": "力量＋11%", "en_name": "Homura's Power", "en_effect": "Power ＋11%", "kr_name": "홍련대 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "蛇女忍のパワー", "type": "P", "effect": "パワー＋11%", "cname": "蛇女忍的力量", "ceffect": "力量＋11%", "zhs_name": "蛇女的力量", "zhs_effect": "力量＋11%", "zht_name": "蛇女的力量", "zht_effect": "力量＋11%", "en_name": "Hebijo's Power", "en_effect": "Power ＋11%", "kr_name": "헤비죠 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "巫神楽のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "巫神乐的技巧", "ceffect": "技巧＋11%", "zhs_name": "巫神乐技术", "zhs_effect": "技术＋11%", "zht_name": "巫神樂技巧", "zht_effect": "技巧＋11%", "en_name": "Mikagura's Technique", "en_effect": "Technique ＋11%", "kr_name": "미카구라 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "しゅわしゅわのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "レオ・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "狮子座・技巧", "ceffect": "技巧＋11%", "zhs_name": "狮子技术", "zhs_effect": "技术＋11%", "zht_name": "獅子技巧", "zht_effect": "技巧＋11%", "en_name": "Leo Technique", "en_effect": "Technique ＋11%", "kr_name": "레오 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "レオ・パワー", "type": "P", "effect": "パワー＋11%", "cname": "狮子座・力量", "ceffect": "力量＋11%", "zhs_name": "狮子力量", "zhs_effect": "力量＋11%", "zht_name": "獅子力量", "zht_effect": "力量＋11%", "en_name": "Leo Power", "en_effect": "Power ＋11%", "kr_name": "레오 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "ウィルゴ・パワー", "type": "P", "effect": "パワー＋11%", "cname": "处女座・力量", "ceffect": "力量＋11%", "zhs_name": "处女力量", "zhs_effect": "力量＋11%", "zht_name": "處女力量", "zht_effect": "力量＋11%", "en_name": "Virgo Power", "en_effect": "Power ＋11%", "kr_name": "비르고 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "ヴァルキリーのパワー", "type": "P", "effect": "パワー＋11%", "cname": "女武神的力量", "ceffect": "力量＋11%", "zhs_name": "女武神的力量", "zhs_effect": "力量＋11%", "zht_name": "女武神的力量", "zht_effect": "力量＋11%", "en_name": "Valkyrie Power", "en_effect": "Power ＋11%", "kr_name": "발키리 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "ウィルゴ・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "处女座・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "处女体力", "zhs_effect": "体力消耗量－11%", "zht_name": "處女體力", "zht_effect": "體力－11%", "en_name": "Virgo Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "비르고 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "リブラ・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "天秤座・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "天秤体力", "zhs_effect": "体力消耗量－11%", "zht_name": "天秤體力", "zht_effect": "體力消耗量－11%", "en_name": "Libra Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "리브라 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "乙姫のテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "乙姫的技巧", "ceffect": "技巧＋10%", "zhs_name": "乙姬的技术", "zhs_effect": "技术＋10%", "zht_name": "乙姬的技巧", "zht_effect": "技巧＋10%", "en_name": "Oto－hime's Technique", "en_effect": "Technique ＋10%", "kr_name": "선녀의 테크닉", "kr_effect": "테크닉 ＋10%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "トパーズ・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "黄玉・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "黄玉体力", "zhs_effect": "体力消耗量－11%", "zht_name": "黃玉體力", "zht_effect": "體力消耗量－11%", "en_name": "Topaz Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "토파즈 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "ラピスラズリ・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "蓝玉・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "青金石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "青金石體力", "zht_effect": "體力消耗量－11%", "en_name": "Lapiz Lazuli Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "라피스 라즐리 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "雪華のパワー", "type": "P", "effect": "パワー＋11%", "cname": "雪花的力量", "ceffect": "力量＋11%", "zhs_name": "雪华的力量", "zhs_effect": "力量＋11%", "zht_name": "雪華的力量", "zht_effect": "力量＋11%", "en_name": "Snowflake Power", "en_effect": "Power ＋11%", "kr_name": "눈꽃 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "ガーネット・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "红玉・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "石榴石‧体力", "zhs_effect": "体力消耗量－11%", "zht_name": "石榴石・體力", "zht_effect": "體力消耗量－11%", "en_name": "Garnet Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "가넷 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "カプリコーン・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "摩羯座・技巧", "ceffect": "技巧＋11%", "zhs_name": "魔羯技术", "zhs_effect": "技术＋11%", "zht_name": "摩羯技巧", "zht_effect": "技巧＋11%", "en_name": "Capricorn Technique", "en_effect": "Technique ＋11%", "kr_name": "캐프리콘 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "ライザのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "莱莎的技巧", "ceffect": "技巧＋11%", "zhs_name": "莱莎的技术", "zhs_effect": "技术＋11%", "zht_name": "萊莎的技巧", "zht_effect": "技巧＋11%", "en_name": "Ryza's Technique", "en_effect": "Technique ＋11%", "kr_name": "라이자 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "アメジスト・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "紫玉・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "紫水晶体力", "zhs_effect": "体力消耗量－11%", "zht_name": "紫水晶體力", "zht_effect": "體力消耗量－11%", "en_name": "Amethyst Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "자수정 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "ショコラティエのパワー", "type": "P", "effect": "パワー＋11%", "cname": "巧克力的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "アクアマリン・パワー", "type": "P", "effect": "パワー＋11%", "cname": "蓝晶・力量", "ceffect": "力量＋11%", "zhs_name": "海蓝宝石力量", "zhs_effect": "力量＋11%", "zht_name": "海藍寶石力量", "zht_effect": "力量＋11%", "en_name": "Aquamarine Power", "en_effect": "Power ＋11%", "kr_name": "아쿠아마린 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "バーラタのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "巴拉塔的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "アクアマリン・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "蓝晶・技巧", "ceffect": "技巧＋11%", "zhs_name": "海蓝宝石技术", "zhs_effect": "技术＋11%", "zht_name": "海藍寶石技巧", "zht_effect": "技巧＋11%", "en_name": "Aquamarine Technique", "en_effect": "Technique ＋11%", "kr_name": "아쿠아마린 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "アクアマリン・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "蓝晶・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "海蓝宝石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "海藍寶石體力", "zht_effect": "體力消耗量－11%", "en_name": "Aquamarine Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "아쿠아마린 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "明鏡止水のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "明镜止水的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "恋のテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "恋之技巧", "ceffect": "技巧＋10%", "zhs_name": "恋爱的技术", "zhs_effect": "技术＋10%", "zht_name": "戀愛的技巧", "zht_effect": "技巧＋10%", "en_name": "Love Technique", "en_effect": "Technique ＋10%", "kr_name": "사랑의 테크닉", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "ダイヤモンド・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "金刚石・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "钻石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "鑽石體力", "zht_effect": "體力消耗量－11%", "en_name": "Diamond Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "다이아몬드 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "エメラルド・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "祖母绿・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "翡翠体力", "zhs_effect": "体力消耗量－11%", "zht_name": "翡翠體力", "zht_effect": "體力消耗量－11%", "en_name": "Emerald Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "에메랄드 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "咲き誇るパワー", "type": "P", "effect": "パワー＋10%", "cname": "盛开的力量", "ceffect": "力量＋10%", "zhs_name": "盛开的力量", "zhs_effect": "力量＋10%", "zht_name": "盛開的力量", "zht_effect": "力量＋10%", "en_name": "Full Bloom Power", "en_effect": "Power ＋10%", "kr_name": "흐드러지는 파워", "kr_effect": "파워 ＋10%", "pp_type": "7", "property": "pow"
+  },
+  {
+    "name": "エメラルド・パワー", "type": "P", "effect": "パワー＋11%", "cname": "祖母绿・力量", "ceffect": "力量＋11%", "zhs_name": "翡翠力量", "zhs_effect": "力量＋11%", "zht_name": "翡翠力量", "zht_effect": "力量＋11%", "en_name": "Emerald Power", "en_effect": "Power ＋11%", "kr_name": "에메랄드 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "パール・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "珍珠・技巧", "ceffect": "技巧＋11%", "zhs_name": "珍珠技术", "zhs_effect": "技术＋11%", "zht_name": "珍珠技巧", "zht_effect": "技巧＋11%", "en_name": "Pearl Technique", "en_effect": "Technique ＋11%", "kr_name": "진주 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "パール・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "珍珠・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "珍珠体力", "zhs_effect": "体力消耗量－11%", "zht_name": "珍珠體力", "zht_effect": "體力消耗量－11%", "en_name": "Pearl Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "진주 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "ルビー・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "红宝石・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "红宝石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "紅寶石體力", "zht_effect": "體力消耗量－11%", "en_name": "Ruby Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "루비 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "SUGOIスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "SUGOI体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ペリドット・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "橄榄石・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "橄榄石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "橄欖石體力", "zht_effect": "體力消耗量－11%", "en_name": "Peridot Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "페리도트 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "順風満帆のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "顺风满帆的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "一帆风顺的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "一帆風順的體力", "zht_effect": "體力消耗量－11%", "en_name": "Smooth Sailing Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "순풍만범의 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "順風満帆のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "顺风满帆的技巧", "ceffect": "技巧＋11%", "zhs_name": "一帆风顺的技术", "zhs_effect": "技术＋11%", "zht_name": "一帆風順的技巧", "zht_effect": "技巧＋11%", "en_name": "Smooth Sailing Technique", "en_effect": "Technique ＋11%", "kr_name": "순풍만범의 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "順風満帆のパワー", "type": "P", "effect": "パワー＋11%", "cname": "顺风满帆的力量", "ceffect": "力量＋11%", "zhs_name": "一帆风顺的力量", "zhs_effect": "力量＋11%", "zht_name": "一帆風順的力量", "zht_effect": "力量＋11%", "en_name": "Smooth Sailing Power", "en_effect": "Power ＋11%", "kr_name": "순풍만범의 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "サファイア・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "蓝宝石・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "蓝宝石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "藍寶石體力", "zht_effect": "体力消耗量－11%", "en_name": "Sapphire Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "사파이어 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "サファイア・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "蓝宝石・技巧", "ceffect": "技巧＋11%", "zhs_name": "蓝宝石技术", "zhs_effect": "技术＋11%", "zht_name": "藍寶石技巧", "zht_effect": "技巧＋11%", "en_name": "Sapphire Technique", "en_effect": "Technique ＋11%", "kr_name": "사파이어 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "シトリーのパワー", "type": "P", "effect": "パワー＋11%", "cname": "希特莉的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "リザのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "丽莎的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "丽莎的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "麗莎的體力", "zht_effect": "體力消耗量－11%", "en_name": "Lisa's Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "리자 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ダビのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "塔比的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "妲比的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "妲比的體力", "zht_effect": "體力消耗量－11%", "en_name": "Davi's Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "다비 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "モナのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "莫娜的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "莫娜的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "莫娜的體力", "zht_effect": "體力消耗量－11%", "en_name": "Mona's Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "모나 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "イブのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "伊芙的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "夏娃的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "夏娃的體力", "zht_effect": "體力消耗量－11%", "en_name": "Eve's Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "이브 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "オパール・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "蛋白石・技巧", "ceffect": "技巧＋11%", "zhs_name": "蛋白石技术", "zhs_effect": "技术＋11%", "zht_name": "蛋白石技巧", "zht_effect": "技巧＋11%", "en_name": "Opal Technique", "en_effect": "Technique ＋11%", "kr_name": "오팔 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "月影のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "月影的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "月下魅影的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "月下魅影的體力", "zht_effect": "體力消耗量－11%", "en_name": "Moonlight Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "월영의 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "吸血鬼のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "吸血鬼的技巧", "ceffect": "技巧＋11%", "zhs_name": "吸血鬼的技术", "zhs_effect": "技术＋11%", "zht_name": "吸血鬼的技巧", "zht_effect": "技巧＋11%", "en_name": "Vampire Technique", "en_effect": "Technique ＋11%", "kr_name": "뱀파이어 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "スコルピオン・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "天蝎座・技巧", "ceffect": "技巧＋11%", "zhs_name": "天蝎技术", "zhs_effect": "技术＋11%", "zht_name": "天蠍技巧", "zht_effect": "技巧＋11%", "en_name": "Scorpion Technique", "en_effect": "Technique ＋11%", "kr_name": "스콜피온 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "オパール・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "蛋白石・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "蛋白石体力", "zhs_effect": "体力消耗量－11%", "zht_name": "蛋白石體力", "zht_effect": "體力消耗量－11%", "en_name": "Opal Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "오팔 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "エトワールのテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "星星的技巧", "ceffect": "技巧＋10%", "zhs_name": "星光的技术", "zhs_effect": "技术＋10%", "zht_name": "群星的技巧", "zht_effect": "技巧＋10%", "en_name": "Étoile Technique", "en_effect": "Technique ＋10%", "kr_name": "에투알 테크닉", "kr_effect": "테크닉 ＋10%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "白椿のパワー", "type": "P", "effect": "パワー＋12%", "cname": "白椿的力量", "ceffect": "力量＋12%", "zhs_name": "白山茶力量", "zhs_effect": "力量＋12%", "zht_name": "白山茶力量", "zht_effect": "力量＋12%", "en_name": "White Camellia Power", "en_effect": "Power ＋12%", "kr_name": "흰 동백 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "カトレアのパワー", "type": "P", "effect": "パワー＋12%", "cname": "卡特兰的力量", "ceffect": "力量＋12%", "zhs_name": "卡特兰力量", "zhs_effect": "力量＋12%", "zht_name": "卡特蘭力量", "zht_effect": "力量＋12%", "en_name": "Cattleya Power", "en_effect": "Power ＋12%", "kr_name": "카틀레야 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "カトレアのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "卡特兰的体力", "ceffect": "自身体力消耗－12%", "zhs_name": "", "zhs_effect": "体力消耗量－12%", "zht_name": "", "zht_effect": "體力消耗量－12%", "en_name": "", "en_effect": "Stamina Consumption －12%", "kr_name": "", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "貂蝉(三國志14)のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "貂蝉(三国志14)的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "貂蝉(三国志14)体力", "zhs_effect": "体力消耗量－11%", "zht_name": "貂蟬(三國志14)體力", "zht_effect": "體力消耗量－11%", "en_name": "Diao Chan's (RTK 14) Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "초선(삼국지 14) 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "シャルマンパワー", "type": "P", "effect": "パワー＋10%", "cname": "迷人的力量", "ceffect": "力量＋10%", "zhs_name": "魅惑的力量", "zhs_effect": "力量＋10%", "zht_name": "魅惑的力量", "zht_effect": "力量＋10%", "en_name": "Charmant Power", "en_effect": "Power ＋10%", "kr_name": "샤르망 파워", "kr_effect": "파워 ＋10%", "pp_type": "7", "property": "pow"
+  },
+  {
+    "name": "シンビジウムのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "大花蕙兰的技巧", "ceffect": "技巧＋12%", "zhs_name": "大花蕙兰技术", "zhs_effect": "技术＋12%", "zht_name": "大花蕙蘭技巧", "zht_effect": "技巧＋12%", "en_name": "Cymbidium Technique", "en_effect": "Technique ＋12%", "kr_name": "심비디엄 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "シンビジウムのパワー", "type": "P", "effect": "パワー＋12%", "cname": "大花蕙兰的力量", "ceffect": "力量＋12%", "zhs_name": "大花蕙兰力量", "zhs_effect": "力量＋12%", "zht_name": "大花蕙蘭力量", "zht_effect": "力量＋12%", "en_name": "Cymbidium Power", "en_effect": "Power ＋12%", "kr_name": "심비디엄 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "百花献瑞のパワー", "type": "P", "effect": "パワー＋11%", "cname": "百花献瑞力量", "ceffect": "力量＋11%", "zhs_name": "百花献瑞力量", "zhs_effect": "力量＋11%", "zht_name": "百花獻瑞力量", "zht_effect": "力量＋11%", "en_name": "Auspicious Blossom Power", "en_effect": "Power ＋11%", "kr_name": "백화헌서 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "ランデブーのパワー", "type": "P", "effect": "パワー＋10%", "cname": "约会的力量", "ceffect": "力量＋10%", "zhs_name": "约会的力量", "zhs_effect": "力量＋10%", "zht_name": "相約的力量", "zht_effect": "力量＋10%", "en_name": "Rendezvous Power", "en_effect": "Power ＋10%", "kr_name": "랑데부 파워", "kr_effect": "파워 ＋10%", "pp_type": "7", "property": "pow"
+  },
+  {
+    "name": "フリージアのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "小苍兰的技巧", "ceffect": "技巧＋12%", "zhs_name": "小苍兰技术", "zhs_effect": "技术＋12%", "zht_name": "小蒼蘭技巧", "zht_effect": "技巧＋12%", "en_name": " Freesia Technique", "en_effect": "Technique ＋12%", "kr_name": "프리지어 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ショコラティエのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "巧克力的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "お姉さんのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "姐姐的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "姐姐体力", "zhs_effect": "体力消耗量－11%", "zht_name": "姊姊體力", "zht_effect": "體力消耗量－11%", "en_name": "Big Sis' Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "누나 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ラーレのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "郁金香的体力", "ceffect": "自身体力消耗－12%", "zhs_name": "郁金香体力", "zhs_effect": "体力消耗量－12%", "zht_name": "鬱金香體力", "zht_effect": "體力消耗量－12%", "en_name": "Lale Stamina", "en_effect": "Stamina Consumption －12%", "kr_name": "라레 스태미너", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "アルストロメリアのパワー", "type": "P", "effect": "パワー＋12%", "cname": "六出花的力量", "ceffect": "力量＋12%", "zhs_name": "水仙百合力量", "zhs_effect": "力量＋12%", "zht_name": "水仙百合力量", "zht_effect": "力量＋12%", "en_name": "Alstroemeria Power", "en_effect": "Power ＋12%", "kr_name": "알스트로메리아 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "アルストロメリアのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "六出花的技巧", "ceffect": "技巧＋12%", "zhs_name": "水仙百合技术", "zhs_effect": "技术＋12%", "zht_name": "水仙百合技巧", "zht_effect": "技巧＋12%", "en_name": "Alstroemeria Technique", "en_effect": "Technique ＋12%", "kr_name": "알스트로메리아 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "カーネーションのパワー", "type": "P", "effect": "パワー＋12%", "cname": "康乃馨的力量", "ceffect": "力量＋12%", "zhs_name": "康乃馨的力量", "zhs_effect": "力量＋12%", "zht_name": "康乃馨的力量", "zht_effect": "力量＋12%", "en_name": "Carnation Power", "en_effect": "Power ＋12%", "kr_name": "카네이션 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ミッドナイトのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "午夜的体力", "ceffect": "自身体力消耗－10%", "zhs_name": "午夜的体力", "zhs_effect": "体力消耗量－10%", "zht_name": "午夜的體力", "zht_effect": "體力消耗量－10%", "en_name": "Midnight Stamina", "en_effect": "Stamina Consumption －10%", "kr_name": "미드나이트의 스태미너", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "カーネーションのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "康乃馨的体力", "ceffect": "自身体力消耗－12%", "zhs_name": "康乃馨的体力", "zhs_effect": "体力消耗量－12%", "zht_name": "康乃馨的體力", "zht_effect": "體力消耗量－12%", "en_name": "Carnation Stamina", "en_effect": "Stamina Consumption －12%", "kr_name": "카네이션의 스태미너", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "ローゼンのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "蔷薇的体力", "ceffect": "自身体力消耗－12%", "zhs_name": "玫瑰的体力", "zhs_effect": "体力消耗量－12%", "zht_name": "玫瑰的體力", "zht_effect": "體力消耗量－12%", "en_name": "Rose Stamina", "en_effect": "Stamina Consumption －12%", "kr_name": "로즈 스태미너", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "ローゼンのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "蔷薇的技巧", "ceffect": "技巧＋12%", "zhs_name": "玫瑰技术", "zhs_effect": "技术＋12%", "zht_name": "玫瑰的技巧", "zht_effect": "技巧＋12%", "en_name": "Rose Technique", "en_effect": "Technique ＋12%", "kr_name": "로즈 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ソレイユのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "太阳的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "太阳的体力", "zhs_effect": "体力消耗量－10%", "zht_name": "太陽的體力", "zht_effect": "體力消耗量－10%", "en_name": "Soleil Stamina", "en_effect": "Stamina Consumption －10%", "kr_name": "솔레이 스태미너", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "スイートなスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "甜蜜的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "甜蜜的体力", "zhs_effect": "体力消耗量－10%", "zht_name": "甜蜜的體力", "zht_effect": "體力消耗量－10%", "en_name": "Sweet Stamina", "en_effect": "Stamina Consumption －10%", "kr_name": "스위트 스태미너", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "ハイビスカスのパワー", "type": "P", "effect": "パワー＋12%", "cname": "扶桑花的力量", "ceffect": "力量＋12%", "zhs_name": "扶桑的力量", "zhs_effect": "力量＋12%", "zht_name": "扶桑的力量", "zht_effect": "力量＋12%", "en_name": "Hibiscus Power", "en_effect": "Power ＋12%", "kr_name": "히비스커스의 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ロートヴァインのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "红葡萄酒的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "红葡萄酒的体力", "zhs_effect": "体力消耗量－10%", "zht_name": "德國紅酒的體力", "zht_effect": "體力消耗量－10%", "en_name": "Rotwein's Stamina", "en_effect": "Stamina Consumption －10%", "kr_name": "로트바인의 스태미너", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "リシアンサスのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "石竹的技巧", "ceffect": "技巧＋12%", "zhs_name": "洋桔梗技术", "zhs_effect": "技术＋12%", "zht_name": "洋桔梗技巧", "zht_effect": "技巧＋12%", "en_name": "Lisianthus Technique", "en_effect": "Technique ＋12%", "kr_name": "리시안셔스 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "リシアンサスのパワー", "type": "P", "effect": "パワー＋12%", "cname": "石竹的力量", "ceffect": "力量＋12%", "zhs_name": "洋桔梗力量", "zhs_effect": "力量＋12%", "zht_name": "洋桔梗力量", "zht_effect": "力量＋12%", "en_name": "Lisianthus Power", "en_effect": "Power ＋12%", "kr_name": "리시안셔스 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ピサラのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "毘萨菈的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "ギルのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "吉尔的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "ダリアのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "大丽花的技巧", "ceffect": "技巧＋12%", "zhs_name": "大丽花技术", "zhs_effect": "技术＋12%", "zht_name": "大麗花技巧", "zht_effect": "技巧＋12%", "en_name": "Dahlia Technique", "en_effect": "Technique ＋12%", "kr_name": "달리아 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ダリアのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "大丽花的耐力", "ceffect": "自身体力消耗－12%", "zhs_name": "大丽花体力", "zhs_effect": "体力消耗量－12%", "zht_name": "大麗花體力", "zht_effect": "體力消耗量－12%", "en_name": "Dahlia Stamina", "en_effect": "Stamina Consumption －12%", "kr_name": "달리아 스태미너", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "ダリアのパワー", "type": "P", "effect": "パワー＋12%", "cname": "大丽花的力量", "ceffect": "力量＋12%", "zhs_name": "大丽花力量", "zhs_effect": "力量＋12%", "zht_name": "大麗花力量", "zht_effect": "力量＋12%", "en_name": "Dahlia Power", "en_effect": "Power ＋12%", "kr_name": "달리아 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "アリエス・パワー", "type": "P", "effect": "パワー＋11%", "cname": "水瓶座・力量", "ceffect": "力量＋11%", "zhs_name": "白羊力量", "zhs_effect": "力量＋11%", "zht_name": "白羊力量", "zht_effect": "力量＋11%", "en_name": "Aries Power", "en_effect": "Power ＋11%", "kr_name": "아리에스 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "カンケル・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "巨蟹座・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "巨蟹体力", "zhs_effect": "体力消耗量－11%", "zht_name": "巨蟹體力", "zht_effect": "體力消耗量－11%", "en_name": "Cancer Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "캔서 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "月影のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "月影的技巧", "ceffect": "技巧＋11%", "zhs_name": "月影的技术", "zhs_effect": "技术＋11%", "zht_name": "月影的技巧", "zht_effect": "技巧＋11%", "en_name": "Moonlight Technique", "en_effect": "Technique ＋11%", "kr_name": "월영의 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "コスモスのスタミナ", "type": "P", "effect": "スタミナ消費量－12%", "cname": "秋樱的体力", "ceffect": "自身体力消耗－12%", "zhs_name": "秋英属体力", "zhs_effect": "体力消耗量－12%", "zht_name": "秋英屬體力", "zht_effect": "體力消耗量－12%", "en_name": "Cosmos Stamina", "en_effect": "Stamina Consumption －12%", "kr_name": "코스모스 스태미너", "kr_effect": "스태미너 소비량 －12%", "pp_type": "13", "property": "stm"
+  },
+  {
+    "name": "コスモスのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "秋樱的技巧", "ceffect": "技巧＋12%", "zhs_name": "秋英属技术", "zhs_effect": "技术＋12%", "zht_name": "秋英屬技巧", "zht_effect": "技巧＋12%", "en_name": "Cosmos Technique", "en_effect": "Technique ＋12%", "kr_name": "코스모스 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "花鳥風月のパワー", "type": "P", "effect": "パワー＋11%", "cname": "花鸟风月的力量", "ceffect": "力量＋11%", "zhs_name": "花鸟风月的力量", "zhs_effect": "力量＋11%", "zht_name": "花鳥風月的力量", "zht_effect": "力量＋11%", "en_name": "Beauty of Nature's Power", "en_effect": "Power ＋11%", "kr_name": "화조풍월의 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "リンゴのパワー", "type": "P", "effect": "パワー＋12%", "cname": "苹果的力量", "ceffect": "力量＋12%", "zhs_name": "苹果的力量", "zhs_effect": "力量＋12%", "zht_name": "蘋果的力量", "zht_effect": "力量＋12%", "en_name": "Apple Power", "en_effect": "Power ＋12%", "kr_name": "사과 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ミカンのパワー", "type": "P", "effect": "パワー＋12%", "cname": "蜜柑的力量", "ceffect": "力量＋12%", "zhs_name": "桔子的力量", "zhs_effect": "力量＋12%", "zht_name": "柑橘的力量", "zht_effect": "力量＋12%", "en_name": "Orange Power", "en_effect": "Power ＋12%", "kr_name": "오렌지 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ルミナスのテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "发光的技巧", "ceffect": "技巧＋10%", "zhs_name": "发光的技术", "zhs_effect": "技术＋10%", "zht_name": "光輝的技巧", "zht_effect": "技巧＋10%", "en_name": "Luminous Technique", "en_effect": "Technique ＋10%", "kr_name": "루미너스 테크닉", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "ラズベリーのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "蓝莓的技巧", "ceffect": "技巧＋12%", "zhs_name": "覆盆子的技术", "zhs_effect": "技术＋12%", "zht_name": "覆盆子的技巧", "zht_effect": "技巧＋12%", "en_name": "Raspberry Technique", "en_effect": "Technique ＋12%", "kr_name": "라즈베리 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ラズベリーのパワー", "type": "P", "effect": "パワー＋12%", "cname": "蓝莓的力量", "ceffect": "力量＋12%", "zhs_name": "覆盆子的力量", "zhs_effect": "力量＋12%", "zht_name": "覆盆子的力量", "zht_effect": "力量＋12%", "en_name": "Raspberry Power", "en_effect": "Power ＋12%", "kr_name": "라즈베리 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "オフィスウェアのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "办公装的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "办公室服装体力", "zhs_effect": "体力消耗量－11%", "zht_name": "OL裝體力", "zht_effect": "體力消耗量－11%", "en_name": "Office Wear Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "사무복 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "パフュームのパワー", "type": "P", "effect": "パワー＋11%", "cname": "香水的力量", "ceffect": "力量＋11%", "zhs_name": "芳香的力量", "zhs_effect": "力量＋11%", "zht_name": "香氛的力量", "zht_effect": "力量＋11%", "en_name": "Perfume Power", "en_effect": "Power ＋11%", "kr_name": "퍼퓸 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "イチゴのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "草莓的技巧", "ceffect": "技巧＋12%", "zhs_name": "草莓技术", "zhs_effect": "技术＋12%", "zht_name": "草莓技巧", "zht_effect": "技巧＋12%", "en_name": "Strawberry Technique", "en_effect": "Technique ＋12%", "kr_name": "스트로베리 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ソフィーのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "苏菲的技巧", "ceffect": "技巧＋11%", "zhs_name": "苏菲的技术", "zhs_effect": "技术＋11%", "zht_name": "蘇菲的技巧", "zht_effect": "技巧＋11%", "en_name": "Sophie's Technique", "en_effect": "Technique ＋11%", "kr_name": "소피 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "プラフタのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "普拉芙妲的技巧", "ceffect": "技巧＋11%", "zhs_name": "普拉芙妲的技术", "zhs_effect": "技术＋11%", "zht_name": "普拉芙妲的技巧", "zht_effect": "技巧＋11%", "en_name": "Plachta's Technique", "en_effect": "Technique ＋11%", "kr_name": "플라흐타 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "葛城のパワー", "type": "P", "effect": "パワー＋11%", "cname": "葛城的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "マンゴーのパワー", "type": "P", "effect": "パワー＋12%", "cname": "芒果的力量", "ceffect": "力量＋12%", "zhs_name": "芒果力量", "zhs_effect": "力量＋12%", "zht_name": "芒果力量", "zht_effect": "力量＋12%", "en_name": "Mango Power", "en_effect": "Power ＋12%", "kr_name": "망고 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "マンゴーのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "芒果的技巧", "ceffect": "技巧＋12%", "zhs_name": "芒果技术", "zhs_effect": "技术＋12%", "zht_name": "芒果技巧", "zht_effect": "技巧＋12%", "en_name": "Mango Technique", "en_effect": "Technique ＋12%", "kr_name": "망고 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "メロンのパワー", "type": "P", "effect": "パワー＋12%", "cname": "哈密瓜的力量", "ceffect": "力量＋12%", "zhs_name": "蜜瓜力量", "zhs_effect": "力量＋12%", "zht_name": "甜瓜力量", "zht_effect": "力量＋12%", "en_name": "Melon Power", "en_effect": "Power ＋12%", "kr_name": "멜론 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "メロンのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "哈密瓜的技巧", "ceffect": "技巧＋12%", "zhs_name": "蜜瓜技术", "zhs_effect": "技术＋12%", "zht_name": "甜瓜技巧", "zht_effect": "技巧＋12%", "en_name": "Melon Technique", "en_effect": "Technique ＋12%", "kr_name": "멜론 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "バーレスクのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "谐星的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "诙谐体力", "zhs_effect": "体力消耗量－11%", "zht_name": "詼諧體力", "zht_effect": "體力消耗量－11%", "en_name": "Burlesque Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "벌레스크 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "バーレスク・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "谐星的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "诙谐体力", "zhs_effect": "体力消耗量－11%", "zht_name": "詼諧體力", "zht_effect": "體力消耗量－11%", "en_name": "Burlesque Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "벌레스크 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "バナナのパワー", "type": "P", "effect": "パワー＋12%", "cname": "香蕉的力量", "ceffect": "力量＋12%", "zhs_name": "香蕉力量", "zhs_effect": "力量＋12%", "zht_name": "香蕉力量", "zht_effect": "力量＋12%", "en_name": "Banana Power", "en_effect": "Power ＋12%", "kr_name": "바나누 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "バナナのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "香蕉的技巧", "ceffect": "技巧＋12%", "zhs_name": "香蕉技术", "zhs_effect": "技术＋12%", "zht_name": "香蕉技巧", "zht_effect": "技巧＋12%", "en_name": "Banana Technique", "en_effect": "Technique ＋12%", "kr_name": "바나누 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "不思議なウサギのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "奇怪兔子的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "不可思议的兔子的体力", "zhs_effect": "体力消耗量－11%", "zht_name": "奇妙的兔兔的體力", "zht_effect": "體力消耗量－11%", "en_name": "Wondrous Rabbit Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "이상한 토끼 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "サクランボのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "樱桃的技巧", "ceffect": "技巧＋12%", "zhs_name": "樱桃技术", "zhs_effect": "技术＋12%", "zht_name": "櫻桃技巧", "zht_effect": "技巧＋12%", "en_name": "Cherry Technique", "en_effect": "Technique ＋12%", "kr_name": "체리 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ラピスラズリ・パワー", "type": "P", "effect": "パワー＋11%", "cname": "蓝玉・力量", "ceffect": "力量＋11%", "zhs_name": "青金石力量", "zhs_effect": "力量＋11%", "zht_name": "青金石力量", "zht_effect": "力量＋11%", "en_name": "Lapis Lazuli Power", "en_effect": "Power ＋11%", "kr_name": "라피스 라즐리 파워", "kr_effect": "파워 ＋11%", "pp_type": "9", "property": "pow"
+  },
+  {
+    "name": "プラチナラインのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "白金线的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "バーラタCSのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "婆罗多CS的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "明鏡止水CSのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "明镜止水CS的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "メイデンのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "少女的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "少女的体力", "zhs_effect": "体力消耗量－10%", "zht_name": "少女的體力", "zht_effect": "體力消耗量－10%", "en_name": "Maiden's Stamina", "en_effect": "Stamina Consumption －10%", "kr_name": "메이든 스태미너", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "パイナップルのパワー", "type": "P", "effect": "パワー＋12%", "cname": "菠萝的力量", "ceffect": "力量＋12%", "zhs_name": "菠萝力量", "zhs_effect": "力量＋12%", "zht_name": "鳳梨力量", "zht_effect": "力量＋12%", "en_name": "Pineapple Power", "en_effect": "Power ＋12%", "kr_name": "파인애플 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "モモのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "桃子的技巧", "ceffect": "技巧＋12%", "zhs_name": "桃子技巧", "zhs_effect": "技术＋12%", "zht_name": "桃子技巧", "zht_effect": "技巧＋12%", "en_name": "Peach Technique", "en_effect": "Technique ＋12%", "kr_name": "복숭아 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "モモのパワー", "type": "P", "effect": "パワー＋12%", "cname": "桃子的力量", "ceffect": "力量＋12%", "zhs_name": "桃子力量", "zhs_effect": "力量＋12%", "zht_name": "桃子力量", "zht_effect": "力量＋12%", "en_name": "Peach Power", "en_effect": "Power ＋12%", "kr_name": "복숭아 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ウィルゴ・テクニック", "type": "P", "effect": "テクニック＋11%", "cname": "处女座・技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "9", "property": "tec"
+  },
+  {
+    "name": "カプリコーン・スタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "摩羯座・体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "9", "property": "stm"
+  },
+  {
+    "name": "ブドウのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "葡萄的技巧", "ceffect": "技巧＋12%", "zhs_name": "葡萄技术", "zhs_effect": "技术＋12%", "zht_name": "葡萄技巧", "zht_effect": "技巧＋12%", "en_name": "Grape Technique", "en_effect": "Technique ＋12%", "kr_name": "포도 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "ブドウのパワー", "type": "P", "effect": "パワー＋12%", "cname": "葡萄的力量", "ceffect": "力量＋12%", "zhs_name": "葡萄力量", "zhs_effect": "力量＋12%", "zht_name": "葡萄力量", "zht_effect": "力量＋12%", "en_name": "Grape Power", "en_effect": "Power ＋12%", "kr_name": "포도 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ペダリングのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "蹬车的技巧", "ceffect": "技巧＋11%", "zhs_name": "踩踏板的技术", "zhs_effect": "技术＋11%", "zht_name": "踩踏的技巧", "zht_effect": "技巧＋11%", "en_name": "Peddling Technique", "en_effect": "Technique ＋11%", "kr_name": "페달링 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "X・Y・Zのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "X・Y・Z的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "X.Y.Z体力", "zhs_effect": "体力消耗量－10%", "zht_name": "X.Y.Z體力", "zht_effect": "體力消耗量－10%", "en_name": "X. Y. Z Stamina", "en_effect": "Stamina Consumption －10%", "kr_name": "X. Y. Z 스태미너", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "マロンのパワー", "type": "P", "effect": "パワー＋12%", "cname": "栗子的力量", "ceffect": "力量＋12%", "zhs_name": "栗子力量", "zhs_effect": "力量＋12%", "zht_name": "栗子力量", "zht_effect": "力量＋12%", "en_name": "Chestnut Power", "en_effect": "Power ＋12%", "kr_name": "밤 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "ラーレのパワー", "type": "P", "effect": "パワー＋12%", "cname": "郁金香的力量", "ceffect": "力量＋12%", "zhs_name": "郁金香力量", "zhs_effect": "力量＋12%", "zht_name": "鬱金香力量", "zht_effect": "力量＋12%", "en_name": "Lale Power", "en_effect": "Power ＋12%", "kr_name": "라레 파워", "kr_effect": "파워 ＋12%", "pp_type": "13", "property": "pow"
+  },
+  {
+    "name": "幻影のパワー", "type": "P", "effect": "パワー＋11%", "cname": "幻影的力量", "ceffect": "力量＋11%", "zhs_name": "幻影的力量", "zhs_effect": "力量＋11%", "zht_name": "幻影的力量", "zht_effect": "力量＋11%", "en_name": "Phantom Power", "en_effect": "Power ＋11%", "kr_name": "환영의 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "桂花のパワー", "type": "P", "effect": "パワー＋11%", "cname": "桂花的力量", "ceffect": "力量＋11%", "zhs_name": "桂花的力量", "zhs_effect": "力量＋11%", "zht_name": "桂花的力量", "zht_effect": "力量＋11%", "en_name": "Osmanthus Power", "en_effect": "Power ＋11%", "kr_name": "카시아 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "マロンのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "栗子的技巧", "ceffect": "技巧＋12%", "zhs_name": "栗子技术", "zhs_effect": "技术＋12%", "zht_name": "栗子技巧", "zht_effect": "技巧＋12%", "en_name": "Marron Technique", "en_effect": "Technique ＋12%", "kr_name": "마로네 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "カーネーションのテクニック", "type": "P", "effect": "テクニック＋12%", "cname": "康乃馨的技巧", "ceffect": "技巧＋12%", "zhs_name": "康乃馨的技术", "zhs_effect": "技术＋12%", "zht_name": "康乃馨的技巧", "zht_effect": "技巧＋12%", "en_name": "Carnation Technique", "en_effect": "Technique ＋12%", "kr_name": "카네이션의 테크닉", "kr_effect": "테크닉 ＋12%", "pp_type": "13", "property": "tec"
+  },
+  {
+    "name": "デア・マリーナのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "女神之泪的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "シャルキーのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "东方调的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "綺羅星のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "绮罗星的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "サポーネのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "香皂调的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "レインディアのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "麋鹿的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "魔王のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "魔王的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "ヲトメのパワー", "type": "P", "effect": "パワー＋11%", "cname": "少女的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "パンサーのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "豹纹的耐力", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "スリップストリームのパワー", "type": "P", "effect": "パワー＋11%", "cname": "滑流的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "サーバントのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "女仆的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "キラキラのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "闪耀的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "闪亮体力", "zhs_effect": "体力消耗量－11%", "zht_name": "閃亮體力", "zht_effect": "體力消耗量－11%", "en_name": "Shiny Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "반짝거리는 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "にしざーさんのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "西沢的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ギャルのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "辣妹的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "キュイールのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "皮革调的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "キュイールのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "木质调的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "ネージュのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "清新调的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "コスタのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "木质调的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "コスタのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "木质调的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "ブルームのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "花香调的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "ブルームのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "花香调的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "シダーのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "木制调的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "ローレルのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "月桂树的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "パイレーツのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "海盗的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ノブレスのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "贵族的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "目を引くほどのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "夺目技术", "ceffect": "技巧＋11%", "zhs_name": "夺目技术", "zhs_effect": "技术＋11%", "zht_name": "奪目技巧", "zht_effect": "技巧＋11%", "en_name": "Eye－catching Technique", "en_effect": "Technique ＋11%", "kr_name": "눈길을 끌 정도의 테크닉", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "マーレのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "玛雷的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "月兎のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "月兔的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ローレルのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "劳雷尔的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "ウェルネスのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "健康的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "アラクネのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "蜘蛛的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "ジップ・パワー", "type": "P", "effect": "パワー＋11%", "cname": "拉链的力量", "ceffect": "力量＋11%", "zhs_name": "拉链的力量", "zhs_effect": "力量＋11%", "zht_name": "拉鍊的力量", "zht_effect": "力量＋11%", "en_name": "Zipper Power", "en_effect": "Power ＋11%", "kr_name": "지퍼 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "エピスのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "香料的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "エピスのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "香料的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "アンロックのテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "溜门撬锁的技巧", "ceffect": "技巧＋10%", "zhs_name": "", "zhs_effect": "技术＋10%", "zht_name": "", "zht_effect": "技巧＋10%", "en_name": "", "en_effect": "Technique ＋10%", "kr_name": "", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "シンデレラスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "灰姑娘的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "灰姑娘体力", "zhs_effect": "体力消耗量－11%", "zht_name": "灰姑娘體力", "zht_effect": "體力消耗量－11%", "en_name": "Cinderella Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "신데렐라 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "シュクレのパワー&スタミナ", "type": "P", "effect": "パワー＋7%/スタミナ消費量－7%", "cname": "砂糖的力量&体力", "ceffect": "力量＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "力量＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "力量＋7%/體力消耗量－7%", "en_name": "", "en_effect": " Power ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "파워 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "pow"
+  },
+  {
+    "name": "シュクレのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "砂糖的技巧&体力", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "シダーのテクニック&スタミナ", "type": "P", "effect": "テクニック＋7%/スタミナ消費量－7%", "cname": "", "ceffect": "技巧＋7%/自身体力消耗－7%", "zhs_name": "", "zhs_effect": "技术＋7%/体力消耗量－7%", "zht_name": "", "zht_effect": "技巧＋7%/體力消耗量－7%", "en_name": "", "en_effect": "Technique ＋7%/Stamina Consumption －7%", "kr_name": "", "kr_effect": "테크닉 ＋7%/스태미너 소비량 －7%", "pp_type": "14", "property": "tec"
+  },
+  {
+    "name": "サンドリヨンのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "灰姑娘的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "水月のスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "水月的体力", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "メリーナイトのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "圣诞之夜的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "誓いのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "誓言的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "信愛のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "シティライトのテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "城市之光的技巧", "ceffect": "技巧＋10%", "zhs_name": "", "zhs_effect": "技术＋10%", "zht_name": "", "zht_effect": "技巧＋10%", "en_name": "", "en_effect": "Technique ＋10%", "kr_name": "", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "入華のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "入华的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "氷織のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "水织的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "ジェラシーのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "銀狐のテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "银狐的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "アイズ・オン・ミーのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "パトロールのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ニャンメイドのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "猫女仆的技巧", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "リペアのテクニック", "type": "P", "effect": "テクニック＋10%", "cname": "", "ceffect": "技巧＋10%", "zhs_name": "", "zhs_effect": "技术＋10%", "zht_name": "", "zht_effect": "技巧＋10%", "en_name": "", "en_effect": "Technique ＋10%", "kr_name": "", "kr_effect": "테크닉 ＋10%", "pp_type": "7", "property": "tec"
+  },
+  {
+    "name": "月華のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "月华的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "氷月妖のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "水月妖的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "チルするスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "寒冷的体力", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "メロウ・ドリームのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "夜明けのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ソワレ・ドーレのパワー", "type": "P", "effect": "パワー＋11%", "cname": "", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "スターライトのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "マジックのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "フレサ・ベーゼのテクニック", "type": "P", "effect": "テクニック＋11%", "cname": "", "ceffect": "技巧＋11%", "zhs_name": "", "zhs_effect": "技术＋11%", "zht_name": "", "zht_effect": "技巧＋11%", "en_name": "", "en_effect": "Technique ＋11%", "kr_name": "", "kr_effect": "테크닉 ＋11%", "pp_type": "8", "property": "tec"
+  },
+  {
+    "name": "紫電清霜のスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "アジュールのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "風乗りのパワー", "type": "P", "effect": "パワー＋11%", "cname": "乘风的力量", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "ユミアのパワー", "type": "P", "effect": "パワー＋11%", "cname": "", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "ララ・ウルプアのパワー", "type": "P", "effect": "パワー＋11%", "cname": "", "ceffect": "力量＋11%", "zhs_name": "", "zhs_effect": "力量＋11%", "zht_name": "", "zht_effect": "力量＋11%", "en_name": "", "en_effect": "Power ＋11%", "kr_name": "", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "リゾートキャミソールのパワー", "type": "P", "effect": "パワー＋11%", "cname": "假日风情细肩洋装的力量", "ceffect": "力量＋11%", "zhs_name": "假日风情细肩洋装的力量", "zhs_effect": "力量＋11%", "zht_name": "假日風情細肩洋裝的力量", "zht_effect": "力量＋11%", "en_name": "Resort Cami Dress Power", "en_effect": "Power ＋11%", "kr_name": "리조트 캐미솔의 파워", "kr_effect": "파워 ＋11%", "pp_type": "8", "property": "pow"
+  },
+  {
+    "name": "シアー・ムールのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "ニャンテックのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "ラグーン・シェルのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "サバイバーのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "アンコールのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "タンデムのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "百合のスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "ナイショのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ヘブンリーのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "レスナのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "相愛のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "プラージュのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "スクール・バイブスのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "追梦的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "夢追いのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "追梦的耐力", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "紅恋のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "フロストのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "波打つ心音のスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "体力消耗量－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "比翼のクロウ", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "比翼のロビン", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "比翼のイーグル", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "比翼のファザン", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "比翼のスワン", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "比翼のアウル", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "比翼のスワロウ", "type": "P", "effect": "アタッカーになる確率＋20％/パワー＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/力量＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/力量＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/力量＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Power ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/파워 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "双飛のイーグル", "type": "P", "effect": "アタッカーになる確率＋20％/テクニック＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/技巧＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/技巧＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/技巧＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Technique ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/테크닉 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "双飛のパラディ", "type": "P", "effect": "アタッカーになる確率＋20％/テクニック＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/技巧＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/技巧＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/技巧＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Technique ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/테크닉 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "双飛のファザン", "type": "P", "effect": "アタッカーになる確率＋20％/テクニック＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/技巧＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/技巧＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/技巧＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Technique ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/테크닉 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "双飛のスワン", "type": "P", "effect": "アタッカーになる確率＋20％/テクニック＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/技巧＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/技巧＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/技巧＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Technique ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/테크닉 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "双飛のアウル", "type": "P", "effect": "アタッカーになる確率＋20％/テクニック＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/技巧＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/技巧＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/技巧＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Technique ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/테크닉 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "双飛のシーガル", "type": "P", "effect": "アタッカーになる確率＋20％/テクニック＋12%", "cname": "", "ceffect": "成为攻击者的可能性＋20%/技巧＋12%", "zhs_name": "", "zhs_effect": "成为攻击手的概率＋20%/技巧＋12%", "zht_name": "", "zht_effect": "成為攻擊手的機率為＋20%/技巧＋12%", "en_name": "", "en_effect": "Probability of being the attacker: ＋20%/Technique ＋12%", "kr_name": "", "kr_effect": "어태커가 될 확률 ＋20%/테크닉 ＋12%", "pp_type": "19", "property": "SP"
+  },
+  {
+    "name": "キュリオシティのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "ノワールのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "", "ceffect": "自身体力消耗－11%", "zhs_name": "", "zhs_effect": "自身体力消耗－11%", "zht_name": "", "zht_effect": "體力消耗量－11%", "en_name": "", "en_effect": "Stamina Consumption －11%", "kr_name": "", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  },
+  {
+    "name": "ライダースのスタミナ", "type": "P", "effect": "スタミナ消費量－10%", "cname": "", "ceffect": "自身体力消耗－10%", "zhs_name": "", "zhs_effect": "体力消耗量－10%", "zht_name": "", "zht_effect": "體力消耗量－10%", "en_name": "", "en_effect": "Stamina Consumption －10%", "kr_name": "", "kr_effect": "스태미너 소비량 －10%", "pp_type": "7", "property": "stm"
+  },
+  {
+    "name": "通用技能4PP", "type": "P", "effect": "对应属性＋5%", "cname": " 活动限定SR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "4", "property": ""
+  },
+  {
+    "name": "通用技能5PP_1", "type": "P", "effect": "对应属性＋1%", "cname": " 攀岩活动赠送", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "0", "property": ""
+  },
+  {
+    "name": "通用技能5PP_2", "type": "P", "effect": "对应属性＋1%", "cname": " 24级以下 升级奖励", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "1", "property": ""
+  },
+  {
+    "name": "通用技能5PP_3", "type": "P", "effect": "对应属性＋6%", "cname": " 活动限定SR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "5", "property": ""
+  },
+  {
+    "name": "通用技能7PP_1", "type": "P", "effect": "对应属性＋5%", "cname": " 圣诞SR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "11", "property": ""
+  },
+  {
+    "name": "通用技能7PP_2", "type": "P", "effect": "对应属性＋5%", "cname": " 女神石板解锁", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "17", "property": ""
+  },
+  {
+    "name": "通用技能8PP_1", "type": "P", "effect": "对应属性＋2%", "cname": " 24级以上 升级奖励", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "2", "property": ""
+  },
+  {
+    "name": "通用技能8PP_2", "type": "P", "effect": "对应属性＋5%", "cname": " 普通常驻SR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "3", "property": ""
+  },
+  {
+    "name": "通用技能12PP_1", "type": "P", "effect": "对应属性＋10%", "cname": " 常驻/活动限定SSR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "7", "property": ""
+  },
+  {
+    "name": "通用技能12PP_2", "type": "P", "effect": "对应属性＋11%", "cname": " 活动限定SSR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "9", "property": ""
+  },
+  {
+    "name": "通用技能13PP", "type": "P", "effect": "对应属性＋11%", "cname": " 活动限定SSR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "8", "property": ""
+  },
+  {
+    "name": "通用技能14PP_1", "type": "P", "effect": "对应属性＋12%", "cname": " 第三年生日限定SSR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "13", "property": ""
+  },
+  {
+    "name": "通用技能14PP_2", "type": "P", "effect": "对应属性＋7%/体力消耗－7%", "cname": " 第五年生日限定SSR满觉醒", "ceffect": "", "zhs_name": "", "zhs_effect": "", "zht_name": "", "zht_effect": "", "en_name": "", "en_effect": "", "kr_name": "", "kr_effect": "", "pp_type": "14", "property": ""
+  },
+  {
+    "name": "ニュービーのスタミナ", "type": "P", "effect": "スタミナ消費量－11%", "cname": "谐星的体力", "ceffect": "自身体力消耗－11%", "zhs_name": "诙谐体力", "zhs_effect": "体力消耗量－11%", "zht_name": "詼諧體力", "zht_effect": "體力消耗量－11%", "en_name": "Burlesque Stamina", "en_effect": "Stamina Consumption －11%", "kr_name": "벌레스크 스태미너", "kr_effect": "스태미너 소비량 －11%", "pp_type": "8", "property": "stm"
+  }
+]

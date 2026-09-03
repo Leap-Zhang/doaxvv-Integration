@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+import { UI, LANGS, LANG_LABEL, girlNames, TYPE } from '../data/i18n.js';
+
+interface Props {
+  title?: string;
+  desc?: string;
+}
+
+const { title = 'DOAXVV 攻略站', desc = '死或生 沙滩排球：维纳斯假期 中文攻略百科' } = Astro.props;
+const path = Astro.url.pathname;
+const base = import.meta.env.BASE_URL || '/';
+const buildDate = new Date().toISOString().slice(0, 10);
+const ogImage = Astro.site + base.replace(/\/$/, '') + '/img/hero_day.webp';
+
+const nav = [
+  { key: 'admin.home', href: '/', match: (p: string) => p === '/' },
+  { key: 'admin.girls', href: '/girls', match: (p: string) => p.startsWith('/girls') },
+  { key: 'admin.swimsuits', href: '/swimsuits', match: (p: string) => p.startsWith('/swimsuits') },
+  { key: 'admin.skills', href: '/skills', match: (p: string) => p.startsWith('/skills') },
+  { key: 'admin.tools', href: '/tools', match: (p: string) => p.startsWith('/tools') },
+  { key: 'admin.guide', href: '/guide', match: (p: string) => p.startsWith('/guide') },
+  { key: 'admin.community', href: '/community', match: (p: string) => p.startsWith('/community') }
+];
+const I18N = { ui: UI, girls: girlNames, langs: LANGS, labels: LANG_LABEL, type: TYPE };
+---
+
+<!doctype html>
+<html lang="zh-CN" data-base={base}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={desc} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+    <script is:inline>
+      const q = new URLSearchParams(location.search).get('lang');
+      let L = q || localStorage.getItem('lang') || 'zh';
+      if (!['zh','en','ja'].includes(L)) L = 'zh';
+      localStorage.setItem('lang', L);
+      window.__LANG = L;
+      document.documentElement.lang = L; if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+    </script>
+  </head>
+  <body class="min-h-screen bg-mist text-ink">
+    <header class="sticky top-0 z-40 border-b border-line/70 bg-white/85 backdrop-blur">
+      <div class="container-wiki flex h-16 items-center justify-between">
+        <a href={base} class="flex items-center gap-3 no-underline">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-pool-400 to-pool-600 text-white shadow">🏖</span>
+          <span class="leading-tight">
+            <span class="block text-base font-extrabold text-ink" data-i18n="brand">DOAXVV 攻略站</span>
+            <span class="block text-[11px] text-ink-soft" data-i18n="brand.sub">维纳斯群岛度假攻略</span>
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-3 md:flex">
+          <input id="h-search" type="search" placeholder="搜索…" data-i18n-ph="search.placeholder"
+            class="w-40 rounded-full border border-line bg-pool-50/50 px-4 py-2 text-sm outline-none focus:border-pool-400" />
+          <nav class="flex items-center gap-1">
+            {nav.map((n) => (
+              <a
+                href={base + n.href.replace(/^\//, '')}
+                data-i18n={n.key}
+                class:list={[
+                  'rounded-full px-4 py-2 text-sm font-semibold no-underline transition-colors',
+                  n.match(path) ? 'bg-pool-500 text-white' : 'text-ink-soft hover:bg-pool-50 hover:text-pool-700'
+                ]}
+              >
+                {UI.zh[n.key]}
+              </a>
+            ))}
+            <div class="ml-2 flex items-center rounded-full border border-line bg-pool-50/50 p-0.5">
+              {LANGS.map((l) => (
+                <button data-setlang={l} class="rounded-full px-2.5 py-1 text-xs font-semibold text-ink-soft hover:text-pool-700">{LANG_LABEL[l]}</button>
+              ))}
+            </div>
+            <button id="themeBtn" class="grid h-8 w-8 place-items-center rounded-full border border-line bg-pool-50/50 text-sm" title="主题">🌙</button>
+          </nav>
+        </div>
+
+        <button id="menu-btn" class="grid h-10 w-10 place-items-center rounded-xl border border-line text-ink md:hidden" aria-label="打开菜单">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+
+      <div id="m-menu" class="hidden border-t border-line bg-white px-4 pb-4 pt-2 md:hidden">
+        <input id="m-search" type="search" placeholder="搜索…" data-i18n-ph="search.placeholder"
+          class="mb-2 w-full rounded-full border border-line bg-pool-50/50 px-4 py-2 text-sm outline-none focus:border-pool-400" />
+        <div class="mb-2 flex gap-2">
+          {LANGS.map((l) => (
+            <button data-setlang={l} class="flex-1 rounded-full border border-line bg-pool-50/50 py-1.5 text-xs font-semibold text-ink-soft hover:text-pool-700">{LANG_LABEL[l]}</button>
+          ))}
+        </div>
+        <button id="themeBtnM" class="mb-2 w-full rounded-full border border-line bg-pool-50/50 py-1.5 text-xs font-semibold text-ink-soft" title="主题">🌙 切换主题</button>
+        {nav.map((n) => (
+          <a href={base + n.href.replace(/^\//, '')} data-i18n={n.key} class:list={['block rounded-lg px-3 py-2.5 text-sm font-semibold no-underline', n.match(path) ? 'bg-pool-50 text-pool-700' : 'text-ink-soft']}>
+            {UI.zh[n.key]}
+          </a>
+        ))}
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="mt-16 border-t border-line bg-white">
+      <div class="container-wiki py-8 text-sm text-ink-soft">
+        <p class="font-semibold text-ink">DOAXVV 攻略站</p>
+        <p class="mt-2" data-i18n="footer.note">本站在本地生成，内容整理自官方帮助文档与社区公开资料，非官方站点。</p>
+        <p class="mt-2 text-xs">数据快照：{buildDate}（doax.cc） · 本地版本 · 可离线浏览</p>
+      </div>
+    </footer>
+
+    <div id="i18n-data" hidden>{JSON.stringify(I18N)}</div>
+    <script>
+      const IDATA = JSON.parse(document.getElementById('i18n-data').textContent);
+      let LANG = window.__LANG || 'zh';
+      const tkey = (k) => (IDATA.ui[LANG] && IDATA.ui[LANG][k]) || IDATA.ui.zh[k] || k;
+      function xtrans() {
+        const tl = IDATA.type[LANG] || {};
+        document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = tkey(el.getAttribute('data-i18n')); });
+        document.querySelectorAll('[data-i18n-ph]').forEach((el) => { el.setAttribute('placeholder', tkey(el.getAttribute('data-i18n-ph'))); });
+        document.querySelectorAll('[data-type-label]').forEach((el) => { el.textContent = tl[el.getAttribute('data-type-label')] || el.getAttribute('data-type-label'); });
+        document.querySelectorAll('[data-name-id]').forEach((el) => { const gn = IDATA.girls[el.getAttribute('data-name-id')]; if (gn && gn[LANG]) el.textContent = gn[LANG]; });
+      }
+      function applyLang(l) { LANG = l; window.__LANG = l; localStorage.setItem('lang', l); document.documentElement.lang = l; xtrans(); window.dispatchEvent(new CustomEvent('langchange', { detail: l })); }
+      xtrans();
+      document.querySelectorAll('[data-setlang]').forEach((b) => { b.addEventListener('click', () => applyLang(b.getAttribute('data-setlang'))); });
+      const toggleTheme = () => { const d = document.documentElement.classList.toggle('dark'); localStorage.setItem('theme', d ? 'dark' : 'light'); const icons = [document.getElementById('themeBtn'), document.getElementById('themeBtnM')]; icons.forEach((i) => { if (i) i.textContent = d ? '☀️' : '🌙'; }); }; [document.getElementById('themeBtn'), document.getElementById('themeBtnM')].forEach((b) => { if (b) b.addEventListener('click', toggleTheme); });</script>
+  </body>
+</html>

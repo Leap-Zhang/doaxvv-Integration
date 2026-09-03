@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  /* 泳池蓝（主品牌色） */
+  --color-pool-50: #eef7ff;
+  --color-pool-100: #d8edff;
+  --color-pool-200: #b0dbff;
+  --color-pool-300: #7fc3f7;
+  --color-pool-400: #4fa6ef;
+  --color-pool-500: #2b8ae0;
+  --color-pool-600: #2070bd;
+  --color-pool-700: #1c5a99;
+  --color-pool-800: #174a7d;
+  --color-pool-900: #123a63;
+
+  /* 沙滩金 */
+  --color-sand-200: #f8ecce;
+  --color-sand-300: #f1dc9f;
+  --color-sand-400: #e8c76a;
+  --color-sand-500: #dfb24a;
+  --color-sand-600: #c1892e;
+
+  /* 腮红粉 */
+  --color-blush-200: #fbdfe8;
+  --color-blush-300: #f7c1d3;
+  --color-blush-400: #ef98b4;
+  --color-blush-500: #e56a92;
+  --color-blush-600: #c84e74;
+
+  --color-ink: #16324a;
+  --color-ink-soft: #5a7288;
+  --color-mist: #f5f9fd;
+  --color-line: #e2ecf5;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, "PingFang SC", sans-serif;
+  color: var(--color-ink);
+  background: var(--color-mist);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { @apply text-pool-600; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+@layer components {
+  .container-wiki { @apply mx-auto max-w-6xl px-4 sm:px-6; }
+  .card-wiki {
+    @apply rounded-2xl border border-line bg-white shadow-[0_10px_30px_rgba(18,58,99,0.06)] transition-transform duration-200 hover:-translate-y-1;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+  .badge-pool { @apply bg-pool-50 text-pool-700; }
+  .badge-blush { @apply bg-blush-200 text-blush-600; }
+  .badge-sand { @apply bg-sand-200 text-sand-600; }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-pool-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-colors hover:bg-pool-600;
+  }
+  .stat-bar { @apply h-2.5 w-full overflow-hidden rounded-full bg-pool-50; }
+  .stat-fill { @apply block h-full rounded-full; }
+
+  /* 正文内容块 */
+  .sec-h {
+    @apply mb-4 mt-10 flex items-center gap-2 text-xl font-black text-ink;
+  }
+  .sec-h::before {
+    content: "";
+    @apply mr-1 inline-block h-5 w-1.5 rounded-full bg-gradient-to-b from-pool-400 to-pool-600;
+  }
+  .sub-h { @apply mb-2 mt-6 text-base font-extrabold text-ink; }
+  .para { @apply my-3 leading-relaxed text-ink-soft; }
+  .bullet-list { @apply my-3 list-disc space-y-1.5 pl-5 text-ink-soft; }
+  .callout { @apply my-4 rounded-xl border-l-4 p-4 text-sm leading-relaxed; }
+  .callout-pool { @apply border-pool-500 bg-pool-50 text-pool-900; }
+  .callout-warn { @apply border-sand-500 bg-sand-200/40 text-sand-600; }
+  .callout-todo { @apply border-ink-soft bg-mist text-ink-soft; }
+  .tbl { @apply my-4 w-full overflow-hidden rounded-xl border border-line text-sm; }
+  .tbl th { @apply border-b border-line bg-pool-50 px-4 py-2 text-left font-bold text-pool-700; }
+  .tbl td { @apply border-b border-line px-4 py-2 align-top text-ink-soft; }
+  .tbl tr:last-child td { @apply border-b-0; }
+}
+
+
+/* 毛玻璃卡片 + 渐变舞台（泳装图鉴） */
+.glass-card {
+  @apply rounded-2xl border border-white/60 bg-white/60 shadow-lg shadow-pool-900/5 backdrop-blur-xl transition-transform duration-200 hover:-translate-y-0.5;
+}
+.stage { @apply rounded-3xl bg-gradient-to-br from-pool-100/80 via-mist to-blush-200/40 p-4 sm:p-5; }
+
+/* ===== 深色模式 ===== */
+@custom-variant dark (&:where(.dark, .dark *));
+.dark { --color-mist:#0f172a; --color-ink:#e2e8f0; --color-ink-soft:#94a3b8; --color-line:#223048; --color-pool-50:#1e3a5f; --color-pool-100:#25446f; }
+.dark body { background:#0f172a; }
+.dark .card-wiki, .dark .src-block, .dark .figure, .dark .feature { background:#16233a; border-color:#223048; }
+.dark .glass-card { background:rgba(30,41,59,.6); border-color:rgba(255,255,255,.08); }
+.dark .tbl { background:#16233a; border-color:#223048; }
+.dark .tbl th { background:#1e293b; color:#bcd3ef; }
+.dark .tbl td { border-color:#223048; color:#b9c7d8; }
+.dark .stage { background:linear-gradient(135deg, rgba(30,64,120,.35), rgba(15,23,42,.7)); }
+.dark input, .dark select, .dark textarea { background:#16233a; color:#e2e8f0; border-color:#223048; }
+.dark header, .dark footer { background:rgba(20,30,48,.9); border-color:#223048; }
+.dark .callout-pool, .dark .callout-warn, .dark .callout-todo { background:#16233a; }
+.dark .badge-pool { background:#1e3a5f; color:#bcd3ef; }
+.dark .badge-sand { background:#3a3222; color:#e6c27a; }
+.dark .badge-blush { background:#44202c; color:#f0a9c0; }
+.dark .bg-white, .dark .bg-white\/70, .dark .bg-white\/60, .dark .bg-white\/50 { background-color:#16233a !important; }

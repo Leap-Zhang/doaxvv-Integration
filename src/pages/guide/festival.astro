@@ -1,0 +1,67 @@
+---
+import GuidePage from '../../components/GuidePage.astro';
+---
+
+<GuidePage title="挑战赛与比赛" desc="挑战赛是唯一核心玩法。赢球只是第一步，更重要的是把“魅力值”刷高。">
+  <h2 class="sec-h">挑战赛分类</h2>
+  <table class="tbl">
+    <thead><tr><th>类别</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><b>主要</b></td><td>赢取比赛、提升执照等级的主线赛事。</td></tr>
+      <tr><td><b>每日</b></td><td>每天不同的比赛，可获各种素材。</td></tr>
+      <tr><td><b>活动</b></td><td>限期召开的特别限定挑战赛。</td></tr>
+      <tr><td><b>推荐</b></td><td>按你的实力给出合适清单，不知道该打什么时用它。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec-h">比赛界面与属性</h2>
+  <p class="para">左侧是你，右侧是对手。三个关键数值（含泳装 + 女孩的合计）：</p>
+  <ul class="bullet-list">
+    <li><b>POW（力量·红）：</b>杀球攻击、接球判定的基准。</li>
+    <li><b>TEC（技巧·绿）：</b>假动作攻击、接球判定的基准。</li>
+    <li><b>STM（体力·黄）：</b>攻击等动作会消耗；低于一定值时全参数下降。</li>
+  </ul>
+
+  <h2 class="sec-h">胜负与攻防</h2>
+  <p class="para">每场达到<b class="text-ink">规定得分</b>即获胜（所需分数因赛而异）。有得分机会时，双方各选出<b class="text-ink">攻击手</b>和<b class="text-ink">接球手</b>：攻击手“攻击力”胜则得分；接球手“接球力”胜则继续拉力。</p>
+  <p class="para">攻击分两种：</p>
+  <ul class="bullet-list">
+    <li><b>杀球：</b>按双方 <b>POW</b> 判定。</li>
+    <li><b>假动作：</b>按双方 <b>TEC</b> 判定。</li>
+    <li>要更重视哪边，在“作战指示”里设定。</li>
+  </ul>
+
+  <h2 class="sec-h">情绪条与情绪高涨</h2>
+  <p class="para">比赛进行时下方<b class="text-ink">情绪条</b>会上升，女孩魅力越高越容易升。情绪条越高，最终魅力值分数越高；到 <b>MAX</b> 可发动“情绪高涨”——能量增大，但体力掉得更快。</p>
+
+  <h2 class="sec-h">魅力值与评价</h2>
+  <p class="para">“魅力值”是比赛“热闹度”的分数，进攻得分时可获得。全场魅力值总分决定评价（D~S 五个等级）；<b class="text-ink">比赛输了一定是最低评价</b>。首次以 S 级获胜可得大量报酬。</p>
+  <div class="callout callout-pool"><b>想上分就奔 S 去。</b>评价越高，S 首胜奖励越丰富；这也是刷资源的关键目标。</div>
+
+  <h2 class="sec-h">流行奖励</h2>
+  <p class="para">挑战赛中泳装有“流行”趋势，根据所穿泳装属性会得到相应的<b class="text-ink">流行奖励</b>。版本更新时多留意当期流行泳装。</p>
+
+  <h2 class="sec-h">暂停与作战指示</h2>
+  <p class="para">比赛中可<b class="text-ink">暂停</b>，暂停时可“选手替换”和“作战指示”。作战指示有三项：<b>攻击方法</b>（杀球/假动作）、<b>攻击手</b>（两人谁负责攻击）、<b>攻击目标</b>（瞄准对方哪位）。交给女孩判断就选“任意”。</p>
+
+  <h2 class="sec-h">嘉宾替换与王牌</h2>
+  <p class="para"><b class="text-ink">嘉宾</b>是 2 分入账为止的救援，可与体力见底的女孩替换，扭转局势。赛前设定的<b class="text-ink">王牌</b>女孩：得分贡献大时情绪条升更快、赛后获得更多 EXP、性感照板满足度加成。</p>
+
+  <h2 class="sec-h">性感照板</h2>
+  <p class="para">比赛结束后会进入“性感照板”环节：攒满下方“满足度条”解锁一块碎片，集满即看到性感照。这也与岛主经验、女孩回忆挂钩。</p>
+
+  <h2 class="sec-h">狂热技能（F 技）</h2>
+  <p class="para">装备带<b class="text-ink">狂热技能</b>的泳装，比赛开始时会发动特殊效果；比赛中<b>满足特定条件并攻击成功</b>，可获得额外的“狂热技能奖励”，让总魅力值大幅上升。</p>
+
+  <h2 class="sec-h">羁绊挑战赛</h2>
+  <ul class="bullet-list">
+    <li>选好友当嘉宾，<b>羁绊奖励</b>更多。</li>
+    <li>自己和嘉宾的<b>封面女孩奖励</b>越多，羁绊奖励越多；多穿封面女孩泳装能提高。</li>
+    <li>被其他岛主选为嘉宾可获得<b>羁绊分享</b>（储蓄上限 200 万）。</li>
+  </ul>
+
+  <h2 class="sec-h">连续 PLAY</h2>
+  <p class="para">使用“自动挑战赛券”可开启<b class="text-ink">连续 PLAY</b> 和<b>全部 SKIP</b>。购买“自动挑战赛应援证”可无限次连续 PLAY；否则每用一次消耗 1 张券。券最多持有 45 张，超出会寄到邮箱（24 小时内领取）。</p>
+
+  <div class="callout callout-todo"><b>待补充：</b>各难度的具体打分手牌、情绪搭配、以及登塔/竞技场等进阶机制，随社区数据逐步完善。</div>
+</GuidePage>

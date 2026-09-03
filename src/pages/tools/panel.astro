@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="面板估算器 · 工具 · DOAXVV 攻略站" desc="选角色+泳装+加成，估算面板。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">工具</p>
+    <h1 class="mt-1 text-3xl font-black">面板估算器</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">选角色与一件 SSR 泳装，叠加潜力/涂油加成，估算面板数值（参考合成公式：基础 + 泳装 后按加成放大）。</p>
+
+    <div class="card-wiki mt-6 p-6">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="text-sm"><span class="text-ink-soft">角色</span>
+          <select id="pGirl" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none"></select>
+        </label>
+        <label class="text-sm"><span class="text-ink-soft">泳装</span>
+          <select id="pSuit" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none"></select>
+        </label>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-3">
+        {[['力量','pP'],['技巧','pT'],['体力','pS']].map(([lb,id]) => (
+          <label class="text-sm"><span class="text-ink-soft">{lb} 潜力 %</span>
+            <input id={id} type="number" min="0" value="0" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none" />
+          </label>
+        ))}
+      </div>
+      <div class="mt-3 grid grid-cols-3 gap-3">
+        {[['力量','oP'],['技巧','oT'],['体力','oS']].map(([lb,id]) => (
+          <label class="text-sm"><span class="text-ink-soft">{lb} 涂油 %</span>
+            <input id={id} type="number" min="0" value="0" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none" />
+          </label>
+        ))}
+      </div>
+    </div>
+
+    <div id="pOut" class="card-wiki mt-6 p-6 text-sm"></div>
+    <div class="mt-4 rounded-xl bg-pool-50 p-4 text-xs text-pool-800">估算面板=基础(Lv100)+泳装，再×(1+潜力%+涂油%)。比赛得分公式（攻防判定、情绪条、F技）另计，仅供参考。</div>
+  </div>
+
+  <script>
+    import { girlSuitKey } from '../../lib/suitModal.js';
+    (async () => {
+      const base = document.documentElement.getAttribute('data-base') || '/';
+      const [girls, suits, gnames] = await Promise.all([
+        fetch(base + 'data/doax-girls.json').then((r) => r.json()),
+        fetch(base + 'data/doax-ssr.json').then((r) => r.json()),
+        fetch(base + 'data/girl-names.json').then((r) => r.json())
+      ]);
+      const girlSel = document.getElementById('pGirl');
+      const suitSel = document.getElementById('pSuit');
+      const out = document.getElementById('pOut');
+      girls.forEach((g) => { const o = document.createElement('option'); o.value = g.id; o.textContent = g.name; girlSel.appendChild(o); });
+      let currentGirl = null, currentSuit = null;
+      function fillSuits() {
+        const gid = girlSel.value; currentGirl = girls.find((g) => g.id === gid);
+        const key = girlSuitKey(gid);
+        suitSel.innerHTML = '';
+        suits.filter((s) => s.girl === key).forEach((s) => {
+          const o = document.createElement('option'); o.value = s.id; o.textContent = s.pow + '/' + s.tec + '/' + s.stm + '　' + s.name_ja; suitSel.appendChild(o);
+        });
+        currentSuit = suits.find((s) => s.id === suitSel.value);
+        render();
+      }
+      const val = (id) => parseFloat(document.getElementById(id).value) || 0;
+      function render() {
+        if (!currentGirl || !currentSuit) { out.textContent = ''; return; }
+        const base = currentGirl;
+        const suit = currentSuit;
+        const rows = [['POW 力量', base.pow.lv100, suit.pow, 'pP', 'oP'], ['TEC 技巧', base.tec.lv100, suit.tec, 'pT', 'oT'], ['STM 体力', base.stm.lv100, suit.stm, 'pS', 'oS']];
+        let total = 0, raw = 0;
+        out.innerHTML = '<p class="font-bold">' + base.name + ' · ' + (suit.name_ja || suit.name) + '</p>' +
+          '<table class="tbl mt-3"><thead><tr><th>属性</th><th>角色基础(Lv100)</th><th>泳装</th><th>基础+泳装</th><th>加成后</th></tr></thead><tbody>' +
+          rows.map(([lb, gb, s, pot, oil]) => {
+            const combined = gb + s;
+            const adj = Math.round(combined * (1 + (val(pot) + val(oil)) / 100));
+            raw += combined; total += adj;
+            return '<tr><td>' + lb + '</td><td>' + gb + '</td><td>' + s + '</td><td>' + combined + '</td><td><b>' + adj + '</b></td></tr>';
+          }).join('') +
+          '<tr><td><b>合计</b></td><td></td><td></td><td>' + raw + '</td><td><b>' + total + '</b></td></tr>' +
+          '</tbody></table>';
+      }
+      girlSel.addEventListener('change', fillSuits);
+      suitSel.addEventListener('change', () => { currentSuit = suits.find((s) => s.id === suitSel.value); render(); });
+      ['pP', 'pT', 'pS', 'oP', 'oT', 'oS'].forEach((id) => document.getElementById(id).addEventListener('input', render));
+      fillSuits();
+    })();
+  </script>
+</Base>

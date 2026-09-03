@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import { girls } from '../../data/girls.js';
+import girlNames from '../../data/girl-names.json';
+import skillData from '../../data/doax-skills.json';
+import { buildSkillMap } from '../../lib/suitModal.js';
+import { readdirSync } from 'node:fs';
+
+const GKEY = { helena: 'elena', marie: 'marierose', meg: 'megu' };
+const types = ['全部', 'pow', 'tec', 'stm', 'apl'];
+const girlNameMap = Object.fromEntries(Object.entries(girlNames).map(([id, n]) => [id, n]));
+Object.entries(GKEY).forEach(([k, v]) => { girlNameMap[k] = girlNames[v]; });
+const girlImg = Object.fromEntries(girls.map((g) => [g.id, `/img/bromide/girls/${g.id}.webp`]));
+Object.entries(GKEY).forEach(([k, v]) => { girlImg[k] = girlImg[v]; });
+const skillMap = buildSkillMap(skillData);
+const starIds = new Set(readdirSync('public/img/bromide/star').map((x) => x.replace(/\.(png|webp)$/, '')));
+const suitCount = 3191;
+---
+
+<Base title="DOAXVV 攻略站 · 泳装图鉴" desc="doax.cc 泳装数据全量图鉴。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600" data-i18n="admin.swimsuits">泳装图鉴</p>
+    <h1 class="mt-1 text-3xl font-black" data-i18n="swim.title">泳装・饰品图鉴</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">共 <b class="text-ink">{suitCount}</b> 件 SSR 泳装（数据来源：doax.cc）。</p>
+
+    <h2 class="sec-h">筛选</h2>
+    <div class="flex flex-wrap items-center gap-3">
+      <input id="sSearch" type="search" placeholder="搜索泳装名…" class="w-full max-w-xs rounded-full border border-line bg-white/70 px-4 py-2.5 text-sm outline-none focus:border-pool-400" />
+      <select id="sGirl" class="rounded-full border border-line bg-white/70 px-3 py-2 text-sm outline-none">
+        <option value="全部">{ '全部角色' }</option>
+        {girls.map((g) => <option value={g.id}>{g.name}</option>)}
+      </select>
+      <div id="sType" class="flex gap-2">
+        {types.map((t, i) => (
+          <button data-type={t} class:list={['badge cursor-pointer', i === 0 ? 'badge-pool' : 'bg-white/70 text-ink-soft border border-line']}>
+            {t === '全部' ? '全部' : t.toUpperCase()}
+          </button>
+        ))}
+      </div>
+      <span id="sCount" class="text-sm text-ink-soft"></span>
+    </div>
+
+    <div class="stage mt-5">
+      <div id="sList" class="grid gap-3 sm:grid-cols-3 lg:grid-cols-4"></div>
+      <button id="sMore" class="mt-5 w-full rounded-full border border-white/60 bg-white/60 py-3 text-sm font-semibold text-pool-600 backdrop-blur-xl hover:bg-white/80">加载更多</button>
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 text-sm text-ink-soft">
+      数据来源：<a href="https://doax.cc/ssr" target="_blank" rel="noopener" class="font-semibold text-pool-600">doax.cc 泳装图鉴</a>（已本地化）。
+    </div>
+  </div>
+
+  <div id="sMeta" hidden>{JSON.stringify({ girlNames: girlNameMap, girlImg, skillMap, starIds: [...starIds] })}</div>
+  <script>
+    import { suitName, girlDisplayName, openSuitModal, skillText } from '../../lib/suitModal.js';
+    import { isFav, toggleFav } from '../../lib/fav.js';
+    (async () => {
+      const meta = JSON.parse(document.getElementById('sMeta').textContent);
+      const girlNames = meta.girlNames, girlImg = meta.girlImg, skillMap = meta.skillMap;
+      const star = new Set(meta.starIds);
+      const LANG = window.__LANG || 'zh';
+      const binds = { girlNames, girlImg, base: (document.documentElement.getAttribute('data-base') || '/') };
+      const suits = await fetch((document.documentElement.getAttribute('data-base') || '/') + 'data/doax-ssr.json').then((r) => r.json());
+      const girlSel = document.getElementById('sGirl'), search = document.getElementById('sSearch'), typeBox = document.getElementById('sType');
+      const list = document.getElementById('sList'), more = document.getElementById('sMore'), countEl = document.getElementById('sCount');
+      let girl = '全部', type = '全部', qtext = '', shown = 36;
+      const filtered = () => suits.filter((s) => {
+        const okG = girl === '全部' || s.girl === girl;
+        const okT = type === '全部' || s.type === type;
+        const okQ = !qtext || (s.name + ' ' + s.name_en + ' ' + s.name_ja + ' ' + girlDisplayName(s.girl, girlNames, LANG)).toLowerCase().includes(qtext);
+        return okG && okT && okQ;
+      });
+      const statTile = (l, v) => '<div class="rounded-lg bg-white/50 py-1"><div class="text-[10px] text-ink-soft">' + l + '</div><div class="text-xs font-bold">' + v + '</div></div>';
+      function render() {
+        const f = filtered();
+        countEl.textContent = '共 ' + f.length + ' 件';
+        list.innerHTML = '';
+        f.slice(0, shown).forEach((s) => {
+          const el = document.createElement('div');
+          el.className = 'glass-card cursor-pointer p-3'; el.style.position = 'relative';
+          el.innerHTML =
+            '<div class="flex items-center gap-2"><img src="' + (star.has(s.id) ? (document.documentElement.getAttribute('data-base') || '/') + 'img/bromide/star/' + s.id + '.webp' : (girlImg[s.girl] || '')) + '" alt="' + girlDisplayName(s.girl, girlNames, LANG) + '" loading="lazy" decoding="async" class="h-11 w-11 rounded-lg object-cover" onerror="this.style.display=\'none\'" /><div class="min-w-0 flex-1"><div class="truncate text-sm font-extrabold text-pool-700">' + suitName(s, LANG) + '</div><div class="truncate text-[11px] text-ink-soft">' + girlDisplayName(s.girl, girlNames, LANG) + '</div></div><span class="badge badge-blush">' + (s.type || '').toUpperCase() + '</span></div>' +
+            '<div class="mt-2 grid grid-cols-4 gap-1">' + statTile('P', s.pow) + statTile('T', s.tec) + statTile('S', s.stm) + statTile('A', s.apl) + '</div>' +
+            (s.skills.length ? '<div class="mt-2 flex flex-wrap gap-1">' + s.skills.slice(0, 2).map((k) => '<span class="badge badge-sand">' + skillText(skillMap, k, LANG).name + '</span>').join('') + '</div>' : '') +
+            '<button class="fav-a" style="position:absolute;top:8px;right:8px;border:none;background:transparent;cursor:pointer;font-size:16px;color:#e6a04c">' + (isFav('suits', s.id) ? '★' : '☆') + '</button>';
+          el.addEventListener('click', () => openSuitModal(s, skillMap, LANG, binds));
+          el.querySelector('.fav-a').addEventListener('click', (e) => { e.stopPropagation(); toggleFav('suits', s.id); e.currentTarget.textContent = isFav('suits', s.id) ? '★' : '☆'; });
+          list.appendChild(el);
+        });
+        more.classList.toggle('hidden', shown >= f.length);
+      }
+      search.addEventListener('input', () => { qtext = search.value.trim().toLowerCase(); shown = 36; render(); });
+      girlSel.addEventListener('change', () => { girl = girlSel.value; shown = 36; render(); });
+      typeBox.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; type = b.dataset.type; typeBox.querySelectorAll('button').forEach((x) => { x.className = 'badge cursor-pointer ' + (x === b ? 'badge-pool' : 'bg-white/70 text-ink-soft border border-line'); }); shown = 36; render(); });
+      more.addEventListener('click', () => { shown += 36; render(); });
+      render();
+      window.addEventListener('langchange', (e) => { window.__LANG = e.detail; render(); });
+    })();
+  </script>
+</Base>

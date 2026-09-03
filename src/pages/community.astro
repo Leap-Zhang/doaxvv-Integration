@@ -1,0 +1,181 @@
+---
+import Base from '../layouts/Base.astro';
+import SrcBlock from '../components/SrcBlock.astro';
+
+const sections = [
+  {
+    title: '新手开荒',
+    blocks: [
+      {
+        title: '纯萌新攻略', url: 'https://tieba.baidu.com/p/8119453382', author: '百度贴吧 · 江浦', flag: '精华',
+        bullets: [
+          '女孩战力来源：等级、泳装与饰品、涂油、应援板，其中<b>衣服最为重要</b>。',
+          '一个培养毕业的主手女孩至少准备：3 件后缀不同的体力服 + 1 件不错的刷分服（要练的女孩最好已持有其中 2~3 件）。',
+          '好的刷分服通常是约 5000 正属性的 A / P / F 三技能衣服。',
+          '开局可按力量 / 技巧方向各选一名能做主的女孩作主力。'
+        ],
+        note: '从战力构成入手，给出角色养成的“底层配置”思路。'
+      },
+      {
+        title: '简单介绍衣服系统', url: 'https://tieba.baidu.com/p/6519750123', author: '百度贴吧',
+        body: '女孩强度 ≈ 女孩裸体强度 + 衣服强度 + 首饰强度 + 软绵绵技能 + 潜力系统 + 应援板系统（应援板仅为 DMM 服实装）。对萌新来说最直接、最主要的来源是<b>衣服</b>——角色本体基础属性可能只有几百，衣服带来的是大头加成。',
+        note: '适合新玩家理解“为什么衣服这么重要”。'
+      },
+      {
+        title: '新手入坑 · 常见玩法 / 注意事项 / 规划汇总', url: 'https://tieba.baidu.com/p/6703793457', author: '百度贴吧',
+        bullets: [
+          '前期重点培养一个力量角色 + 一个技巧角色。',
+          '抽到当期流行就穿上打活动；力量角色可优先考虑<b>海咲</b>（生日装极品、PP 好凑）。',
+          '其余角色可等后续强卡（避免错过饰品与<b>周年复刻</b>）；刷分用双 SR 即可拿到 S 级。',
+          '平时囤钻石、觉醒石、衣服，等周年/爬山活动再投入。'
+        ],
+        note: '偏开荒规划与资源取舍。'
+      }
+    ]
+  },
+  {
+    title: '角色定位与培养',
+    blocks: [
+      {
+        title: '心血来潮抠细节', url: 'http://jump2.bdimg.com/p/9012574359', author: '百度贴吧',
+        bullets: [
+          '<b>二阶：</b>拥有 1~2 件真正意义上的刷分装。',
+          '<b>三阶：</b>确定主力，开始向 SSS 等级推进。',
+          '<b>四阶：</b>有两名女孩可分别打通力量 / 技巧的 SSS 并拿到 S 评价。',
+          '用<b>工具人</b>开荒，能获得更多资源来培养你的真正主力。'
+        ],
+        note: '把养成目标拆成可执行的阶段。'
+      },
+      {
+        title: '各角色刷分能力排行（数据贴）', url: 'http://jump2.bdimg.com/p/6457976789', author: '百度贴吧',
+        body: '排名基于角色穿指定刷分装、进行完全养成，8 回合大跳可打出的平均分；角色等级 80、星等级 SSS+、泳装满强化满觉醒。仅列举带<b>杀球 / 假动作 F 技能</b>的刷分装，并加入少量辅助装与无 F 装。',
+        note: '选培养对象时可参考的量化排名。'
+      },
+      {
+        title: 'DOAXVV 打分队（攻略向）', url: 'https://www.bilibili.com/opus/566244485395289268', author: 'Bilibili 专栏',
+        bullets: [
+          '<b>力量偏向：</b>环（Tamaki）。',
+          '<b>技巧偏向：</b>玛莉萝丝、海莲娜、莫妮卡、绫音、丽凤、霞。',
+          '潜力技能中有提升魅力的技能，可通过<b>爬山</b>进一步提升（爬山优先提升 SSR / SR 满破所得技能）。'
+        ],
+        note: '角色定位的“属性偏向”速查。'
+      },
+      {
+        title: 'steam 全角色 SSR 觉醒技能推荐', url: 'https://tieba.baidu.com/p/6387901332', author: '百度贴吧',
+        body: '以海咲为例：<b>满级属性 P2528 / T2388 / S3029</b>（力量角色）；常驻与第一次贝壳泳装满破后得到“隐藏的力量 3 / 4”约 <b>12PP</b> 技能。目前海咲缺少强力刷分服，<b>JK 服 / 圣诞服</b>可作副手辅助得分。',
+        note: '给“练谁、怎么满破”一个参考。'
+      },
+      {
+        title: '(水) 关于 10 个常驻女孩的小知识', url: 'https://jump2.bdimg.com/p/7841056449', author: '百度贴吧',
+        bullets: [
+          '<b>玛莉萝丝：</b>有常驻 SR 体力 + 升级送 8PP 体力，练成难度最低。',
+          '<b>海莲娜：</b>有常驻 SR 体力。',
+          '<b>绫音、霞：</b>有常驻 SR 技巧接球 12PP，合计约 61% 接球+技巧。',
+          '<b>穗香：</b>接球需补大技巧 12 / 13PP。'
+        ],
+        note: '常驻角色的潜力 / PP 构成拆解。'
+      }
+    ]
+  },
+  {
+    title: '爬山・爬塔与满破',
+    blocks: [
+      {
+        title: '【萌新向/手把手】第一次爬山该爬什么', url: 'https://jump2.bdimg.com/p/6514099383', author: '百度贴吧',
+        body: '<b>满破（最大化利用技能）：</b>用额外 4 件相同的衣服或 4 个觉醒石（可混搭，位置在“套装—技能觉醒”），把某件 SR / SSR 的 P 技能从衣服上取下来，放进头 / 脸 / 手三个首饰后，穿任意衣服都能发动——这是提升女孩战力的最重要途径之一。',
+        note: '爬山活动的核心机制：满破与 PP 首饰。'
+      },
+      {
+        title: '本期爬山', url: 'http://jump2.bdimg.com/p/8246838113', author: '百度贴吧',
+        body: '没有明确规划可爬的，可以把<b>原钻</b>爬了。新玩家女孩都缺潜力，<b>优先爬力量女孩</b>；活动币充足时可把<b>所有女孩都爬</b>（前期 5PP 总是缺的不够用）。',
+        note: '爬山资源优先级。'
+      },
+      {
+        title: '寄服最大化收益爬山方法', url: 'http://ent.tieba.com/p/8846280244', author: '百度贴吧',
+        body: '白嫖最大化收益：假如已爬 <b>3 个 13PP 减体</b>，就再爬 <b>5PP + 2PP + 4PP 减体</b>，正好塞进 <b>19PP 首饰</b>，不会浪费任何一次毕业爬山次数；剩下一个空位塞原钻或没爬山的 5PP。',
+        note: '毕业爬山的 PP 配比参考。'
+      },
+      {
+        title: '萌新打到 SS+ 死活打不动了', url: 'https://www.tieba.com/p/8704375601', author: '百度贴吧',
+        body: '打到 <b>SS+</b> 卡关时，女孩等级、首饰等级、涂油这“三大项”一时很难提升。建议加入大佬借两球凹分，或先拿<b>攻坚服</b>过渡；不到万不得已不硬抽流行。爬塔阶段不必急着强化 SSR，优先<b>囤钻石、觉醒石和衣服</b>，等爬山再投入。',
+        note: '针对“卡关”的取舍心态与资源规划。'
+      }
+    ]
+  },
+  {
+    title: '过关・竞技场与刷分',
+    blocks: [
+      {
+        title: '活动赛通关与大跳指南', url: 'https://tieba.baidu.com/p/8969809061', author: '百度贴吧',
+        bullets: [
+          '胜率的<b>基准线</b>判断。',
+          '<b>以弱胜强</b>的打法与心态。',
+          '不同 <b>A 技能</b>对新手通关的影响。',
+          '<b>三体力潜力 + 输出卡</b>的局限。',
+          '<b>回体声援卡</b>的使用与基准线突破。'
+        ],
+        note: '想稳定通关活动赛、用好“大跳”，先读这一篇。'
+      },
+      {
+        title: '学习贴：前排学习 JJC 冠军配置打法攻略', url: 'http://jump2.bdimg.com/p/8770759954', author: '百度贴吧',
+        bullets: [
+          '只有<b>主手正属性攻击</b>能得分；主手反属性、副手攻击皆不得分。',
+          '<b>沙包方</b>除主手正属性外其余攻击皆可被防御，从而最大化主手<b>倒转技能</b>收益。'
+        ],
+        note: '竞技场（JJC）玩家进阶参考。'
+      },
+      {
+        title: '入坑日服记录贴三（涂油与配置分享）', url: 'https://www.tieba.com/p/8244540500', author: '百度贴吧',
+        body: '分享配置供新入坑玩家参考：<b>艾米</b>涂两个 <b>15 技巧 EX 油</b>、<b>丽凤</b>涂三个 <b>5 体力油</b>，顶油拉满并把<b>魅力值提到上限</b>；换流行头饰时记得<b>装回 PP</b>。',
+        note: '给出“涂油 + 声援板”成型后的面板参考。'
+      },
+      {
+        title: '无聊氵一贴 为什么我的攻副这么水', url: 'https://tieba.baidu.com/p/8864419517', author: '百度贴吧',
+        bullets: [
+          '<b>攻副</b>＝队伍里的“进攻副手”。海咲不适合打攻副（易“捣乱”抢分）。',
+          '把攻副换成<b>七海</b>，让七海 + 凪咲打<b>双攻</b>更稳。',
+          '<b>防副</b>可用“玛小丽 + 紧凑实用防副绫音”，三队霞均分可稳定在 4 万左右。'
+        ],
+        note: '竞技场组队与攻副/防副分工。'
+      }
+    ]
+  }
+];
+---
+
+<Base title="社区攻略 · DOAXVV 攻略站" desc="贴吧 / B 站玩家攻略，按板块整理并标注来源。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">社区攻略</p>
+    <h1 class="mt-1 text-3xl font-black" data-i18n="community.title">玩家攻略（来源标注）</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">
+    <p class="mt-3 rounded-xl bg-pool-50 p-3 text-sm text-pool-800" data-i18n="ed.note"></p>
+      内容整理自百度贴吧《死或生沙滩排球维纳斯假期吧》与 B 站专栏。每块均注明<b class="text-ink">标题、作者与来源链接</b>；文字为本站整理摘要，细节以原帖为准。
+    </p>
+
+    <figure class="card-wiki mt-6 overflow-hidden">
+      <img src="/img/hero_night.webp" alt="DOAXVV 实机截图（夜之泳池）" class="max-h-80 w-full object-cover" />
+      <figcaption class="px-4 py-2 text-xs text-ink-soft">配图：DOAXVV 实机截图，来源 3DMGame 资讯。</figcaption>
+    </figure>
+
+    <figure class="card-wiki mt-4 overflow-hidden">
+      <img src="/img/promo.webp" alt="Misty Lily 泳装抽卡宣传图" class="max-h-80 w-full object-cover" />
+      <figcaption class="px-4 py-2 text-xs text-ink-soft">配图：DOAXVV 泳装抽卡宣传图，来源 GOTVG 资讯（已本地化）。</figcaption>
+    </figure>
+
+    {sections.map((sec) => (
+      <section class="mt-10">
+        <h2 class="sec-h">{sec.title}</h2>
+        <div class="space-y-5">
+          {sec.blocks.map((b) => <SrcBlock {...b} />)}
+        </div>
+      </section>
+    ))}
+
+    <div class="mt-8 rounded-2xl border border-sand-300 bg-sand-200/40 p-6">
+      <p class="font-bold text-sand-600">内容说明</p>
+      <p class="mt-1 text-sm text-ink-soft">
+        以上为社区讨论的整理摘要，观点随版本与数值变化，具体以原帖及当期游戏内容为准；如原帖地址失效，可在贴吧搜索对应标题。
+      </p>
+    </div>
+  </div>
+</Base>

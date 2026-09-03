@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="我的收藏 · DOAXVV 攻略站" desc="本地收藏的女孩与泳装。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">我的收藏</p>
+    <h1 class="mt-1 text-3xl font-black">已拥有</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">收藏（★）保存在本地浏览器，刷新不丢失。列表为空的泳装请先在图鉴/角色页点★。</p>
+    <div id="coll" class="mt-6 space-y-8"></div>
+  </div>
+
+  <script>
+    import { getFav } from '../lib/fav.js';
+    import { suitName, openSuitModal, buildSkillMap, girlDisplayName, girlSuitKey } from '../lib/suitModal.js';
+    (async () => {
+      const fav = getFav();
+      const base = document.documentElement.getAttribute('data-base') || '/';
+      const [girls, suits, skillData, gnames] = await Promise.all([
+        fetch(base + 'data/doax-girls.json').then((r) => r.json()),
+        fetch(base + 'data/doax-ssr.json').then((r) => r.json()),
+        fetch(base + 'data/doax-skills.json').then((r) => r.json()),
+        fetch(base + 'data/girl-names.json').then((r) => r.json())
+      ]).catch(() => [null, null, null, null]);
+      const wrap = document.getElementById('coll');
+      if (!girls) { wrap.innerHTML = '<p class="text-ink-soft">加载失败。</p>'; return; }
+      const LANG = window.__LANG || 'zh';
+      const skillMap = buildSkillMap(skillData);
+      const favGirls = girls.filter((g) => fav.girls.includes(g.id));
+      const girlById = Object.fromEntries(girls.map((g) => [g.id, g]));
+      const favSuits = suits.filter((s) => fav.suits.includes(s.id));
+      const girlImg = Object.fromEntries(girls.map((g) => [g.id, base + 'img/bromide/girls/' + g.id + '.webp']));
+      const binds = { girlNames: gnames, girlImg, base };
+
+      let html = '';
+      html += '<section><p class="font-bold text-lg">女孩（' + favGirls.length + '）</p><div class="mt-3 grid gap-4 sm:grid-cols-3 lg:grid-cols-5">' +
+        favGirls.map((g) => '<a class="card-wiki block p-3 no-underline" href="' + base + 'girls/' + g.id + '/"><img src="' + girlImg[g.id] + '" alt="' + g.name + '" loading="lazy" class="h-28 w-full rounded-lg object-cover" /><div class="mt-1 text-sm font-semibold">' + g.name + '</div></a>').join('') + '</div></section>';
+      html += '<section><p class="font-bold text-lg">泳装（' + favSuits.length + '）</p><div class="mt-3 grid gap-3 sm:grid-cols-3 lg:grid-cols-5">' +
+        favSuits.map((s) => '<div class="glass-card cursor-pointer p-3" data-id="' + s.id + '"><div class="truncate text-sm font-extrabold text-pool-700">' + suitName(s, LANG) + '</div><div class="text-[11px] text-ink-soft">' + girlDisplayName(s.girl, gnames, LANG) + '</div><div class="mt-1 text-xs">P' + s.pow + ' T' + s.tec + ' S' + s.stm + '</div></div>').join('') + '</div></section>';
+      wrap.innerHTML = html;
+      wrap.querySelectorAll('[data-id]').forEach((el) => { const s = favSuits.find((x) => x.id === el.getAttribute('data-id')); el.addEventListener('click', () => openSuitModal(s, skillMap, LANG, binds)); });
+      if (!favGirls.length && !favSuits.length) wrap.innerHTML = '<p class="text-ink-soft">还没有收藏。去<b>女孩图鉴</b>或<b>泳装图鉴</b>点 ★。</p>';
+    })();
+  </script>
+</Base>

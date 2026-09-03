@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="满破 / PP 规划器 · 工具 · DOAXVV 攻略站" desc="按目标饰品PP容量推荐减体潜力搭配。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">工具</p>
+    <h1 class="mt-1 text-3xl font-black">满破 / PP 规划器</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">给定饰品 PP 容量与可选“减体潜力”PP 值，找出填充最满（不浪费）的搭配。参考贴吧“寄服最大化收益”思路：优先大 PP + 小 PP 补足。</p>
+
+    <div class="card-wiki mt-6 p-6">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="text-sm"><span class="text-ink-soft">饰品 PP 容量</span>
+          <input id="cap" type="number" value="19" min="1" max="40" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none" />
+        </label>
+        <label class="text-sm"><span class="text-ink-soft">可选减体潜力 PP（逗号分隔）</span>
+          <input id="vals" value="13,12,11,10,9,8,7,6,5,4,3,2" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none" />
+        </label>
+      </div>
+    </div>
+
+    <div id="plOut" class="card-wiki mt-6 p-6 text-sm"></div>
+    <div class="mt-4 rounded-xl bg-pool-50 p-4 text-xs text-pool-800">示例：容量 19，若已爬 3 个 13PP，则再填 5+2+4=11 也可由 4+13+2 补满（以实际潜力为准）。仅供参考。</div>
+  </div>
+
+  <script>
+    const capEl = document.getElementById('cap');
+    const valsEl = document.getElementById('vals');
+    const out = document.getElementById('plOut');
+    function bestFill(capacity, values) {
+      const uniq = [...new Set(values)].filter((v) => v > 0).sort((a, b) => b - a);
+      const n = uniq.length; let bestSum = 0, best = [];
+      for (let mask = 0; mask < (1 << n); mask++) {
+        let s = 0; const comb = [];
+        for (let i = 0; i < n; i++) if (mask & (1 << i)) { s += uniq[i]; comb.push(uniq[i]); }
+        if (s === 0) continue;
+        if (s <= capacity && s > bestSum) { bestSum = s; best = [comb]; }
+        else if (s === bestSum) best.push(comb);
+      }
+      return { sum: bestSum, combos: best.slice(0, 10) };
+    }
+    function render() {
+      const cap = parseInt(capEl.value) || 19;
+      const values = valsEl.value.split(',').map((x) => parseInt(x.trim())).filter((x) => !isNaN(x));
+      const r = bestFill(cap, values);
+      out.innerHTML = '<p class="font-bold">目标容量：' + cap + '</p>' +
+        '<p class="mt-2">可填满到 <b class="text-pool-700">' + r.sum + '</b>（' + (r.sum === cap ? '已填满，无浪费' : '浪费 ' + (cap - r.sum)) + '）</p>' +
+        (r.combos.length
+          ? '<ul class="mt-3 list-disc pl-5">' + r.combos.map((c) => '<li>' + c.slice().sort((a, b) => b - a).join(' + ') + ' = ' + c.reduce((a, b) => a + b, 0) + '</li>').join('') + '</ul>'
+          : '<p class="mt-3 text-ink-soft">未找到可用组合，请检查可选 PP。</p>');
+    }
+    capEl.addEventListener('input', render); valsEl.addEventListener('input', render);
+    render();
+  </script>
+</Base>

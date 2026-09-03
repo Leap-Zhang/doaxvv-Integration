@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pageEntries } from '../../data/searchEntries.js';
+import { girls } from '../../data/girls.js';
+
+const entries = [
+  ...pageEntries,
+  ...girls.map((g) => ({
+    title: g.name,
+    url: `/girls/${g.id}`,
+    text: `${g.jp} ${g.romaji} ${g.cv} ${g.birthday} ${g.tags.join(' ')} ${g.type} ${g.profile}`
+  }))
+];
+---
+
+<Base title="搜索 · DOAXVV 攻略站" desc="全站检索。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">全站检索</p>
+    <h1 class="mt-1 text-3xl font-black" data-i18n="search.title">搜索</h1>
+    <input id="q" type="search" placeholder="输入关键词，如：海咲、力量、爬山、泳装…"
+      class="mt-5 w-full max-w-2xl rounded-full border border-line bg-white px-5 py-3 text-sm shadow-sm outline-none focus:border-pool-400" />
+    <div id="results" class="mt-8 grid gap-4"></div>
+    <p id="empty" class="mt-8 hidden text-ink-soft">没有找到匹配的内容。</p>
+  </div>
+
+  <div id="search-index" hidden>{JSON.stringify(entries)}</div>
+  <script>
+    const entries = JSON.parse(document.getElementById('search-index').textContent);
+    const input = document.getElementById('q');
+    const results = document.getElementById('results');
+    const empty = document.getElementById('empty');
+
+    const qs = new URLSearchParams(location.search).get('q') || '';
+    if (qs) input.value = qs;
+
+    function render(q) {
+      q = (q || '').trim().toLowerCase();
+      results.innerHTML = '';
+      let shown = 0;
+      entries.forEach((e) => {
+        const hay = (e.title + ' ' + e.text).toLowerCase();
+        if (!q || hay.includes(q)) {
+          shown++;
+          const a = document.createElement('a');
+          a.href = (document.documentElement.getAttribute('data-base')||'/')+e.url.replace(/^\//,'');
+          a.className = 'card-wiki block p-5 no-underline';
+          a.innerHTML = '<div class="font-extrabold text-pool-700">' + e.title + '</div><div class="mt-1 text-sm text-ink-soft">' + e.text.slice(0, 90) + '…</div>';
+          results.appendChild(a);
+        }
+      });
+      empty.classList.toggle('hidden', shown !== 0);
+    }
+
+    input.addEventListener('input', () => render(input.value));
+    render(qs);
+  </script>
+</Base>
