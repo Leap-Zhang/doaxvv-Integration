@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+const snapshot = '2026-09-06';
+const stat = [
+  ['泳装 SSR', '3191'], ['Steam 泳装', '155'], ['技能', '401'], ['角色', '33'],
+  ['等级 / 经验表', '100'], ['月度纪念', '90'], ['活动', '10'], ['潜力 / PP', '19'],
+  ['饰品升级素材', '8'], ['亲密度等级', '60']
+];
+const log = [
+  ['v0.3', '2026-09-06', '资料库：等级/月度/活动/潜力PP/Steam泳装/饰品/亲密度全量接入；新增工具：等级经验计算器、属性对比'],
+  ['v0.2', '2026-09-06', '泳装/女孩/技能图鉴、搜索、面板估算/PP规划、收藏、留言、三语、明暗、海岸视觉'],
+  ['v0.1', '2026-09-06', '站点搭建：Astro 静态站、数据本地化、GitHub Pages 部署']
+];
+---
+
+<Base title="数据快照与更新日志 · DOAXVV 攻略站" desc="数据来源、快照日期与版本更新记录。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">关于本站</p>
+    <h1 class="mt-1 text-3xl font-black">数据快照与更新日志</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">本站为社区向攻略站，数据整理自 <a href="https://doax.cc/" target="_blank" rel="noopener" class="font-semibold text-pool-600">doax.cc</a> 与官方/社区公开资料（已本地化）。数据快照：<b class="text-ink">{snapshot}</b>。</p>
+
+    <h2 class="sec-h">数据模块一览</h2>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {stat.map((s) => (
+        <div class="rounded-2xl border border-line bg-white p-4">
+          <div class="text-xs text-ink-soft">{s[0]}</div>
+          <div class="mt-1 text-2xl font-black text-pool-700">{s[1]}</div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="sec-h">更新日志</h2>
+    <div class="space-y-3">
+      {log.map((l) => (
+        <div class="rounded-2xl border border-line bg-white p-4">
+          <div class="flex items-center gap-2"><span class="badge badge-pool">{l[0]}</span><span class="text-xs text-ink-soft">{l[1]}</span></div>
+          <p class="mt-1 text-sm text-ink">{l[2]}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 text-sm text-ink-soft">
+      <b class="text-ink">版权与免责</b>：站内为《DEAD OR ALIVE Xtreme Venus Vacation》（光荣特库摩）之攻略与游戏图片，整理为移动学习/资讯向、非商用；数据与攻略以来源站及官方为准，如有疑问以原站为准。
+    </div>
+  </div>
+</Base>
