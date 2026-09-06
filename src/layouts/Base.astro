@@ -22,7 +22,8 @@ const nav = [
   { key: 'admin.skills', href: '/skills', match: (p: string) => p.startsWith('/skills') },
   { key: 'admin.tools', href: '/tools', match: (p: string) => p.startsWith('/tools') },
   { key: 'admin.guide', href: '/guide', match: (p: string) => p.startsWith('/guide') },
-  { key: 'admin.community', href: '/community', match: (p: string) => p.startsWith('/community') }
+  { key: 'admin.community', href: '/community', match: (p: string) => p.startsWith('/community') },
+  { key: 'admin.reference', href: '/reference', match: (p: string) => p === '/reference' }
 ];
 const I18N = { ui: UI, girls: girlNames, langs: LANGS, labels: LANG_LABEL, type: TYPE };
 ---

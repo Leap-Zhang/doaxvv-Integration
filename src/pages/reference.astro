@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import girlNames from '../data/girl-names.json';
+import levelData from '../data/doax-level.json';
+import bannerData from '../data/doax-banner.json';
+import eventData from '../data/doax-event.json';
+import emphasisData from '../data/doax-emphasis.json';
+import steamData from '../data/doax-ssr-steam.json';
+import accessory from '../data/doax-accessory.json';
+import room from '../data/doax-room.json';
+
+const gname = (id) => (girlNames[id] && girlNames[id].zh) || id;
+const yearMap = {};
+bannerData.forEach((b) => { const y = String(b.timestamp).split('/')[0]; (yearMap[y] ||= []).push(b); });
+const years = Object.keys(yearMap).sort();
+const typeChip = (t) => ({ pow:'chip-pow', tec:'chip-tec', stm:'chip-stm', apl:'chip-apl' }[t] || 'badge-sand');
+const fmt = (s) => String(s || '').replace(/\s+/g, ' ').trim();
+const today = new Date().toISOString().slice(0, 10);
+const snap = '2026-09-06';
+const ptsLabels = ['10分','20分','1小时','3小时','6小时','12小时','20小时','1篮','3篮','10篮'];
+---
+
+<Base title="资料库 · DOAXVV 攻略站" desc="等级经验、月度纪念、活动、潜力 PP、Steam 泳装等参考数据。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600" data-i18n="admin.reference">参考数据</p>
+    <h1 class="mt-1 text-3xl font-black" data-i18n="ref.title">资料库</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">整理自 doax.cc 数据（已本地化）。数据快照：{snap}。</p>
+
+    <!-- 等级 / 经验 -->
+    <h2 class="sec-h">等级 / 经验表（100 级）</h2>
+    <div class="max-h-[72vh] overflow-auto rounded-2xl border border-line bg-white shadow-sm">
+      <table class="tbl min-w-[560px] w-full">
+        <thead><tr><th>等级</th><th>力/技 +</th><th>体 +</th><th>魅 +</th><th>所需经验</th></tr></thead>
+        <tbody>
+          {levelData.map((l) => <tr><td><b class="text-ink">{l.level}</b></td><td>{l.pow_tec_up}</td><td>{l.stm_up}</td><td>{l.apl_up}</td><td>{l.need_exp}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 月度纪念 -->
+    <h2 class="sec-h">月度纪念 / 泳装发布时间线（{bannerData.length} 个月）</h2>
+    {years.map((y) => (
+      <div class="mt-4">
+        <h3 class="text-base font-extrabold text-pool-700">{y}</h3>
+        {yearMap[y].map((b) => (
+          <div class="mt-2 rounded-xl border border-line bg-white/80 p-3">
+            <div class="text-xs font-bold text-ink-soft">{b.timestamp}</div>
+            <div class="mt-1 text-sm leading-relaxed text-ink">{b.data.join('　·　')}</div>
+          </div>
+        ))}
+      </div>
+    ))}
+
+    <!-- 活动 -->
+    <h2 class="sec-h">活动</h2>
+    <div class="grid gap-3 sm:grid-cols-2">
+      {eventData.map((e) => (
+        <div class="rounded-2xl border border-line bg-white p-4">
+          <span class:list={['badge', e.type === 'limited' ? 'badge-blush' : 'badge-pool']}>{e.type}</span>
+          <div class="mt-1 font-bold text-ink">{e.title}</div>
+          <div class="mt-1 text-xs text-ink-soft">{e.starttime} ~ {e.endtime}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- 潜力 PP -->
+    <h2 class="sec-h">潜力 / 优先级（PP）</h2>
+    <div class="overflow-auto rounded-2xl border border-line bg-white shadow-sm">
+      <table class="tbl min-w-[760px] w-full">
+        <thead><tr><th>类型</th><th>PP</th><th>下限</th><th>星级上限</th><th>上限</th><th>所需钥匙</th><th>加成</th><th>所需体力</th></tr></thead>
+        <tbody>
+          {emphasisData.map((p) => <tr><td>{p.type}</td><td>{p.pp}</td><td>{p.min}</td><td>{p.max_star}</td><td>{p.max}</td><td class="whitespace-pre-wrap">{fmt(p.need_key)}</td><td>{fmt(p.bonus)}</td><td>{fmt(p.need_stm)}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Steam 泳装 -->
+    <h2 class="sec-h">Steam 泳装（{steamData.length} 件）</h2>
+    <div class="max-h-[72vh] overflow-auto rounded-2xl border border-line bg-white shadow-sm">
+      <table class="tbl min-w-[760px] w-full">
+        <thead><tr><th>角色</th><th>名称</th><th>类型</th><th>POW</th><th>TEC</th><th>STM</th><th>APL</th><th>发售 / 备注</th></tr></thead>
+        <tbody>
+          {steamData.map((s) => (
+            <tr>
+              <td><b class="text-ink">{gname(s.girl)}</b></td>
+              <td>{s.name}</td>
+              <td><span class:list={['badge', typeChip(s.type)]}>{s.type.toUpperCase()}</span></td>
+              <td>{s.pow}</td><td>{s.tec}</td><td>{s.stm}</td><td>{s.apl}</td>
+              <td class="text-xs">{s.sell}{s.special_fun ? ' · ' + s.special_fun.slice(0, 36) : ''}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- 饰品升级素材 -->
+    <h2 class="sec-h">饰品升级素材</h2>
+    <div class="overflow-auto rounded-2xl border border-line bg-white shadow-sm">
+      <table class="tbl min-w-[640px] w-full">
+        <thead><tr><th>等级</th><th>补正</th><th>羽毛</th><th>单翼</th><th>双翼</th></tr></thead>
+        <tbody>{accessory.ssr.map((a) => <tr><td><b class="text-ink">LV.{a.lv}</b></td><td>{a.n}</td><td>{a.feather}</td><td>{a.single_wing}</td><td>{a.double_wings}</td></tr>)}</tbody>
+      </table>
+    </div>
+    <p class="mt-2 text-xs text-ink-soft">另一档（含成长值）：{accessory.alt.length} 条。</p>
+
+    <!-- 亲密度 / 房间 -->
+    <h2 class="sec-h">亲密度 / 房间 · 结果分数</h2>
+    <div class="overflow-auto rounded-2xl border border-line bg-white shadow-sm">
+      <table class="tbl min-w-[760px] w-full">
+        <thead><tr><th>结果</th><th>概率</th>{ptsLabels.map((l) => <th>{l}</th>)}</tr></thead>
+        <tbody>{room.score.map((r) => <tr><td><b class="text-ink">{r.result}</b></td><td>{r.prob}</td>{r.pts.map((pt) => <td>{pt}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+
+
+    <h2 class="sec-h">亲密度等级表（{room.levels.length} 级）</h2>
+    <div class="max-h-[72vh] overflow-auto rounded-2xl border border-line bg-white shadow-sm">
+      <table class="tbl min-w-[760px] w-full">
+        <thead><tr><th>等级</th><th>亲密度</th><th>篮子</th><th>总亲密度</th><th>篮子合计</th><th>应援版</th><th>心之匙</th></tr></thead>
+        <tbody>{room.levels.map((l) => <tr><td><b class="text-ink">LV.{l.lv}</b></td><td>{l.intimacy}</td><td>{l.basket}</td><td>{l.total}</td><td>{l.basketTotal}</td><td>{l.support}</td><td>{l.key || '—'}</td></tr>)}</tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 text-sm text-ink-soft">
+      数据来源：<a href="https://doax.cc/" target="_blank" rel="noopener" class="font-semibold text-pool-600">doax.cc</a>（已本地化）。潜力/PP、饰品升级素材、房间/亲密度（结果分数 + 60 级等级表）已收录。card（强化经验·费用）为 doax.cc 内嵌的多字段小表，字段语义随原站布局，结构化不可靠，交由“工具”阶段的经验计算器覆盖。
+    </div>
+  </div>
+</Base>

@@ -5,3 +5,4 @@ dist/
 *.log
 bromide_dl/
 test-results/
+tools/doax/raw/
