@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import levelData from '../../data/doax-level.json';
+const levels = levelData;
+const LEVEL_JSON = JSON.stringify(levels);
+const total100 = levels.reduce((s, l) => s + (+l.need_exp || 0), 0);
+---
+
+<Base title="等级经验计算器 · DOAXVV 攻略站" desc="按 100 级经验表计算升级所需经验与属性成长。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600" data-i18n="admin.tools">工具</p>
+    <h1 class="mt-1 text-3xl font-black">等级经验计算器</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">用 doax.cc 的 100 级经验表，算从当前等级升到目标等级所需的经验与属性成长。</p>
+
+    <div class="card-wiki mt-6 p-6">
+      <div class="flex flex-wrap items-end gap-3">
+        <label class="text-xs text-ink-soft">当前等级
+          <input id="fromLv" type="number" min="1" max="100" value="1" class="mt-1 block w-24 rounded-full border border-line bg-white/70 px-3 py-2 text-sm outline-none focus:border-pool-400" /></label>
+        <label class="text-xs text-ink-soft">目标等级
+          <input id="toLv" type="number" min="1" max="100" value="100" class="mt-1 block w-24 rounded-full border border-line bg-white/70 px-3 py-2 text-sm outline-none focus:border-pool-400" /></label>
+        <button id="calcBtn" class="badge badge-pool cursor-pointer">计算</button>
+      </div>
+      <div id="res" class="mt-5"></div>
+    </div>
+
+    <p class="mt-4 text-sm text-ink-soft">Lv1 → 100 总经验约 <b class="text-ink">{total100.toLocaleString()}</b>。</p>
+  </div>
+  <script>
+    const levels = {LEVEL_JSON};
+    const fmt = (n) => Math.round(n).toLocaleString();
+    function range(f, t) { let e = 0, pt = 0, st = 0, at = 0; for (let i = f; i < t; i++) { const l = levels[i - 1]; if (!l) break; e += (+l.need_exp || 0); pt += (+l.pow_tec_up || 0); st += (+l.stm_up || 0); at += (+l.apl_up || 0); } return { e, pt, st, at }; }
+    function run() {
+      const f = Math.max(1, Math.min(100, +document.getElementById('fromLv').value || 1));
+      const t = Math.max(1, Math.min(100, +document.getElementById('toLv').value || 100));
+      const r = range(f, t); const el = document.getElementById('res');
+      el.innerHTML =
+        '<div class="grid gap-3 sm:grid-cols-2">' +
+        '<div class="rounded-xl bg-pool-50 p-4"><div class="text-xs text-ink-soft">所需经验</div><div class="mt-1 text-2xl font-black text-pool-700">' + fmt(r.e) + '</div></div>' +
+        '<div class="rounded-xl bg-pool-50 p-4"><div class="text-xs text-ink-soft">升级区间</div><div class="mt-1 text-2xl font-black text-ink">Lv ' + f + ' 到 Lv ' + t + '</div></div>' +
+        '</div>' +
+        '<div class="mt-3 grid grid-cols-3 gap-3 text-center">' +
+        '<div class="rounded-lg border border-line bg-white p-2"><div class="text-xs text-ink-soft">力/技 +</div><div class="mt-1 text-lg font-extrabold attr-pow">' + fmt(r.pt) + '</div></div>' +
+        '<div class="rounded-lg border border-line bg-white p-2"><div class="text-xs text-ink-soft">体 +</div><div class="mt-1 text-lg font-extrabold attr-stm">' + fmt(r.st) + '</div></div>' +
+        '<div class="rounded-lg border border-line bg-white p-2"><div class="text-xs text-ink-soft">魅 +</div><div class="mt-1 text-lg font-extrabold attr-apl">' + fmt(r.at) + '</div></div>' +
+        '</div>';
+    }
+    document.getElementById('calcBtn').addEventListener('click', run); run();
+  </script>
+</Base>
