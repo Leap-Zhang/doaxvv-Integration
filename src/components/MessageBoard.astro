@@ -1,0 +1,59 @@
+---
+import Icon from './Icon.astro';
+---
+
+<div class="msg-fab" style="position:fixed;bottom:22px;right:22px;z-index:120;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:linear-gradient(90deg,#2fa3a0,#1f6f74);color:#fff;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 12px 32px rgba(31,111,116,.4);">
+  <Icon name="community" size={18} /> 留言 / 提问
+</div>
+
+<div class="msg-panel" style="position:fixed;inset:0;z-index:125;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(18,70,76,.45);">
+  <div style="background:#fffdf7;border:1px dashed rgba(224,138,106,.35);border-radius:20px;max-width:460px;width:100%;max-height:86vh;overflow:auto;padding:22px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);">
+    <button class="msg-close" style="position:absolute;top:12px;right:12px;border:none;background:transparent;font-size:22px;cursor:pointer;color:#5a7288">×</button>
+    <div class="text-lg font-extrabold">留言 / 提问</div>
+    <p class="mt-1 text-xs text-ink-soft">本地留言板（保存在本浏览器，无账号、不上传、不跨设备）。</p>
+    <textarea id="msgTa" rows="3" placeholder="想说啥、想问啥…" style="width:100%;margin-top:12px;padding:10px 12px;border:1px solid rgba(224,138,106,.35);border-radius:12px;background:#fff;font-size:14px;resize:vertical;outline:none;"></textarea>
+    <button id="msgSubmit" style="margin-top:10px;padding:9px 16px;border-radius:999px;background:linear-gradient(90deg,#2fa3a0,#1f6f74);color:#fff;font-weight:700;font-size:13px;border:none;cursor:pointer;">提交留言</button>
+    <div class="mt-4 text-xs text-ink-soft">共 <span id="msgCount">0</span> 条</div>
+    <div id="msgList" class="mt-2 space-y-2"></div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const KEY = 'doax_msg';
+    const fab = document.querySelector('.msg-fab');
+    const panel = document.querySelector('.msg-panel');
+    const listEl = document.getElementById('msgList');
+    const ta = document.getElementById('msgTa');
+    const countEl = document.getElementById('msgCount');
+    const read = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } };
+    const write = (a) => localStorage.setItem(KEY, JSON.stringify(a));
+    const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    function render() {
+      const a = read();
+      countEl.textContent = a.length;
+      if (!a.length) { listEl.innerHTML = '<p class="text-xs text-ink-soft">还没有留言/提问。写一条吧～</p>'; return; }
+      listEl.innerHTML = a.slice().reverse().map((m, i) =>
+        '<div class="msg-item" style="border:1px solid rgba(224,138,106,.25);border-radius:12px;padding:10px 12px;background:#fff;margin-top:8px;color:var(--color-ink);">' +
+          '<div style="font-size:13px;line-height:1.6;white-space:pre-wrap;">' + esc(m.text) + '</div>' +
+          '<div style="display:flex;justify-content:space-between;margin-top:6px;"><span style="font-size:11px;color:#5f8090;">' + new Date(m.ts).toLocaleString('zh-CN') + '</span><button class="msg-del" data-i="' + i + '" style="font-size:11px;color:#c85c3a;border:none;background:none;cursor:pointer;">删除</button></div>' +
+        '</div>').join('');
+      listEl.querySelectorAll('.msg-del').forEach((b) => b.addEventListener('click', (e) => {
+        const arr = read();
+        const idx = arr.length - 1 - Number(b.dataset.i);
+        if (idx >= 0 && idx < arr.length) { arr.splice(idx, 1); write(arr); render(); }
+        e.stopPropagation();
+      }));
+    }
+    function open() { panel.style.display = 'flex'; render(); document.body.style.overflow = 'hidden'; }
+    function close() { panel.style.display = 'none'; document.body.style.overflow = ''; }
+    fab.addEventListener('click', open);
+    panel.querySelector('.msg-close').addEventListener('click', close);
+    panel.addEventListener('click', (e) => { if (e.target === panel) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && panel.style.display === 'flex') close(); });
+    document.getElementById('msgSubmit').addEventListener('click', () => {
+      const t = ta.value.trim(); if (!t) return;
+      const arr = read(); arr.push({ text: t, ts: Date.now() }); write(arr); ta.value = ''; render();
+    });
+  })();
+</script>

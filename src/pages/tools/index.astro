@@ -1,10 +1,12 @@
 ---
+
 import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+const root = import.meta.env.BASE_URL || '/';
 const tools = [
-  { href: '/tools/panel', emoji: '🧮', title: '面板估算器', desc: '选角色 + 泳装 + 潜力/涂油加成，估算最终面板数值。' },
-  { href: '/tools/plan', emoji: '🧗', title: '满破 / PP 规划器', desc: '按目标饰品 PP 容量，推荐“减体潜力”搭配组合。' },
-  { href: '/glossary', emoji: '📚', title: '术语表', desc: '中 / 英 / 日 术语对照。' },
-  { href: '/collection', emoji: '⭐', title: '我的收藏', desc: '本地收藏的女孩与泳装。' }
+  { href: '/tools/panel', icon: 'panel', title: '面板估算器', desc: '选角色 + 泳装 + 潜力/涂油加成，估算最终面板数值。' },
+  { href: '/tools/plan', icon: 'plan', title: '满破 / PP 规划器', desc: '按目标饰品 PP 容量，推荐“减体潜力”搭配组合。' },
+  { href: '/collection', icon: 'star', title: '我的收藏', desc: '本地收藏的女孩与泳装。' }
 ];
 ---
 
@@ -15,8 +17,8 @@ const tools = [
     <p class="mt-2 max-w-3xl text-ink-soft" data-i18n="tools.desc">配装估算 / 满破PP规划。</p>
     <div class="mt-6 grid gap-5 sm:grid-cols-2">
       {tools.map((t) => (
-        <a href={t.href} class="card-wiki block p-6 no-underline">
-          <div class="text-3xl">{t.emoji}</div>
+        <a href={root + t.href.slice(1)} class="card-wiki block p-6 no-underline">
+          <div class="text-pool-700"><Icon name={t.icon} size={28} /></div>
           <h2 class="mt-3 text-lg font-extrabold">{t.title}</h2>
           <p class="mt-1.5 text-sm text-ink-soft">{t.desc}</p>
           <span class="mt-3 inline-block text-sm font-semibold text-pool-600">打开 →</span>

@@ -1,6 +1,8 @@
 ---
+
 import Base from '../layouts/Base.astro';
 import SrcBlock from '../components/SrcBlock.astro';
+const root = import.meta.env.BASE_URL || '/';
 
 const sections = [
   {
@@ -153,12 +155,12 @@ const sections = [
     </p>
 
     <figure class="card-wiki mt-6 overflow-hidden">
-      <img src="/img/hero_night.webp" alt="DOAXVV 实机截图（夜之泳池）" class="max-h-80 w-full object-cover" />
+      <img src={root + 'img/hero_night.webp'} alt="DOAXVV 实机截图（夜之泳池）" class="max-h-80 w-full object-cover" />
       <figcaption class="px-4 py-2 text-xs text-ink-soft">配图：DOAXVV 实机截图，来源 3DMGame 资讯。</figcaption>
     </figure>
 
     <figure class="card-wiki mt-4 overflow-hidden">
-      <img src="/img/promo.webp" alt="Misty Lily 泳装抽卡宣传图" class="max-h-80 w-full object-cover" />
+      <img src={root + 'img/promo.webp'} alt="Misty Lily 泳装抽卡宣传图" class="max-h-80 w-full object-cover" />
       <figcaption class="px-4 py-2 text-xs text-ink-soft">配图：DOAXVV 泳装抽卡宣传图，来源 GOTVG 资讯（已本地化）。</figcaption>
     </figure>
 

@@ -1,0 +1,37 @@
+---
+const root = import.meta.env.BASE_URL || '/';
+
+/*
+ * 海岸背景轮播组件（A×C 艺术方向）
+ * full = true  首页 hero：完整显示照片 + 左深色渐变遮罩（文字可读）
+ * full = false 全站环境背景：低透明度 + 模糊 + 明暗纱幕，作为氛围底
+ */
+const { full = false } = Astro.props;
+const pool = ['img/bg/bg1.jpg','img/bg/bg2.jpg','img/bg/bg3.jpg','img/bg/bg4.jpg','img/bg/bg5.jpg'].map((p) => root + p);
+const slides = full ? pool : [pool[0], pool[1], pool[3]];
+---
+
+<div class:list={['coast', full ? 'coast-full' : 'coast-ambient']}>
+  <div class="coast-slides">
+    {slides.map((b, i) => (
+      <div class:list={['coast-slide', i === 0 ? 'on' : '']} style={`background:url(${b}) center/cover no-repeat`}></div>
+    ))}
+  </div>
+  <div class="coast-veil"></div>
+</div>
+
+<script>
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.coast').forEach((el) => {
+    const slides = [...el.querySelectorAll('.coast-slide')];
+    if (!slides.length) return;
+    if (reduce) return;
+    if (slides.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      slides[i].classList.remove('on');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('on');
+    }, 5200);
+  });
+</script>

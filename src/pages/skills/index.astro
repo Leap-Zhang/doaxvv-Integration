@@ -29,11 +29,32 @@ const skillCount = skills.length;
   </div>
 
   <script>
+    import { isFav, toggleFav } from '../../lib/fav.js';
     (async () => {
       const skills = await fetch((document.documentElement.getAttribute('data-base')||'/')+'data/doax-skills.json').then((r) => r.json());
       let LANG = window.__LANG || 'zh';
       const sname = (s) => (LANG === 'en' ? (s.name_en || s.name) : LANG === 'ja' ? (s.name_ja || s.name) : s.name);
       const seffect = (s) => (LANG === 'en' ? (s.effect_en || s.effect) : LANG === 'ja' ? (s.effect_ja || s.effect) : s.effect);
+      const propCls = (p) => ({ pow: 'attr-pow', tec: 'attr-tec', stm: 'attr-stm' }[p] || '');
+      const openSkillOverlay = (sk) => {
+        const propClr = { pow: '#d13a6b', tec: '#2f9e6b', stm: '#e0a53c' }[sk.property] || '#1f6f74';
+        const base = (document.documentElement.getAttribute('data-base') || '/');
+        var ov = document.createElement('div');
+        ov.style.cssText = 'position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;padding:18px;';
+        ov.style.background = 'linear-gradient(rgba(20,70,76,.5),rgba(31,111,116,.6)), radial-gradient(50% 40% at 80% 15%, ' + propClr + '66, transparent 60%), linear-gradient(180deg,#14464c,#1f6f74)';
+        ov.innerHTML = '<div style="background:#fffdf7;border-radius:20px;max-width:460px;width:100%;padding:22px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);border:1px dashed rgba(224,138,106,.35)">' +
+          '<button class="x" style="position:absolute;top:12px;right:12px;border:none;background:transparent;font-size:22px;cursor:pointer;color:#5a7288">×</button>' +
+          '<div class="flex items-center justify-between"><div class="text-xl font-extrabold">' + sname(sk) + '</div><span class="badge ' + (sk.type==='F'?'badge-blush':sk.type==='P'?'badge-sand':'badge-pool') + '">' + sk.type + '</span></div>' +
+          '<p class="mt-2 text-sm text-ink-soft">' + seffect(sk) + '</p>' +
+          (sk.property ? '<p class="mt-3 text-xs text-ink-soft">属性：<b class="' + propCls(sk.property) + '">' + sk.property + '</b>' + (sk.pp ? '　PP：' + sk.pp : '') + '</p>' : '') +
+          '</div>';
+        document.body.appendChild(ov); document.body.style.overflow = 'hidden';
+        const onKey = (e) => { if (e.key === 'Escape') close(); };
+        document.addEventListener('keydown', onKey);
+        const close = () => { ov.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); };
+        ov.querySelector('.x').addEventListener('click', close);
+        ov.addEventListener('click', (e) => { if (e.target === ov) close(); });
+      };
       const search = document.getElementById('kSearch');
       const typeBox = document.getElementById('kType');
       const list = document.getElementById('kList');
@@ -51,10 +72,19 @@ const skillCount = skills.length;
         f.forEach((s) => {
           const el = document.createElement('div');
           el.className = 'card-wiki p-4';
+          el.style.position = 'relative';
           const color = s.type === 'F' ? 'badge-blush' : s.type === 'P' ? 'badge-sand' : 'badge-pool';
           el.innerHTML = '<div class="flex items-center justify-between"><span class="font-extrabold">' + sname(s) + '</span><span class="badge ' + color + '">' + s.type + '</span></div>' +
             '<p class="mt-1.5 text-sm text-ink-soft">' + seffect(s) + '</p>' +
-            (s.property ? '<div class="mt-2 text-xs text-ink-soft">' + s.property + (s.pp ? '　PP：' + s.pp : '') + '</div>' : '');
+            (s.property ? '<div class="mt-2 text-xs text-ink-soft"><span class="' + propCls(s.property) + '">' + s.property + '</span>' + (s.pp ? '　PP：' + s.pp : '') + '</div>' : '');
+          const fb = document.createElement('button');
+          fb.className = 'fav-a';
+          fb.textContent = isFav('skills', s.name) ? '★' : '☆';
+          fb.title = '收藏';
+          fb.style.cssText = 'position:absolute;top:8px;right:8px;border:none;background:transparent;cursor:pointer;font-size:16px;color:#e6a04c';
+          fb.addEventListener('click', (e) => { e.stopPropagation(); toggleFav('skills', s.name); fb.textContent = isFav('skills', s.name) ? '★' : '☆'; });
+          el.appendChild(fb);
+          el.addEventListener('click', () => openSkillOverlay(s));
           list.appendChild(el);
         });
       }

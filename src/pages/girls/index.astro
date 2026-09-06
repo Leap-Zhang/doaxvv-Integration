@@ -1,9 +1,14 @@
 ---
+
 import Base from '../../layouts/Base.astro';
 import { girls } from '../../data/girls.js';
+const root = import.meta.env.BASE_URL || '/';
 
 const cats = ['全部', '初始', '追加'];
 const types = ['全部类型', '力量型', '技巧型', '体力型'];
+const typeChip = (t) => ({ '力量型': 'chip-pow', '技巧型': 'chip-tec', '体力型': 'chip-stm' }[t] || 'badge-pool');
+const girlsJson = JSON.stringify(girls.map((g) => ({ id: g.id, name: g.name, jp: g.jp, romaji: g.romaji, cv: g.cv, birthday: g.birthday, age: g.age, height: g.height, type: g.type, tags: g.tags, profile: g.profile, official: g.official, img: g.img, note: g.note })));
+const bgType = (t) => ({ '力量型': 'bg-type-pow', '技巧型': 'bg-type-tec', '体力型': 'bg-type-stm' }[t] || 'bg-gradient-to-br from-pool-50 to-pool-100');
 ---
 
 <Base title="女孩图鉴 · DOAXVV 攻略站" desc="全部女孩资料、基础数值与培养笔记。">
@@ -35,16 +40,17 @@ const types = ['全部类型', '力量型', '技巧型', '体力型'];
       </div>
     </div>
 
+    <div id="girls-data" hidden>{girlsJson}</div>
     <div id="grid" class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {girls.map((g) => (
         <a
-          href={`/girls/${g.id}`}
+          href={`${root}girls/${g.id}`}
           data-cat={g.category}
           data-type={g.type}
           data-search={(g.name + g.romaji + g.jp + g.cv + g.tags.join(' ') + ' ' + g.type).toLowerCase()}
           class="card-wiki block overflow-hidden no-underline"
         >
-          <div class="relative h-44 bg-gradient-to-br from-pool-50 to-pool-100">
+          <div class:list={['relative h-44', bgType(g.type)]}>
             {g.img ? (
               <img src={g.img} alt={g.name} loading="lazy" class="h-44 w-full object-cover" />
             ) : (
@@ -57,7 +63,7 @@ const types = ['全部类型', '力量型', '技巧型', '体力型'];
           <div class="p-4">
             <div class="flex items-baseline justify-between">
               <h2 class="text-base font-extrabold" data-name-id={g.id}>{g.name}</h2>
-              <span class="badge badge-pool" data-type-label={g.type}>{g.type}</span>
+              <span class:list={['badge', typeChip(g.type)]} data-type-label={g.type}>{g.type}</span>
             </div>
             <p class="text-xs text-ink-soft">{g.jp} · {g.romaji}</p>
             <div class="mt-2 flex flex-wrap gap-1">{g.tags.slice(0, 2).map((t) => <span class="badge badge-sand">{t}</span>)}</div>
@@ -107,5 +113,42 @@ const types = ['全部类型', '力量型', '技巧型', '体力型'];
       apply();
     });
     apply();
+    // 女孩悬浮页（lightbox）：完整资料，当前立绘为背景
+    const base = document.documentElement.getAttribute('data-base') || '/';
+    const gData = JSON.parse(document.getElementById('girls-data').textContent || '[]');
+    const doax = await fetch(base + 'data/doax-girls.json').then((r) => r.json()).catch(() => []);
+    const c0 = { pow: '#d13a6b', tec: '#2f9e6b', stm: '#e0a53c', apl: '#a86fd0' };
+    function bar(l, v, color, max) { const w = Math.min(100, Math.round(v / max * 100)); return '<div class="mb-1.5"><div class="mb-0.5 flex justify-between text-[11px]"><span class="font-semibold" style="color:' + color + '">' + l + '</span><span class="font-bold" style="color:' + color + '">' + v + '</span></div><div class="h-1.5 w-full overflow-hidden rounded-full" style="background:#f3e3c8"><div class="h-full rounded-full" style="width:' + w + '%;background:' + color + '"></div></div></div>'; }
+    const grid = document.getElementById('grid');
+    grid?.addEventListener('click', (e) => {
+      const card = e.target.closest('#grid > a'); if (!card) return; e.preventDefault();
+      const id = (card.getAttribute('href') || '').replace(/\/girls\//, '').replace(/\/$/, '');
+      const gg = gData.find((x) => x.id === id) || {};
+      const dx = (doax || []).find((x) => x.id === id) || null;
+      const img = (card.querySelector('img')?.src) || gg.img || '';
+      const typeClr = { '力量型': '#d13a6b', '技巧型': '#2f9e6b', '体力型': '#e0a53c' }[gg.type] || '#1f6f74';
+      const t3 = dx ? (dx.bust + '/' + dx.waist + '/' + dx.hip) : '';
+      const ov = document.createElement('div');
+      ov.style.cssText = 'position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;padding:16px;';
+      ov.style.background = img ? 'linear-gradient(rgba(18,70,76,.50),rgba(18,70,76,.62)), url(' + img + ') center/cover' : 'rgba(18,70,76,.55)';
+      const panel = document.createElement('div');
+      panel.style.cssText = 'background:#fffdf7;border:1px dashed rgba(224,138,106,.35);border-radius:20px;max-width:520px;width:100%;max-height:88vh;overflow:auto;padding:22px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);';
+      panel.innerHTML =
+        '<button class="x" style="position:absolute;top:12px;right:12px;border:none;background:transparent;font-size:22px;cursor:pointer;color:#5a7288">×</button>' +
+        '<div class="flex items-center gap-3"><img src="' + img + '" alt="" style="width:64px;height:64px;border-radius:14px;object-fit:cover" /><div><div class="text-xl font-extrabold">' + (gg.name || '') + '</div><div class="text-xs text-ink-soft">' + (gg.jp || '') + ' · ' + (gg.romaji || '') + '</div><span style="display:inline-block;margin-top:5px;padding:3px 10px;border-radius:999px;background:' + typeClr + '1f;color:' + typeClr + ';font-weight:700;font-size:12px">' + (gg.type || '') + '</span></div></div>' +
+        '<div class="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-xs text-ink-soft"><span>声优：' + (gg.cv || '—') + '</span><span>生日：' + (gg.birthday || '—') + '</span><span>年龄：' + (gg.age || '—') + '</span><span>身高：' + (gg.height || '—') + '</span><span>三围：' + (t3 || '—') + '</span><span>血型：' + (dx ? (dx.blood || '—') : '—') + '</span></div>' +
+        ((gg.official) ? '<div class="mt-2 text-xs text-ink-soft">职业：' + (gg.official.occupation || '—') + '　兴趣：' + (gg.official.hobby || '—') + '</div><div class="text-xs text-ink-soft">喜欢的食物：' + (gg.official.favoriteFood || '—') + '　颜色：' + (gg.official.favoriteColor || '—') + '</div>' : '') +
+        '<div class="mt-3">' + bar('POW 力量', dx ? dx.pow.lv1 : '—', c0.pow, 1450) + bar('TEC 技巧', dx ? dx.tec.lv1 : '—', c0.tec, 1450) + bar('STM 体力', dx ? dx.stm.lv1 : '—', c0.stm, 1450) + bar('APL 魅力', dx ? dx.appeal.lv1 : '—', c0.apl, 90) + '</div>' +
+        '<div class="mt-3">' + bar('POW Lv100', dx ? dx.pow.lv100 : '—', c0.pow, 5000) + bar('TEC Lv100', dx ? dx.tec.lv100 : '—', c0.tec, 5000) + bar('STM Lv100', dx ? dx.stm.lv100 : '—', c0.stm, 5000) + '</div>' +
+        '<div class="mt-3 text-xs text-ink-soft">理论最高＝基础(Lv1)＋满级成长＋满强化装备＋满潜力PP＋涂油＋应援板，随配装变化。</div>' +
+        ((gg.note && gg.note.bullets && gg.note.bullets.length) ? '<div class="mt-3 text-xs text-ink-soft"><b class="text-ink">培养笔记</b><ul class="mt-1 list-disc pl-4 space-y-0.5">' + gg.note.bullets.map((x) => '<li>' + x + '</li>').join('') + '</ul></div>' : '') +
+        '<div class="mt-4 flex gap-2"><a href="' + base + 'girls/' + id + '/" style="display:inline-block;padding:9px 16px;border-radius:999px;background:linear-gradient(90deg,#2fa3a0,#1f6f74);color:#fff;font-weight:700;font-size:13px;text-decoration:none">完整页面 →</a><a href="' + base + 'swimsuits/" style="display:inline-block;padding:9px 16px;border-radius:999px;border:1px solid rgba(31,111,116,.4);color:#1f6f74;font-weight:600;font-size:13px;text-decoration:none">她的泳装</a></div>';
+      ov.appendChild(panel); document.body.appendChild(ov); document.body.style.overflow = 'hidden';
+      const onKey = (e) => { if (e.key === 'Escape') close(); };
+      document.addEventListener('keydown', onKey);
+      const close = () => { ov.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); };
+      panel.querySelector('.x').addEventListener('click', close);
+      ov.addEventListener('click', (ev) => { if (ev.target === ov) close(); });
+    });
   </script>
 </Base>

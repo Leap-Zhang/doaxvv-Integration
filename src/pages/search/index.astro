@@ -3,55 +3,198 @@ import Base from '../../layouts/Base.astro';
 import { pageEntries } from '../../data/searchEntries.js';
 import { girls } from '../../data/girls.js';
 
-const entries = [
-  ...pageEntries,
-  ...girls.map((g) => ({
-    title: g.name,
-    url: `/girls/${g.id}`,
-    text: `${g.jp} ${g.romaji} ${g.cv} ${g.birthday} ${g.tags.join(' ')} ${g.type} ${g.profile}`
-  }))
-];
+const girlEntries = girls.map((g) => ({
+  kind: 'girl',
+  badge: '女孩',
+  title: g.name,
+  url: `/girls/${g.id}`,
+  f: {
+    name: `${g.name} ${g.jp || ''} ${g.romaji || ''}`,
+    jp: g.jp || '',
+    romaji: g.romaji || '',
+    type: g.type || '',
+    cv: g.cv || '',
+    birthday: g.birthday || '',
+    tags: (g.tags || []).join(' '),
+    occupation: g.official?.occupation || '',
+    hobby: g.official?.hobby || '',
+    food: g.official?.favoriteFood || '',
+    color: g.official?.favoriteColor || '',
+    profile: g.profile || ''
+  }
+}));
+
+const pageEnts = pageEntries.map((p) => ({
+  kind: 'page',
+  badge: '页面',
+  title: p.title,
+  url: p.url,
+  f: { text: p.text }
+}));
+
+const entries = [...pageEnts, ...girlEntries];
 ---
 
-<Base title="搜索 · DOAXVV 攻略站" desc="全站检索。">
+<Base title="搜索 · DOAXVV 攻略站" desc="全站检索，支持字段过滤与多关键词。">
   <div class="container-wiki py-10">
     <p class="text-sm font-semibold text-pool-600">全站检索</p>
     <h1 class="mt-1 text-3xl font-black" data-i18n="search.title">搜索</h1>
-    <input id="q" type="search" placeholder="输入关键词，如：海咲、力量、爬山、泳装…"
+    <input id="q" type="search" placeholder="输入关键词，如：海咲 / 力量 / cv:内田 / type:力量 / 环 …"
       class="mt-5 w-full max-w-2xl rounded-full border border-line bg-white px-5 py-3 text-sm shadow-sm outline-none focus:border-pool-400" />
-    <div id="results" class="mt-8 grid gap-4"></div>
+    <p class="mt-2 text-xs text-ink-soft">支持多关键词（空格分隔，需同时匹配）；可用 <code>字段:值</code> 过滤，如 <code>type:力量</code>、<code>cv:内田</code>、<code>girl:环</code>、<code>rarity:SSR</code>、<code>tec:3700</code>。</p>
+    <div id="meta" class="mt-2 text-xs text-pool-600"></div>
+    <div id="results" class="mt-6 grid gap-3"></div>
     <p id="empty" class="mt-8 hidden text-ink-soft">没有找到匹配的内容。</p>
+    <p id="loading" class="mt-8 text-sm text-ink-soft">正在载入泳装 / 技能索引…</p>
   </div>
 
   <div id="search-index" hidden>{JSON.stringify(entries)}</div>
+
   <script>
-    const entries = JSON.parse(document.getElementById('search-index').textContent);
+    const base = document.documentElement.getAttribute('data-base') || '/';
+    const staticEntries = JSON.parse(document.getElementById('search-index').textContent);
     const input = document.getElementById('q');
     const results = document.getElementById('results');
     const empty = document.getElementById('empty');
+    const meta = document.getElementById('meta');
+    const loading = document.getElementById('loading');
+    const LANG = window.__LANG || 'zh';
 
-    const qs = new URLSearchParams(location.search).get('q') || '';
-    if (qs) input.value = qs;
+    const FIELDS = new Set(['name','jp','en','tw','romaji','girl','type','cv','birthday','tags','occupation','hobby','food','color','profile','text','skill','effect','property','pow','tec','stm','apl','rarity']);
+    const extra = [];
+
+    function zh(item) { return (item && (item['name_'+LANG] || item['name'] || item['name_ja'])) || ''; }
+    function eff(item) { return (item && (item['effect_'+LANG] || item['effect'] || item['effect_ja'])) || ''; }
+
+    function buildExtra(suits, skills, names) {
+      (suits || []).forEach((s) => {
+        const gw = (names && names[s.girl]) ? (names[s.girl][LANG] || names[s.girl].zh || s.girl) : '共享泳装';
+        extra.push({
+          kind: 'swimsuit', badge: '泳装', title: zh(s) || s.name_ja || s.name || '',
+          url: '/swimsuits/',
+          f: {
+            name: `${s.name||''} ${s.name_en||''} ${s.name_ja||''} ${s.name_tw||''} ${gw}`,
+            en: s.name_en || '', jp: s.name_ja || '', tw: s.name_tw || '',
+            girl: `${s.girl} ${gw}`, type: s.type || '',
+            skill: (s.skills || []).join(' '),
+            pow: String(s.pow || ''), tec: String(s.tec || ''), stm: String(s.stm || ''), apl: String(s.apl || ''),
+            rarity: 'SSR'
+          }
+        });
+      });
+      (skills || []).forEach((s) => {
+        extra.push({
+          kind: 'skill', badge: '技能', title: zh(s) || s.name || '',
+          url: '/skills/',
+          f: {
+            name: `${s.name||''} ${s.name_en||''} ${s.name_ja||''} ${s.name_tw||''}`,
+            en: s.name_en || '', jp: s.name_ja || '', tw: s.name_tw || '',
+            type: s.type || '', property: s.property || '', effect: eff(s)
+          }
+        });
+      });
+    }
+
+    function hay(e) {
+      if (!e._hay) e._hay = Object.values(e.f).filter(Boolean).join(' ').toLowerCase();
+      return e._hay;
+    }
+
+    function parse(q) {
+      return q.toLowerCase().split(/\s+/).filter(Boolean).map((tok) => {
+        const i = tok.indexOf(':');
+        if (i > 0 && FIELDS.has(tok.slice(0, i))) return { field: tok.slice(0, i), term: tok.slice(i + 1) };
+        return { field: null, term: tok };
+      });
+    }
+
+    function matchEntry(h, e, tokens) {
+      for (const t of tokens) {
+        if (!t.term) continue;
+        if (t.field) {
+          const v = String(e.f[t.field] || '').toLowerCase();
+          if (!v.includes(t.term)) return false;
+        } else if (!h.includes(t.term)) return false;
+      }
+      return true;
+    }
+
+    function score(e, tokens) {
+      let s = 0;
+      for (const t of tokens) {
+        if (!t.term) continue;
+        const title = e.title.toLowerCase();
+        if (title.startsWith(t.term)) s += 10; else if (title.includes(t.term)) s += 5;
+        if (t.field) {
+          const v = String(e.f[t.field] || '').toLowerCase();
+          s += (v === t.term) ? 4 : (v.includes(t.term) ? 3 : 0);
+        }
+      }
+      if (e.kind === 'girl') s += 1;
+      return s;
+    }
+
+    function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function hl(text, tokens) {
+      let out = esc(text);
+      tokens.forEach((t) => {
+        if (!t.term) return;
+        const re = new RegExp('(' + t.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+        try { out = out.replace(re, '<b>$1</b>'); } catch (_) {}
+      });
+      return out;
+    }
+
+    function snippet(e, tokens) {
+      const src = Object.values(e.f).filter(Boolean).join(' ');
+      const lower = src.toLowerCase();
+      const tok = tokens.find((t) => t.term && lower.indexOf(t.term) !== -1);
+      if (!tok) return src.slice(0, 90);
+      const p = lower.indexOf(tok.term);
+      return src.slice(Math.max(0, p - 30), Math.max(0, p - 30) + 110);
+    }
 
     function render(q) {
-      q = (q || '').trim().toLowerCase();
+      const tokens = parse(q);
+      const all = staticEntries.concat(extra);
+      let matched = all.map((e) => ({ e, s: score(e, tokens), h: hay(e) }))
+        .filter((x) => matchEntry(x.h, x.e, tokens));
       results.innerHTML = '';
-      let shown = 0;
-      entries.forEach((e) => {
-        const hay = (e.title + ' ' + e.text).toLowerCase();
-        if (!q || hay.includes(q)) {
-          shown++;
-          const a = document.createElement('a');
-          a.href = (document.documentElement.getAttribute('data-base')||'/')+e.url.replace(/^\//,'');
-          a.className = 'card-wiki block p-5 no-underline';
-          a.innerHTML = '<div class="font-extrabold text-pool-700">' + e.title + '</div><div class="mt-1 text-sm text-ink-soft">' + e.text.slice(0, 90) + '…</div>';
-          results.appendChild(a);
-        }
+      if (!matched.length) {
+        empty.classList.remove('hidden');
+        meta.textContent = extra.length ? '' : '索引载入中…';
+        return;
+      }
+      empty.classList.add('hidden');
+      matched.sort((a, b) => b.s - a.s).slice(0, 60).forEach(({ e }) => {
+        const a = document.createElement('a');
+        a.href = base + e.url.replace(/^\//, '');
+        a.className = 'card-wiki block p-4 no-underline';
+        a.innerHTML =
+          '<div class="flex items-center justify-between gap-2">' +
+            '<div class="font-extrabold text-pool-700">' + hl(e.title, tokens) + '</div>' +
+            '<span class="badge badge-pool shrink-0">' + e.badge + '</span>' +
+          '</div>' +
+          '<div class="mt-1 text-sm text-ink-soft">' + hl(snippet(e, tokens), tokens) + '</div>';
+        results.appendChild(a);
       });
-      empty.classList.toggle('hidden', shown !== 0);
+      meta.textContent = '匹配 ' + matched.length + ' 条 · 已索引 ' + all.length + ' 项';
     }
 
     input.addEventListener('input', () => render(input.value));
-    render(qs);
+
+    async function init() {
+      const qs = new URLSearchParams(location.search).get('q') || '';
+      if (qs) input.value = qs;
+      const [suits, skills, names] = await Promise.all([
+        fetch(base + 'data/doax-ssr.json').then((r) => r.json()).catch(() => []),
+        fetch(base + 'data/doax-skills.json').then((r) => r.json()).catch(() => []),
+        fetch(base + 'data/girl-names.json').then((r) => r.json()).catch(() => null)
+      ]);
+      buildExtra(suits, skills, names);
+      loading.classList.add('hidden');
+      render(input.value);
+    }
+    init();
   </script>
 </Base>

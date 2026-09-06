@@ -2,6 +2,7 @@ import { characters } from '../../data/characters.js';
 import { baseStats } from '../../data/stats.js';
 import { communityNotes } from '../../data/community-notes.js';
 import { asset } from '../lib/asset.js';
+import officialGirls from './official-girls.json';
 
 export function deriveType(base) {
   if (!base) return '待补充';
@@ -17,6 +18,7 @@ export const girls = characters.map((c) => {
     ...c,
     base,
     note,
+    official: officialGirls[c.id] || null,
     img: asset(`/img/bromide/girls/${c.id}.webp`),
     type: note.type || deriveType(base)
   };

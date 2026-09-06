@@ -1,12 +1,15 @@
 ---
+
 import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+const root = import.meta.env.BASE_URL || '/';
 
 const sections = [
-  { slug: 'newbie', emoji: '🌱', title: '新手入门', desc: '岛主等级、FP、每日必做、资源管理，开荒期该做什么。' },
-  { slug: 'festival', emoji: '🏐', title: '挑战赛与比赛', desc: '比赛规则、攻防判定、情绪条、魅力值评价、狂热技能。' },
-  { slug: 'swimsuit', emoji: '👗', title: '泳装・饰品・声援板', desc: '套装、强化合成、上限解锁、技能觉醒、PP 潜力与装饰写真。' },
-  { slug: 'growth', emoji: '📈', title: '养成与战斗力', desc: '女孩等级、礼物、课程、回忆，以及力量/技巧队培养思路。' },
-  { slug: 'economy', emoji: '💰', title: '资源・商店・任务', desc: 'V 宝石、扎克币、嘉宾点数、VIP 点数、各商店与任务体系。' }
+  { slug: 'newbie', icon: 'newbie', title: '新手入门', desc: '岛主等级、FP、每日必做、资源管理，开荒期该做什么。' },
+  { slug: 'festival', icon: 'festival', title: '挑战赛与比赛', desc: '比赛规则、攻防判定、情绪条、魅力值评价、狂热技能。' },
+  { slug: 'swimsuit', icon: 'swim', title: '泳装・饰品・声援板', desc: '套装、强化合成、上限解锁、技能觉醒、PP 潜力与装饰写真。' },
+  { slug: 'growth', icon: 'growth', title: '养成与战斗力', desc: '女孩等级、礼物、课程、回忆，以及力量/技巧队培养思路。' },
+  { slug: 'economy', icon: 'economy', title: '资源・商店・任务', desc: 'V 宝石、扎克币、嘉宾点数、VIP 点数、各商店与任务体系。' }
 ];
 ---
 
@@ -18,15 +21,15 @@ const sections = [
 
     <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {sections.map((s) => (
-        <a href={`/guide/${s.slug}`} class="card-wiki block p-6 no-underline">
-          <div class="text-3xl">{s.emoji}</div>
+        <a href={`${root}guide/${s.slug}`} class="card-wiki block p-6 no-underline">
+          <div class="text-pool-700"><Icon name={s.icon} size={30} /></div>
           <h2 class="mt-3 text-lg font-extrabold">{s.title}</h2>
           <p class="mt-1.5 text-sm text-ink-soft">{s.desc}</p>
           <span class="mt-3 inline-block text-sm font-semibold text-pool-600">查看 →</span>
         </a>
       ))}
-      <a href="/community" class="card-wiki block p-6 no-underline">
-        <div class="text-3xl">💬</div>
+      <a href={root + 'community'} class="card-wiki block p-6 no-underline">
+        <div class="text-pool-700"><Icon name="community" size={30} /></div>
         <h2 class="mt-3 text-lg font-extrabold">社区攻略</h2>
         <p class="mt-1.5 text-sm text-ink-soft">贴吧 / B 站玩家攻略，按板块整理并标注来源。</p>
         <span class="mt-3 inline-block text-sm font-semibold text-pool-600">查看 →</span>

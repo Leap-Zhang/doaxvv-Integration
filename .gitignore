@@ -4,4 +4,4 @@ dist/
 .DS_Store
 *.log
 bromide_dl/
-public/img/bromide/
+test-results/

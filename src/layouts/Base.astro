@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import { UI, LANGS, LANG_LABEL, girlNames, TYPE } from '../data/i18n.js';
+import CoastBackdrop from '../components/CoastBackdrop.astro';
+import MessageBoard from '../components/MessageBoard.astro';
 
 interface Props {
   title?: string;
@@ -11,7 +13,7 @@ const { title = 'DOAXVV 攻略站', desc = '死或生 沙滩排球：维纳斯�
 const path = Astro.url.pathname;
 const base = import.meta.env.BASE_URL || '/';
 const buildDate = new Date().toISOString().slice(0, 10);
-const ogImage = Astro.site + base.replace(/\/$/, '') + '/img/hero_day.webp';
+const ogImage = new URL('img/bg/bg1.jpg', Astro.site).href;
 
 const nav = [
   { key: 'admin.home', href: '/', match: (p: string) => p === '/' },
@@ -48,10 +50,11 @@ const I18N = { ui: UI, girls: girlNames, langs: LANGS, labels: LANG_LABEL, type:
     </script>
   </head>
   <body class="min-h-screen bg-mist text-ink">
-    <header class="sticky top-0 z-40 border-b border-line/70 bg-white/85 backdrop-blur">
+  <CoastBackdrop />
+    <header class="sticky top-0 z-40 border-b border-line/70 bg-white/85 backdrop-blur shadow-[0_4px_24px_rgba(18,58,99,0.06)]">
       <div class="container-wiki flex h-16 items-center justify-between">
         <a href={base} class="flex items-center gap-3 no-underline">
-          <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-pool-400 to-pool-600 text-white shadow">🏖</span>
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-pool-400 via-pool-500 to-pool-700 text-white shadow-md ring-1 ring-white/20">🏖</span>
           <span class="leading-tight">
             <span class="block text-base font-extrabold text-ink" data-i18n="brand">DOAXVV 攻略站</span>
             <span class="block text-[11px] text-ink-soft" data-i18n="brand.sub">维纳斯群岛度假攻略</span>
@@ -68,7 +71,7 @@ const I18N = { ui: UI, girls: girlNames, langs: LANGS, labels: LANG_LABEL, type:
                 data-i18n={n.key}
                 class:list={[
                   'rounded-full px-4 py-2 text-sm font-semibold no-underline transition-colors',
-                  n.match(path) ? 'bg-pool-500 text-white' : 'text-ink-soft hover:bg-pool-50 hover:text-pool-700'
+                  n.match(path) ? 'bg-gradient-to-r from-pool-500 to-pool-600 text-white shadow-sm' : 'text-ink-soft hover:bg-pool-50 hover:text-pool-700'
                 ]}
               >
                 {UI.zh[n.key]}
@@ -114,8 +117,11 @@ const I18N = { ui: UI, girls: girlNames, langs: LANGS, labels: LANG_LABEL, type:
         <p class="font-semibold text-ink">DOAXVV 攻略站</p>
         <p class="mt-2" data-i18n="footer.note">本站在本地生成，内容整理自官方帮助文档与社区公开资料，非官方站点。</p>
         <p class="mt-2 text-xs">数据快照：{buildDate}（doax.cc） · 本地版本 · 可离线浏览</p>
+        <p class="mt-2 text-xs">功能板块索引：<a href={base + 'sections'} class="font-semibold text-pool-600">/sections</a></p>
       </div>
     </footer>
+
+    <MessageBoard />
 
     <div id="i18n-data" hidden>{JSON.stringify(I18N)}</div>
     <script>

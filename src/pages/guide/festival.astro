@@ -17,17 +17,17 @@ import GuidePage from '../../components/GuidePage.astro';
   <h2 class="sec-h">比赛界面与属性</h2>
   <p class="para">左侧是你，右侧是对手。三个关键数值（含泳装 + 女孩的合计）：</p>
   <ul class="bullet-list">
-    <li><b>POW（力量·红）：</b>杀球攻击、接球判定的基准。</li>
-    <li><b>TEC（技巧·绿）：</b>假动作攻击、接球判定的基准。</li>
-    <li><b>STM（体力·黄）：</b>攻击等动作会消耗；低于一定值时全参数下降。</li>
+    <li><b class="attr-pow">POW（力量·红）：</b>杀球攻击、接球判定的基准。</li>
+    <li><b class="attr-tec">TEC（技巧·绿）：</b>假动作攻击、接球判定的基准。</li>
+    <li><b class="attr-stm">STM（体力·黄）：</b>攻击等动作会消耗；低于一定值时全参数下降。</li>
   </ul>
 
   <h2 class="sec-h">胜负与攻防</h2>
   <p class="para">每场达到<b class="text-ink">规定得分</b>即获胜（所需分数因赛而异）。有得分机会时，双方各选出<b class="text-ink">攻击手</b>和<b class="text-ink">接球手</b>：攻击手“攻击力”胜则得分；接球手“接球力”胜则继续拉力。</p>
   <p class="para">攻击分两种：</p>
   <ul class="bullet-list">
-    <li><b>杀球：</b>按双方 <b>POW</b> 判定。</li>
-    <li><b>假动作：</b>按双方 <b>TEC</b> 判定。</li>
+    <li><b>杀球：</b>按双方 <b class="attr-pow">POW</b> 判定。</li>
+    <li><b>假动作：</b>按双方 <b class="attr-tec">TEC</b> 判定。</li>
     <li>要更重视哪边，在“作战指示”里设定。</li>
   </ul>
 

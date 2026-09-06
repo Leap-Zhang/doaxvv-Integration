@@ -1,81 +1,77 @@
 @import "tailwindcss";
 
 @theme {
-  /* 泳池蓝（主品牌色） */
-  --color-pool-50: #eef7ff;
-  --color-pool-100: #d8edff;
-  --color-pool-200: #b0dbff;
-  --color-pool-300: #7fc3f7;
-  --color-pool-400: #4fa6ef;
-  --color-pool-500: #2b8ae0;
-  --color-pool-600: #2070bd;
-  --color-pool-700: #1c5a99;
-  --color-pool-800: #174a7d;
-  --color-pool-900: #123a63;
-
-  /* 沙滩金 */
+  --color-pool-50: #e8f6f3;
+  --color-pool-100: #d0eee9;
+  --color-pool-200: #a5dcd4;
+  --color-pool-300: #75c8bd;
+  --color-pool-400: #47b1a5;
+  --color-pool-500: #2fa3a0;
+  --color-pool-600: #1f8f8a;
+  --color-pool-700: #1f6f74;
+  --color-pool-800: #1a5b60;
+  --color-pool-900: #14464c;
   --color-sand-200: #f8ecce;
   --color-sand-300: #f1dc9f;
   --color-sand-400: #e8c76a;
   --color-sand-500: #dfb24a;
   --color-sand-600: #c1892e;
-
-  /* 腮红粉 */
   --color-blush-200: #fbdfe8;
   --color-blush-300: #f7c1d3;
   --color-blush-400: #ef98b4;
   --color-blush-500: #e56a92;
   --color-blush-600: #c84e74;
-
   --color-ink: #16324a;
   --color-ink-soft: #5a7288;
   --color-mist: #f5f9fd;
   --color-line: #e2ecf5;
 }
 
-:root {
-  color-scheme: light;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
 
 body {
   font-family: "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, "PingFang SC", sans-serif;
   color: var(--color-ink);
   background: var(--color-mist);
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
+
 a { @apply text-pool-600; text-decoration: none; }
 a:hover { text-decoration: underline; }
+::selection { background: var(--color-pool-200); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-pool-400); outline-offset: 2px; border-radius: 4px; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-pool-200); border-radius: 9999px; border: 2px solid var(--color-mist); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-pool-300); }
 
 @layer components {
   .container-wiki { @apply mx-auto max-w-6xl px-4 sm:px-6; }
   .card-wiki {
-    @apply rounded-2xl border border-line bg-white shadow-[0_10px_30px_rgba(18,58,99,0.06)] transition-transform duration-200 hover:-translate-y-1;
+    @apply relative rounded-[20px] border border-line bg-white/90 shadow-[0_18px_45px_rgba(18,58,99,0.08)] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(18,58,99,0.15)];
   }
-  .badge {
-    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  .card-wiki::before {
+    content: "";
+    position: absolute; top: 0; left: 14px; right: 14px; height: 3px;
+    border-radius: 0 0 9999px 9999px;
+    background: linear-gradient(90deg, var(--color-pool-400), var(--color-blush-400), var(--color-sand-400));
+    opacity: 0; transition: opacity .3s;
   }
+  .card-wiki:hover::before { opacity: 1; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold shadow-sm; }
   .badge-pool { @apply bg-pool-50 text-pool-700; }
   .badge-blush { @apply bg-blush-200 text-blush-600; }
   .badge-sand { @apply bg-sand-200 text-sand-600; }
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-pool-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-colors hover:bg-pool-600;
+    @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pool-500 to-pool-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-pool-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-pool-500/35;
   }
   .stat-bar { @apply h-2.5 w-full overflow-hidden rounded-full bg-pool-50; }
   .stat-fill { @apply block h-full rounded-full; }
-
-  /* 正文内容块 */
-  .sec-h {
-    @apply mb-4 mt-10 flex items-center gap-2 text-xl font-black text-ink;
-  }
-  .sec-h::before {
-    content: "";
-    @apply mr-1 inline-block h-5 w-1.5 rounded-full bg-gradient-to-b from-pool-400 to-pool-600;
-  }
+  .sec-h { @apply mb-4 mt-10 flex items-center gap-2 text-xl font-black text-ink; }
+  .sec-h::before { content: ""; @apply mr-1 inline-block h-5 w-1.5 rounded-full bg-gradient-to-b from-pool-400 to-pool-600; }
   .sub-h { @apply mb-2 mt-6 text-base font-extrabold text-ink; }
   .para { @apply my-3 leading-relaxed text-ink-soft; }
   .bullet-list { @apply my-3 list-disc space-y-1.5 pl-5 text-ink-soft; }
@@ -89,18 +85,16 @@ a:hover { text-decoration: underline; }
   .tbl tr:last-child td { @apply border-b-0; }
 }
 
-
-/* 毛玻璃卡片 + 渐变舞台（泳装图鉴） */
 .glass-card {
-  @apply rounded-2xl border border-white/60 bg-white/60 shadow-lg shadow-pool-900/5 backdrop-blur-xl transition-transform duration-200 hover:-translate-y-0.5;
+  @apply rounded-2xl border border-white/60 bg-white/60 shadow-lg shadow-pool-900/5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-pool-900/10 hover:border-pool-200;
 }
 .stage { @apply rounded-3xl bg-gradient-to-br from-pool-100/80 via-mist to-blush-200/40 p-4 sm:p-5; }
+.grad-text { background: linear-gradient(90deg, var(--color-pool-500), var(--color-blush-500), var(--color-sand-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* ===== 深色模式 ===== */
 @custom-variant dark (&:where(.dark, .dark *));
-.dark { --color-mist:#0f172a; --color-ink:#e2e8f0; --color-ink-soft:#94a3b8; --color-line:#223048; --color-pool-50:#1e3a5f; --color-pool-100:#25446f; }
+.dark { --color-mist:#0f172a; --color-ink:#e2e8f0; --color-ink-soft:#94a3b8; --color-line:#223048; --color-pool-50:#1c3734; --color-pool-100:#24443f; }
 .dark body { background:#0f172a; }
-.dark .card-wiki, .dark .src-block, .dark .figure, .dark .feature { background:#16233a; border-color:#223048; }
+.dark .card-wiki, .dark .src-block, .dark .figure, .dark .feature { background:rgba(22,35,58,.92); border-color:#223048; }
 .dark .glass-card { background:rgba(30,41,59,.6); border-color:rgba(255,255,255,.08); }
 .dark .tbl { background:#16233a; border-color:#223048; }
 .dark .tbl th { background:#1e293b; color:#bcd3ef; }
@@ -113,3 +107,95 @@ a:hover { text-decoration: underline; }
 .dark .badge-sand { background:#3a3222; color:#e6c27a; }
 .dark .badge-blush { background:#44202c; color:#f0a9c0; }
 .dark .bg-white, .dark .bg-white\/70, .dark .bg-white\/60, .dark .bg-white\/50 { background-color:#16233a !important; }
+.dark ::-webkit-scrollbar-thumb { background:#2b3b56; border-color:#0f172a; }
+.dark ::-webkit-scrollbar-thumb:hover { background:#3a4d6b; }
+.dark .grad-text { background: linear-gradient(90deg, var(--color-pool-300), var(--color-blush-400), var(--color-sand-400)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* 属性配色：POW/TEC/STM/APL + 类型标签 */
+.attr-pow{color:#d13a6b}.attr-tec{color:#2f9e6b}.attr-stm{color:#e0a53c}.attr-apl{color:#a86fd0}
+.type-pow{color:#d13a6b}.type-tec{color:#2f9e6b}.type-stm{color:#e0a53c}
+.chip-pow{background:rgba(209,58,107,.14);color:#c02e62}
+.chip-tec{background:rgba(47,158,107,.12);color:#2f8f60}
+.chip-stm{background:rgba(224,165,60,.16);color:#c1892e}
+.chip-apl{background:rgba(168,111,208,.14);color:#8b5fbf}
+.dark .attr-pow{color:#ff7aa4}.dark .attr-tec{color:#63d1a0}.dark .attr-stm{color:#f4c26c}.dark .attr-apl{color:#caa2f0}
+.dark .type-pow{color:#ff7aa4}.dark .type-tec{color:#63d1a0}.dark .type-stm{color:#f4c26c}
+.dark .chip-pow{background:rgba(209,58,107,.24);color:#ff7aa4}.dark .chip-tec{background:rgba(47,158,107,.22);color:#63d1a0}.dark .chip-stm{background:rgba(224,165,60,.22);color:#f4c26c}.dark .chip-apl{background:rgba(168,111,208,.22);color:#caa2f0}
+
+/* 角色背景按类型匹配 */
+.bg-type-pow{background:linear-gradient(135deg,#fde7ec 0%,#fbd3dd 100%)}
+.bg-type-tec{background:linear-gradient(135deg,#e7f6ee 0%,#d2ede1 100%)}
+.bg-type-stm{background:linear-gradient(135deg,#fdf4e1 0%,#f9e7c4 100%)}
+.dark .bg-type-pow{background:linear-gradient(135deg,#3b1f28 0%,#4a2531 100%)}
+.dark .bg-type-tec{background:linear-gradient(135deg,#173328 0%,#1c4032 100%)}
+.dark .bg-type-stm{background:linear-gradient(135deg,#3a2c16 0%,#47351b 100%)}
+
+/* ===== 海岸背景轮播（A×C） ===== */
+.coast { position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
+.coast .coast-slides { position:absolute; inset:0; }
+.coast .coast-slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity 1.6s ease; will-change:opacity,transform; }
+.coast-full .coast-slide.on { opacity:1; animation:coastkb 12s ease-in-out infinite; }
+.coast-ambient .coast-slide.on { opacity:1; filter:saturate(1.1); animation:coastkb 16s ease-in-out infinite; }
+@keyframes coastkb {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+.coast-ambient .coast-veil { position:absolute; inset:0; background:linear-gradient(180deg, rgba(248,250,252,.70), rgba(248,250,252,.60) 50%, rgba(255,248,238,.68)); }
+.coast-full .coast-veil { position:absolute; inset:0; background:linear-gradient(100deg, rgba(20,70,76,.92), rgba(26,91,96,.62) 40%, rgba(31,143,138,.30)); }
+.coast-full { position:absolute; inset:0; }
+.dark .coast-ambient .coast-veil { background:linear-gradient(180deg, rgba(11,21,36,.82), rgba(15,23,42,.74) 50%, rgba(26,16,32,.84)); }
+
+/* ===== A×C 海岸皮肤：全站板块/卡片统一 ===== */
+:root { --acc:#e08a6a; --acc2:#2fa3a0; --accDeep:#1f6f74; --cream:#fffdf7; --sandLine:#f0d8b0; }
+h1, h2.sec-h { font-family:"Palatino Linotype",Georgia,"Songti SC",serif; }
+h1 { letter-spacing:.005em; }
+a { color:var(--acc2); }
+a:hover { color:var(--accDeep); }
+.card-wiki {
+  border-color:rgba(224,138,106,.30) !important;
+  background:linear-gradient(180deg,#fffdf7,#fff6ea) !important;
+  box-shadow:0 18px 45px rgba(224,138,106,.12) !important;
+}
+.card-wiki::before { background:linear-gradient(90deg,#e08a6a,#2fa3a0,#e0a53c); }
+.glass-card {
+  border-color:rgba(224,138,106,.28) !important;
+  background:linear-gradient(160deg,rgba(255,251,243,.72),rgba(255,244,228,.60)) !important;
+  box-shadow:0 14px 36px rgba(224,138,106,.14) !important;
+}
+.sec-h::before { background:linear-gradient(180deg,#e08a6a,#2fa3a0); }
+.sub-h { font-family:"Palatino Linotype",Georgia,serif; }
+.callout-pool { background:#eef7f4 !important; border-left-color:#2fa3a0 !important; }
+.callout-warn { background:#fbf0e0 !important; border-left-color:#e08a6a !important; }
+.callout-todo { background:#f7f0e6 !important; border-left-color:#5f7f8e !important; }
+.tbl { border-color:var(--sandLine) !important; }
+.tbl th { background:#ffeede !important; color:#1f6f74 !important; border-color:var(--sandLine) !important; }
+.tbl td { border-color:var(--sandLine) !important; color:#5f7f8e !important; }
+.btn-primary { background:linear-gradient(90deg,#2fa3a0,#1f6f74) !important; box-shadow:0 10px 26px rgba(31,111,116,.28) !important; }
+.stat-bar { background:#f3e3c8 !important; }
+.stat-fill { border-radius:9999px; }
+.badge { box-shadow:0 1px 2px rgba(224,138,106,.15); }
+.badge-pool { background:#e0f1ef !important; color:#1f6f74 !important; }
+.badge-blush { background:#fde6e0 !important; color:#c85c3a !important; }
+.badge-sand { background:#fbf0d8 !important; color:#b3882b !important; }
+
+.dark { --sandLine:#3a2f22; }
+.dark h1, .dark h2.sec-h { color:#ede0cc; }
+.dark .card-wiki { background:linear-gradient(180deg,rgba(45,35,27,.96),rgba(36,29,23,.96)) !important; border-color:rgba(224,138,106,.28) !important; }
+.dark .glass-card { background:rgba(42,33,26,.6) !important; border-color:rgba(224,138,106,.25) !important; }
+.dark .tbl th { background:#2a231c !important; color:#e6c9a8 !important; }
+.dark .tbl td { color:#c9b9a8 !important; }
+.dark .callout-pool { background:#1c2a26 !important; }
+.dark .callout-warn { background:#2b241c !important; }
+.dark .callout-todo { background:#241f1a !important; }
+.dark .badge-pool { background:#1f3833 !important; color:#8fd6dd !important; }
+.dark .badge-blush { background:#40251f !important; color:#f0a9c0 !important; }
+.dark .badge-sand { background:#3a2f1e !important; color:#e6c27a !important; }
+
+/* P1: 入口/明信片卡虚线；数据卡保持细实线 */
+.card-postcard { border-style:dashed !important; }
+/* P1: 尊重减弱动效 */
+@media (prefers-reduced-motion: reduce) {
+  .coast .coast-slide { transition:none; }
+  .coast .coast-slide.on { animation:none; }
+  .card-wiki, .glass-card, .btn-primary { transition:none; }
+  .card-wiki:hover, .glass-card:hover, .btn-primary:hover { transform:none; }
+}

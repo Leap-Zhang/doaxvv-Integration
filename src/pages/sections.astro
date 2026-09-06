@@ -1,0 +1,76 @@
+---
+
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+const root = import.meta.env.BASE_URL || '/';
+
+const groups = [
+  { label: '全局', items: [
+    { title: '背景照片轮播（全站 ambient）', route: '/', desc: '每页固定低透明 + 模糊 + 纱幕的风景轮播。' },
+    { title: '顶部导航', route: '/', desc: '导航项、多语言切换、明暗主题切换。' },
+    { title: '页脚', route: '/', desc: '版权、数据快照、来源说明。' },
+    { title: '海岸皮肤（配色/卡片/衬线标题/属性色）', route: '/', desc: 'global.css 统一视觉语言（A×C 海岸）。' }
+  ]},
+  { label: '首页', items: [
+    { title: '首页 Hero', route: '/', desc: '完整照片轮播 + 标题 + CTA 按钮。' },
+    { title: '首页入口卡片', route: '/', desc: '4 张虚线「明信片」卡 + SVG 图标。' },
+    { title: '关于本作 + 快速上手', route: '/', desc: '简介与编号胶囊速览。' }
+  ]},
+  { label: '女孩', items: [
+    { title: '女孩图鉴列表', route: '/girls', desc: '搜索 + 类别/属性筛选 + 类型背景/徽章卡。' },
+    { title: '女孩详情', route: '/girls/misaki', desc: '官方档案、初始/满级数值、理论最高、泳装切片、备注。' }
+  ]},
+  { label: '泳装', items: [
+    { title: '泳装图鉴', route: '/swimsuits', desc: '高级筛选（技能/数值下限/排序/年份）+ 属性色卡 + 新装徽章 + 技能标签。' },
+    { title: '泳装详情弹窗', route: '/swimsuits', desc: '属性/技能/来源/备注（点卡片触发）。' }
+  ]},
+  { label: '技能', items: [
+    { title: '技能图鉴', route: '/skills', desc: '搜索 + 类型筛选 + 属性着色 + 收藏 ★。' }
+  ]},
+  { label: '指南', items: [
+    { title: '系统指南首页', route: '/guide', desc: '5 大板块入口卡。' },
+    { title: '指南内容页', route: '/guide/festival', desc: '新手/挑战赛/泳装/养成/资源 —— sec-h、callout、表格。' }
+  ]},
+  { label: '检索与工具', items: [
+    { title: '全站搜索', route: '/search', desc: '多关键词 + 字段过滤（type:/cv:/girl:）+ 高亮 + 泳装/技能索引。' },
+    { title: '面板估算器', route: '/tools/panel', desc: '选角色 + 泳装切片加载 + 潜力/涂油估算 + APL。' },
+    { title: '满破 / PP 规划器', route: '/tools/plan', desc: '按 PP 容量推荐“减体潜力”组合。' }
+  ]},
+  { label: '收藏', items: [
+    { title: '收藏与收录进度', route: '/collection', desc: '女孩/泳装/技能三类进度条 + 收藏清单。' }
+  ]}
+];
+
+let n = 0;
+const nums = groups.map((g) => g.items.map(() => ++n));
+---
+
+<Base title="功能板块索引 · DOAXVV 攻略站" desc="全站功能板块编号索引，便于指定修改。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">演示 / 索引</p>
+    <h1 class="mt-1 text-3xl font-black">功能板块索引</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">全站功能板块已编号。你说「<b>改 #N</b>」即指对应板块；点击标题可跳到该页面。</p>
+
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+      {groups.map((g, gi) => (
+        <section class="card-wiki p-6">
+          <h2 class="sec-h text-lg">{g.label}</h2>
+          <div class="space-y-3">
+            {g.items.map((it, ii) => {
+              const id = nums[gi][ii];
+              return (
+                <div class="flex items-start gap-3 border-b border-line pb-3 last:border-0">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-pool-500 to-pool-700 font-bold text-white shadow">{String(id).padStart(2, '0')}</span>
+                  <div class="min-w-0">
+                    <a href={root + it.route.slice(1)} class="font-extrabold text-ink no-underline hover:text-pool-600">{it.title} →</a>
+                    <p class="mt-0.5 text-xs text-ink-soft">{it.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

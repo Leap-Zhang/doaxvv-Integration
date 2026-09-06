@@ -37,6 +37,19 @@ pnpm build      # 产物在 dist/
 pnpm preview    # 预览构建产物
 ```
 
+> **不想装 Node 也想先看看效果**：双击打开 `dist/index.html` 可看到首页（多数静态区域正常）。但泳装/技能/搜索/收藏等“运行时拉数据”的页面需要本地服务才能完整渲染：若装了 Python，可在 `dist` 目录跑 `python -m http.server 4321` 再访问 `http://localhost:4321`；更省事是装 Node 后用 `pnpm preview`。
+
+## 视觉回归（Playwright）
+自动给每个页面截图并与“基准”比对，抓外观回归。配置：`playwright.config.ts`，测试：`tests/visual.spec.ts`。
+
+- 首次：`pnpm exec playwright install chromium`（下载测试用 Chromium，一次性）
+- 跑一次存基准：`pnpm test:visual`
+- 日常：`pnpm build` → `pnpm test:visual`（全绿=没改坏；红叉=看 `test-results/` 里的 `diff.png`）
+- 确认本次外观变化为新基准：`pnpm test:visual:update`
+- 覆盖：14 个路由 × 明/暗 全页 + 泳装/女孩/技能 3 个弹窗态（共 31 用例）
+
+> `tests/__screenshots__/`＝基准（提交）；`test-results/`＝临时产物（已 `.gitignore` 排除）。
+
 ## 多语言
 - 界面与数据支持 **中文 / English / 日本語**，顶栏切换或 `?lang=en|ja` 直达。
 - 词库取自 doax.cc 的多语数据（`girl-names`、`doax-ssr`、`doax-skills`），UI 文案在 `src/data/i18n.js`。

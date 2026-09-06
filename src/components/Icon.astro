@@ -1,0 +1,22 @@
+---
+// 线性 SVG 图标集（Lucide 风格，继承当前文字颜色）
+interface Props { name?: string; size?: number; class?: string; }
+const { name = 'star', size = 24, class: cls = '' } = Astro.props;
+const paths: Record<string, string> = {
+  girls: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',
+  girl: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',
+  swim: '<path d="M6 4h12l2 5-3 2a4 4 0 0 1-10 0l-3-2z"/><path d="M9 13l-1 7h8l-1-7"/>',
+  guide: '<path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h14"/>',
+  community: '<path d="M21 12a8 8 0 0 1-11.6 7.2L4 21l1.8-5.4A8 8 0 1 1 21 12z"/>',
+  newbie: '<path d="M12 21V11"/><path d="M12 11c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 11c0-3-2-5-6-5 0 3 2 5 6 5z"/>',
+  festival: '<circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16M6.6 6.6l10.8 10.8M17.4 6.6L6.6 17.4"/>',
+  growth: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  economy: '<circle cx="9" cy="9" r="6"/><path d="M9 15a6 6 0 0 0 0 6M15 9h6a6 6 0 0 1-6 6"/>',
+  panel: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h6"/>',
+  plan: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+  star: '<path d="M12 3l2.7 5.6 6.3.9-4.5 4.4 1 6.1L12 17l-5.5 3 1-6.1L3 9.5l6.3-.9z"/>',
+  skill: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>'
+};
+---
+
+<svg class={cls} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={paths[name] || paths.star} />
