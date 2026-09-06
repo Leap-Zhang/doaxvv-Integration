@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="属性对比 · 工具 · DOAXVV 攻略站" desc="A/B 对比女孩或泳装属性，逐项标优势。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600" data-i18n="admin.tools">工具</p>
+    <h1 class="mt-1 text-3xl font-black">属性对比</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">选两位女孩做对比：初始/满级数值、属性倾向、总值，逐项高亮更强的一方。(数据：doax.cc 已本地化)</p>
+
+    <div class="card-wiki mt-6 p-6">
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="text-sm"><span class="text-ink-soft">对比 A</span>
+          <select id="aSel" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none"></select>
+        </label>
+        <label class="text-sm"><span class="text-ink-soft">对比 B</span>
+          <select id="bSel" class="mt-1 w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none"></select>
+        </label>
+      </div>
+    </div>
+
+    <div id="cmpOut" class="card-wiki mt-6 p-6 text-sm"></div>
+    <div class="mt-4 rounded-xl bg-pool-50 p-4 text-xs text-pool-800">仅角色基础数值（Lv1 / Lv100），不含泳装、潜力、涂油、应援板、装饰写真与技能；实际对战需结合配装。差异以满级(Lv100)为准。</div>
+  </div>
+  <script>
+    const STATS = [
+      { k: 'pow', label: 'POW 力量', cls: 'attr-pow' },
+      { k: 'tec', label: 'TEC 技巧', cls: 'attr-tec' },
+      { k: 'stm', label: 'STM 体力', cls: 'attr-stm' },
+      { k: 'appeal', label: 'APL 魅力', cls: 'attr-apl' }
+    ];
+    (async () => {
+      const base = document.documentElement.getAttribute('data-base') || '/';
+      let girls = [];
+      try { girls = await fetch(base + 'data/doax-girls.json').then((r) => r.json()); } catch (e) { girls = []; }
+      const aSel = document.getElementById('aSel'), bSel = document.getElementById('bSel'), out = document.getElementById('cmpOut');
+      girls.forEach((g) => { for (const sel of [aSel, bSel]) { const o = document.createElement('option'); o.value = g.id; o.textContent = g.name; sel.appendChild(o); } });
+      if (girls.length > 1) bSel.value = girls[1].id;
+      const pick = (sel) => girls.find((g) => g.id === sel.value) || null;
+      const typeLabel = (t) => ({ pow: '力量型', tec: '技巧型', stm: '体力型' }[t] || '—');
+      function render() {
+        const a = pick(aSel), b = pick(bSel);
+        if (!a || !b) { out.innerHTML = '<p class="text-ink-soft">暂无数据。</p>'; return; }
+        const delta = (x, y) => Math.round(x - y);
+        const win = (av, bv) => av > bv ? 'A' : bv > av ? 'B' : '＝';
+        const row = (st) => {
+          const av1 = a[st.k].lv1, av = a[st.k].lv100, bv1 = b[st.k].lv1, bv = b[st.k].lv100;
+          const d = delta(av, bv), w = win(av, bv);
+          const tag = w === 'A' ? '<span class="badge badge-pool">A 强</span>' : w === 'B' ? '<span class="badge badge-blush">B 强</span>' : '<span class="badge badge-sand">平</span>';
+          return '<tr><td class="font-semibold ' + st.cls + '">' + st.label + '</td>' +
+            '<td>' + av1 + '</td><td class="font-bold ' + st.cls + '">' + av + '</td>' +
+            '<td>' + bv1 + '</td><td class="font-bold ' + st.cls + '">' + bv + '</td>' +
+            '<td>' + (d > 0 ? '+' + d : d) + '</td><td>' + tag + '</td></tr>';
+        };
+        out.innerHTML =
+          '<p class="font-bold">' + a.name + '（' + typeLabel(a.type) + '）　vs　' + b.name + '（' + typeLabel(b.type) + '）</p>' +
+          '<table class="tbl mt-3 w-full"><thead><tr><th>属性</th><th>A 初始</th><th>A 满级</th><th>B 初始</th><th>B 满级</th><th>满级差</th><th>优势</th></tr></thead><tbody>' +
+          STATS.map(row).join('') +
+          '<tr><td class="font-semibold">总值</td><td>' + a.total.lv1 + '</td><td class="font-bold">' + a.total.lv100 + '</td><td>' + b.total.lv1 + '</td><td class="font-bold">' + b.total.lv100 + '</td><td>' + (a.total.lv100 > b.total.lv100 ? '+' + (a.total.lv100 - b.total.lv100) : (a.total.lv100 - b.total.lv100)) + '</td><td>' + win(a.total.lv100, b.total.lv100) === 'A' ? '<span class="badge badge-pool">A 强</span>' : win(a.total.lv100, b.total.lv100) === 'B' ? '<span class="badge badge-blush">B 强</span>' : '<span class="badge badge-sand">平</span>' + '</td></tr>' +
+          '</tbody></table>';
+      }
+      aSel.addEventListener('change', render); bSel.addEventListener('change', render); render();
+    })();
+  </script>
+</Base>
