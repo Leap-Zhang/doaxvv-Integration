@@ -63,4 +63,10 @@ pnpm preview    # 预览构建产物
 已内置 `.github/workflows/deploy.yml`。推送到 `main` 后自动构建并发布。
 - **注意**：Astro 输出为静态站，`public` 下的资源与内部链接使用绝对路径。更新 `astro.config.mjs` 的 `BASE_URL`（详见工作流中 `BASE_URL=/仓库名/`）。本地预览默认 `base=/`，部署时自动带上仓库子路径。
 
+
+## 图库托管与更新适配
+- **大图库（`public/img/suits/` 6490 张、`public/img/portraits/` 33 张，约 766MB）只在本机**，已加入 `.gitignore`，**不随 GitHub 上传**。
+- GitHub Pages 版为「代码 + 数据」版：文字、数据、检索、工具全部可用，仅泳装/立绘**缺图**（运行时 404 但不影响站点）。
+- **完整图库在自有服务器**：本地执行 `BASE_URL=<子路径> pnpm build` → `deploy\upload.ps1`（rsync 增量同步，图库已存在不重传）上传。
+- 服务器子路径为 `/looklook/doaxvv/`（见 `deploy/nginx.conf`），构建时必须 `BASE_URL=/looklook/doaxvv/`，否则图片/链接 404。详细见 `deploy/README.md`。
 > 非官方站点。内容整理自官方帮助文档与社区公开资料，图片与攻略版权归原作者，仅供自用参考。

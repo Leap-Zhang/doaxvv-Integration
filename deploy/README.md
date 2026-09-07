@@ -44,11 +44,13 @@ Actions 自动重新构建并发布。
 - 放行 **22/80/443**；记录公网 IP 与 SSH 密钥。
 
 ### 2) 上传站点
+本站部署在 nginx 子路径 `/looklook/doaxvv/`（见 `deploy/nginx.conf`），因此**必须用该子路径构建**再上传：
 ```
-pnpm build
-powershell -File deploy\upload.ps1   # 先改 upload.ps1 顶部的 $server
+$env:SITE_URL="https://你的域名"; $env:BASE_URL="/looklook/doaxvv/"; pnpm build
+powershell -File deploy\upload.ps1   # 已做 rsync 增量同步；若服务器无 rsync 自动回退 scp
 ```
-或手动把 `dist/` 传到 `/var/www/doaxvv`。
+`upload.ps1` 目标目录为 `/var/www/looklook/doaxvv`，与 nginx.conf 的 `location /looklook/doaxvv/`（root=/var/www）一致。
+> 说明：完整泳装/立绘图库（约 766MB）**只在本机，不随 GitHub 上传**；GitHub Pages 版为「代码+数据」版（泳装/立绘缺图），服务器版有完整图库。
 
 ### 3) 配置 Nginx
 ```
