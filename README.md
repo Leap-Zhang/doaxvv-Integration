@@ -68,5 +68,6 @@ pnpm preview    # 预览构建产物
 - **大图库（`public/img/suits/` 6490 张、`public/img/portraits/` 33 张，约 766MB）只在本机**，已加入 `.gitignore`，**不随 GitHub 上传**。
 - GitHub Pages 版为「代码 + 数据」版：文字、数据、检索、工具全部可用，仅泳装/立绘**缺图**（运行时 404 但不影响站点）。
 - **完整图库在自有服务器**：本地执行 `BASE_URL=<子路径> pnpm build` → `deploy\upload.ps1`（rsync 增量同步，图库已存在不重传）上传。
+- **首次全量泳装图库**（`public/img/suits`，约 758MB/6490 张）：带宽低时用 `deploy\upload-suits.ps1` 分批上传（免密 SSH、断点续传、批内重试）；服务器以 `.suits_batch/*.done` 标记批次，可反复运行续传。
 - 服务器子路径为 `/looklook/doaxvv/`（见 `deploy/nginx.conf`），构建时必须 `BASE_URL=/looklook/doaxvv/`，否则图片/链接 404。详细见 `deploy/README.md`。
 > 非官方站点。内容整理自官方帮助文档与社区公开资料，图片与攻略版权归原作者，仅供自用参考。
