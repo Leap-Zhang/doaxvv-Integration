@@ -3,32 +3,58 @@ import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import girlNames from '../data/girl-names.json';
 import levelData from '../data/doax-level.json';
-import bannerData from '../data/doax-banner.json';
-import eventData from '../data/doax-event.json';
 import emphasisData from '../data/doax-emphasis.json';
 import steamData from '../data/doax-ssr-steam.json';
 import accessory from '../data/doax-accessory.json';
 import room from '../data/doax-room.json';
+import officialNews from '../data/official-news.json';
 
 const gname = (id) => (girlNames[id] && girlNames[id].zh) || id;
-const yearMap = {};
-bannerData.forEach((b) => { const y = String(b.timestamp).split('/')[0]; (yearMap[y] ||= []).push(b); });
-const years = Object.keys(yearMap).sort();
 const typeChip = (t) => ({ pow:'chip-pow', tec:'chip-tec', stm:'chip-stm', apl:'chip-apl' }[t] || 'badge-sand');
 const fmt = (s) => String(s || '').replace(/\s+/g, ' ').trim();
 const today = new Date().toISOString().slice(0, 10);
 const snap = '2026-09-06';
+const root = import.meta.env.BASE_URL || '/';
+const catLabel = (c) => ({ gacha:'扭蛋', swimsuit:'泳装', event:'活动', version:'版本', maintenance:'维护', other:'其他' }[c] || c);
+const catChip = (c) => ({ gacha:'badge-blush', swimsuit:'badge-pool', event:'badge-sand', version:'badge-pool', maintenance:'badge-blush', other:'badge-sand' }[c] || 'badge-sand');
+const gid = (id) => ({ marie: 'marierose', helena: 'elena', meg: 'megu' }[id] || id);
 const ptsLabels = ['10分','20分','1小时','3小时','6小时','12小时','20小时','1篮','3篮','10篮'];
 ---
 
-<Base title="资料库 · DOAXVV 攻略站" desc="等级经验、月度纪念、活动、潜力 PP、Steam 泳装等参考数据。">
+<Base title="资料库 · DOAXVV 攻略站" desc="等级经验、潜力 PP、饰品、亲密度、官方公告等参考数据。">
   <div class="container-wiki py-10">
     <p class="text-sm font-semibold text-pool-600" data-i18n="admin.reference">参考数据</p>
     <h1 class="mt-1 text-3xl font-black" data-i18n="ref.title">资料库</h1>
     <p class="mt-2 max-w-3xl text-ink-soft">整理自 doax.cc 数据（已本地化）。数据快照：{snap}。</p>
+    <div class="card-wiki mt-6 p-6">
+      <p class="text-xs font-semibold text-pool-600">官方来源</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <a href="https://game.doaxvv.com" target="_blank" rel="noopener" class="badge badge-pool no-underline">官方网站 ↗</a>
+        <a href="https://game.doaxvv.com/cn/news/" target="_blank" rel="noopener" class="badge badge-sand no-underline">官方公告 / 新闻 ↗</a>
+        <a href="https://game-test.doaxvv.com/cn/c00.html" target="_blank" rel="noopener" class="badge badge-sand no-underline">官方角色档案 ↗</a>
+      </div>
+      <p class="mt-2 text-xs text-ink-soft">角色职业/兴趣等官方档案与部分泳装公告已按官方来源收录到角色页与泳装页。</p>
+    </div>
 
     <!-- 等级 / 经验 -->
+    <h2 class="sec-h">官方公告 / 新闻（{officialNews.length} 条）</h2>
+    <div class="space-y-2">
+      {officialNews.map((n) => (
+        <details class="card-wiki p-3">
+          <summary class="flex cursor-pointer items-center gap-2">
+            <span class="text-xs text-ink-soft">{n.date}</span>
+            <span class:list={['badge', catChip(n.category)]}>{catLabel(n.category)}</span>
+            <span class="text-sm font-semibold text-pool-700">{n.title}</span>
+          </summary>
+          <div class="mt-2 text-xs leading-relaxed text-ink-soft">{n.body.slice(0, 500)}{n.body.length > 500 ? '…' : ''}</div>
+          <a href={n.url} target="_blank" rel="noopener" class="mt-1 inline-block text-[11px] font-semibold text-pool-600 no-underline hover:underline">官网原文 ↗</a>
+        </details>
+      ))}
+    </div>
+    <p class="mt-2 text-xs text-ink-soft">来源：<a href="https://game.doaxvv.com/cn/" target="_blank" rel="noopener" class="font-semibold text-pool-600">DOAXVV 官方网站（简体中文）</a> · 维护公告见官方站点。</p>
+
     <h2 class="sec-h">等级 / 经验表（100 级）</h2>
+    <p class="mt-2 text-sm"><a href={`${root}tools/exp`} class="font-semibold text-pool-600 no-underline hover:underline">用等级经验计算器算一算 →</a></p>
     <div class="max-h-[72vh] overflow-auto rounded-2xl border border-line bg-white shadow-sm">
       <table class="tbl min-w-[560px] w-full">
         <thead><tr><th>等级</th><th>力/技 +</th><th>体 +</th><th>魅 +</th><th>所需经验</th></tr></thead>
@@ -38,34 +64,8 @@ const ptsLabels = ['10分','20分','1小时','3小时','6小时','12小时','20�
       </table>
     </div>
 
-    <!-- 月度纪念 -->
-    <h2 class="sec-h">月度纪念 / 泳装发布时间线（{bannerData.length} 个月）</h2>
-    {years.map((y) => (
-      <div class="mt-4">
-        <h3 class="text-base font-extrabold text-pool-700">{y}</h3>
-        {yearMap[y].map((b) => (
-          <div class="mt-2 rounded-xl border border-line bg-white/80 p-3">
-            <div class="text-xs font-bold text-ink-soft">{b.timestamp}</div>
-            <div class="mt-1 text-sm leading-relaxed text-ink">{b.data.join('　·　')}</div>
-          </div>
-        ))}
-      </div>
-    ))}
-
-    <!-- 活动 -->
-    <h2 class="sec-h">活动</h2>
-    <div class="grid gap-3 sm:grid-cols-2">
-      {eventData.map((e) => (
-        <div class="rounded-2xl border border-line bg-white p-4">
-          <span class:list={['badge', e.type === 'limited' ? 'badge-blush' : 'badge-pool']}>{e.type}</span>
-          <div class="mt-1 font-bold text-ink">{e.title}</div>
-          <div class="mt-1 text-xs text-ink-soft">{e.starttime} ~ {e.endtime}</div>
-        </div>
-      ))}
-    </div>
-
-    <!-- 潜力 PP -->
     <h2 class="sec-h">潜力 / 优先级（PP）</h2>
+    <p class="mt-2 text-sm"><a href={`${root}tools/panel`} class="font-semibold text-pool-600 no-underline hover:underline">去面板估算器配装 →</a></p>
     <div class="overflow-auto rounded-2xl border border-line bg-white shadow-sm">
       <table class="tbl min-w-[760px] w-full">
         <thead><tr><th>类型</th><th>PP</th><th>下限</th><th>星级上限</th><th>上限</th><th>所需钥匙</th><th>加成</th><th>所需体力</th></tr></thead>
@@ -83,7 +83,7 @@ const ptsLabels = ['10分','20分','1小时','3小时','6小时','12小时','20�
         <tbody>
           {steamData.map((s) => (
             <tr>
-              <td><b class="text-ink">{gname(s.girl)}</b></td>
+              <td><a href={`${root}girls/${gid(s.girl)}/`} class="font-bold text-ink no-underline hover:underline">{gname(s.girl)}</a></td>
               <td>{s.name}</td>
               <td><span class:list={['badge', typeChip(s.type)]}>{s.type.toUpperCase()}</span></td>
               <td>{s.pow}</td><td>{s.tec}</td><td>{s.stm}</td><td>{s.apl}</td>
@@ -124,7 +124,7 @@ const ptsLabels = ['10分','20分','1小时','3小时','6小时','12小时','20�
     </div>
 
     <div class="mt-8 rounded-2xl border border-line bg-white p-6 text-sm text-ink-soft">
-      数据来源：<a href="https://doax.cc/" target="_blank" rel="noopener" class="font-semibold text-pool-600">doax.cc</a>（已本地化）。潜力/PP、饰品升级素材、房间/亲密度（结果分数 + 60 级等级表）已收录。card（强化经验·费用）为 doax.cc 内嵌的多字段小表，字段语义随原站布局，结构化不可靠，交由“工具”阶段的经验计算器覆盖。
+      数据来源：以 <a href="https://game.doaxvv.com" target="_blank" rel="noopener" class="font-semibold text-pool-600">官网 game.doaxvv.com</a> 为<b class="text-ink">最高优先</b>（公告/角色档案/系统需求），其余数值参考 <a href="https://doax.cc/" target="_blank" rel="noopener" class="font-semibold text-pool-600">doax.cc</a>，均已本地化。潜力/PP、饰品升级素材、房间/亲密度（结果分数 + 60 级等级表）已收录。card（强化经验·费用）为 doax.cc 内嵌的多字段小表，字段语义随原站布局，结构化不可靠，交由“工具”阶段的经验计算器覆盖。
     </div>
   </div>
 </Base>

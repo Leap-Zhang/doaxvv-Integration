@@ -187,9 +187,9 @@ const entries = [...pageEnts, ...girlEntries];
       const qs = new URLSearchParams(location.search).get('q') || '';
       if (qs) input.value = qs;
       const [suits, skills, names] = await Promise.all([
-        fetch(base + 'data/doax-ssr.json').then((r) => r.json()).catch(() => []),
-        fetch(base + 'data/doax-skills.json').then((r) => r.json()).catch(() => []),
-        fetch(base + 'data/girl-names.json').then((r) => r.json()).catch(() => null)
+        fetch(base + 'api/doax-ssr.json').then((r) => r.json()).catch(() => []),
+        fetch(base + 'api/doax-skills.json').then((r) => r.json()).catch(() => []),
+        fetch(base + 'api/girl-names.json').then((r) => r.json()).catch(() => null)
       ]);
       buildExtra(suits, skills, names);
       loading.classList.add('hidden');

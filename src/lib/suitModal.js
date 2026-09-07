@@ -48,7 +48,7 @@ export function openSuitModal(suit, skillMap, lang, opts = {}) {
   overlay.style.cssText = 'position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;padding:18px;';
   overlay.style.background = backdrop ? 'linear-gradient(rgba(15,24,38,.55),rgba(15,24,38,.62)), url(' + backdrop + ') center/cover' : 'rgba(15,24,38,.5)';
   const panel = document.createElement('div');
-  panel.style.cssText = 'background:#fffdf7;border:1px dashed rgba(224,138,106,.35);border-radius:18px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:24px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);';
+  panel.style.cssText = 'background:rgba(255,251,243,.62);border:1px solid rgba(224,138,106,.30);border-radius:20px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:24px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);';
 
   const statRow = (l, v, c) => '<div class="flex justify-between border-b border-line py-1"><span>' + l + '</span><b class="' + (c || '') + '">' + v + '</b></div>';
   const skills = suit.skills && suit.skills.length
@@ -61,12 +61,13 @@ export function openSuitModal(suit, skillMap, lang, opts = {}) {
   panel.innerHTML =
     '<button class="suit-x" style="position:absolute;top:14px;right:14px;border:none;background:transparent;font-size:20px;cursor:pointer;color:#5a7288">×</button>' +
     '<div class="flex items-center gap-3">' +
-      '<img src="' + (girlImg[suit.girl] || '') + '" alt="" class="h-16 w-16 rounded-xl object-cover" onerror="this.style.display=\'none\'" />' +
+      '<img src="' + (girlImg[suit.girl] || '') + '" alt="' + suitName(suit, lang) + '" class="h-16 w-16 rounded-xl object-cover" onerror="this.style.display=\'none\'" />' +
       '<div><h2 class="text-lg font-extrabold">' + suitName(suit, lang) + '</h2>' +
       '<div class="text-xs text-ink-soft">' + (suit.jp || '') + '</div>' +
       '<div class="mt-1">' + (shared ? '<span class="text-xs text-ink-soft">共享泳装</span>' : '<a class="text-xs font-semibold text-pool-600 no-underline hover:underline" href="' + base + 'girls/' + linkId + '/"> ' + gn + ' ↗</a>') + '</div></div>' +
       '<div style="margin-left:auto"><span class="badge badge-blush">' + (suit.type || '').toUpperCase() + '</span></div>' +
     '</div>' +
+
     '<div class="mt-4">' + statRow('POW', suit.pow, 'attr-pow') + statRow('TEC', suit.tec, 'attr-tec') + statRow('STM', suit.stm, 'attr-stm') + statRow('APL', suit.apl, 'attr-apl') + '</div>' +
     '<div class="mt-4 text-xs text-ink-soft">登场：' + suit.sell + (suit.resell && suit.resell !== 'N/A' ? '　复刻：' + suit.resell : '') + '</div>' +
     '<div class="mt-2 border-t border-line pt-2"><p class="text-xs font-semibold text-pool-600">' + (lang === 'en' ? 'Skills' : lang === 'ja' ? 'スキル' : '技能') + '</p>' + skills + '</div>';

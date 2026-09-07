@@ -13,8 +13,8 @@
 ## 阶段一 · GitHub Pages（现在先做）
 
 ### 1) 建仓库 + 推送
-- 在 GitHub 新建一个**空仓库**（Public 更省事），如 `doaxvv-wiki`，**不要**勾选 Add README。
-- 项目根目录执行（仓库里的 `public/img/bromide/` 已放开，女孩/星级立绘会一并推送）：
+- 在 GitHub 新建一个**空仓库**（Public 更省事），如 `doaxvv-Integration`，**不要**勾选 Add README。
+- 项目根目录执行（仓库里的 `public/img/portraits/`（女孩立绘）与 `public/img/suits/`（泳装图鉴）会一并推送）：
 ```
 git remote add origin https://github.com/<你的用户名>/<仓库名>.git
 git add -A
@@ -71,5 +71,5 @@ sudo nginx -t && sudo systemctl reload nginx
 
 ## 本仓库已配置
 - `.github/workflows/deploy.yml`：GitHub Pages 自动构建发布（触发 `main`/`master` 与手动）。
-- `public/img/bromide/`：女孩/星级立绘（已从 `.gitignore` 放开，随 Git 部署）。
+- `public/img/portraits/`：女孩立绘（本地生成 webp）；`public/img/suits/`：泳装图鉴图（6490 张，含走形变体，本地生成 webp）。均随 Git 部署。
 - 全站 base 感知：已修复「子路径部署下链接/图片/背景/data JSON 404」问题。

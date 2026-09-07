@@ -3,7 +3,7 @@ import { girls } from '../data/girls.js';
 
 const main = [
   '/', '/girls/', '/swimsuits/', '/skills/', '/guide/', '/guide/newbie/', '/guide/festival/' ,
-  '/guide/swimsuit/', '/guide/growth/', '/guide/economy/', '/community/', '/search/', '/sections/', '/tools/',
+  '/guide/swimsuit/', '/guide/growth/', '/guide/economy/', '/community/', '/search/', '/tools/',
   '/tools/panel/', '/tools/plan/'
 ];
 const paths = [...main, ...girls.map((g) => `/girls/${g.id}/`)];

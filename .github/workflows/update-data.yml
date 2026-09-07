@@ -1,31 +1,45 @@
-name: Update DOAXVV data
+name: Update data from sources
 
 on:
   schedule:
-    - cron: '0 3 * * 1'   # 每周一 03:00
+    - cron: '0 18 * * *'   # 每天 UTC 18:00（北京时间 02:00）
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: data-update
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    if: github.repository == 'Leap-Zhang/doaxvv-Integration'
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
-      - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - name: Fetch & regenerate data
-        run: node tools/doax/update.mjs
-      - name: Build
-        run: pnpm build
-      - name: Commit data changes
+      - run: node tools/doax/update.mjs
+      - name: Commit changes if any
+        id: commit
         run: |
-          git config user.name "doax-data-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add tools/doax/raw src/data public/data
-          git diff --cached --quiet && echo "no data changes" || { git commit -m "chore: sync DOAXVV data"; git push; }
+          git config user.name "gasbot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false"
+          else
+            echo "changed=true"
+            git commit -m "chore(data): 自动更新数据快照" || true
+          fi
+      - name: Push
+        if: steps.commit.outputs.changed == 'true'
+        run: git push

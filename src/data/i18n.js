@@ -6,7 +6,7 @@ export const LANG_FULL = { zh: '中文', en: 'English', ja: '日本語' };
 
 export const UI = {
   zh: {
-    'admin.home': '首页', 'admin.girls': '女孩图鉴', 'admin.swimsuits': '泳装图鉴', 'admin.skills': '技能图鉴', 'admin.tools': '工具', 'admin.guide': '系统指南', 'admin.community': '社区攻略', 'admin.reference': '资料库',
+    'admin.home': '首页', 'admin.girls': '女孩图鉴', 'admin.swimsuits': '泳装图鉴', 'admin.skills': '技能图鉴', 'admin.tools': '工具', 'admin.guide': '系统指南', 'admin.community': '社区攻略', 'admin.reference': '资料库', 'admin.help': '帮助中心',
     'brand': 'DOAXVV 攻略站', 'brand.sub': '维纳斯群岛度假攻略',
     'search.placeholder': '搜索…',
     'common.all': '全部', 'common.allGirls': '全部角色', 'common.allType': '全部类型', 'common.loadMore': '加载更多', 'common.items': '件/个',
@@ -25,11 +25,15 @@ export const UI = {
     'home.card.swim': '泳装图鉴', 'home.card.swimD': '游泳系统讲解与全量泳装目录。',
     'home.card.guide': '系统指南', 'home.card.guideD': '比赛、泳装、养成、资源等核心玩法详解。',
     'home.card.community': '社区攻略', 'home.card.communityD': '贴吧 / B 站玩家攻略，按板块整理并标注来源。',
+    'home.card.skills': '技能图鉴', 'home.card.skillsD': '全部技能类型、属性着色与相关泳装反查。',
+    'home.card.tools': '工具', 'home.card.toolsD': '面板估算、PP规划、经验计算、属性对比。',
+    'home.card.reference': '资料库', 'home.card.referenceD': '等级/月度/活动/潜力PP/饰品/亲密度与官方公告。',
+    'home.card.collection': '我的收藏', 'home.card.collectionD': '收藏进度与本地备份导出/导入。',
     'ed.note': '本篇正文为中文，数据与界面已支持多语言。',
-    'footer.note': '本站在本地生成，内容整理自官方帮助文档与社区公开资料，非官方站点；图片与攻略版权归原作者，本站仅作自用参考。'
+    'footer.note': '内容整理自官方帮助文档与社区公开资料；图片与攻略版权归原作者。'
   },
   en: {
-    'admin.home': 'Home', 'admin.girls': 'Girls', 'admin.swimsuits': 'Swimsuits', 'admin.skills': 'Skills', 'admin.tools': 'Tools', 'admin.guide': 'Guides', 'admin.community': 'Community', 'admin.reference': 'Database',
+    'admin.home': 'Home', 'admin.girls': 'Girls', 'admin.swimsuits': 'Swimsuits', 'admin.skills': 'Skills', 'admin.tools': 'Tools', 'admin.guide': 'Guides', 'admin.community': 'Community', 'admin.reference': 'Database', 'admin.help': 'Help',
     'brand': 'DOAXVV Guide', 'brand.sub': 'Venus Islands Resort Guide',
     'search.placeholder': 'Search…',
     'common.all': 'All', 'common.allGirls': 'All Girls', 'common.allType': 'All Types', 'common.loadMore': 'Load more', 'common.items': '',
@@ -49,10 +53,10 @@ export const UI = {
     'home.card.guide': 'Guides', 'home.card.guideD': 'Matches, swimsuits, growth and economy.',
     'home.card.community': 'Community', 'home.card.communityD': 'Tieba / Bilibili builds by section with sources.',
     'ed.note': 'This article is in Chinese; data & UI support multiple languages.',
-    'footer.note': 'A locally-generated reference wiki based on official docs and community sources. Non-official; images & guides belong to their authors.'
+    'footer.note': 'Compiled from official docs & community sources; images & guides belong to their authors.'
   },
   ja: {
-    'admin.home': 'ホーム', 'admin.girls': 'ガールズ', 'admin.swimsuits': '水着図鑑', 'admin.skills': 'スキル図鑑', 'admin.tools': 'ツール', 'admin.guide': 'ガイド', 'admin.community': 'コミュニティ', 'admin.reference': 'データ集',
+    'admin.home': 'ホーム', 'admin.girls': 'ガールズ', 'admin.swimsuits': '水着図鑑', 'admin.skills': 'スキル図鑑', 'admin.tools': 'ツール', 'admin.guide': 'ガイド', 'admin.community': 'コミュニティ', 'admin.reference': 'データ集', 'admin.help': 'ヘルプ',
     'brand': 'DOAXVV 攻略', 'brand.sub': 'ヴィーナス諸島リゾートガイド',
     'search.placeholder': '検索…',
     'common.all': 'すべて', 'common.allGirls': '全キャラ', 'common.allType': '全タイプ', 'common.loadMore': 'もっと見る', 'common.items': '',
@@ -71,8 +75,12 @@ export const UI = {
     'home.card.swim': '水着', 'home.card.swimD': '水着システムと全カタログ。',
     'home.card.guide': 'ガイド', 'home.card.guideD': '試合・水着・育成・経済の解説。',
     'home.card.community': 'コミュニティ', 'home.card.communityD': '貼吧・B站の攻略をセクション別に。',
+    'home.card.skills': 'スキル', 'home.card.skillsD': '全スキルタイプと関連水着の逆引き。',
+    'home.card.tools': 'ツール', 'home.card.toolsD': 'パネル・PP・経験・属性比較。',
+    'home.card.reference': 'データ集', 'home.card.referenceD': 'レベル・バナー・PP・アクセサリ・親密度・公式告知。',
+    'home.card.collection': 'コレクション', 'home.card.collectionD': '進捗とローカルバックアップ。',
     'ed.note': '本文は中国語です。データとUIは多言語対応。',
-    'footer.note': 'ローカル生成の非公式攻略wiki。公式資料・コミュニティ資料をもとに整理。権利は各作者に帰属。'
+    'footer.note': '公式資料とコミュニティ資料をもとに整理。画像・攻略の権利は各作者に帰属。'
   }
 };
 

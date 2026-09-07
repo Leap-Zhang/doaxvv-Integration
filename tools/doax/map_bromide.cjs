@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const ssr = JSON.parse(fs.readFileSync("src/data/doax-ssr.json", "utf8"));
 const src = "bromide_dl/pic_star";
-const dst = "public/img/bromide/girls";
+const dst = "public/img/portraits"; // 注：新立绘由 tools/gen-local-images.mjs 按 suits-id 生成，本项目此脚本已退役
 const KEYMAP = { helena: "elena", marie: "marierose", meg: "megu" };
 fs.mkdirSync(dst, { recursive: true });
 const first = {};

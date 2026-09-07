@@ -32,7 +32,7 @@ import Base from '../../layouts/Base.astro';
     (async () => {
       const base = document.documentElement.getAttribute('data-base') || '/';
       let girls = [];
-      try { girls = await fetch(base + 'data/doax-girls.json').then((r) => r.json()); } catch (e) { girls = []; }
+      try { girls = await fetch(base + 'api/doax-girls.json').then((r) => r.json()); } catch (e) { girls = []; }
       const aSel = document.getElementById('aSel'), bSel = document.getElementById('bSel'), out = document.getElementById('cmpOut');
       girls.forEach((g) => { for (const sel of [aSel, bSel]) { const o = document.createElement('option'); o.value = g.id; o.textContent = g.name; sel.appendChild(o); } });
       if (girls.length > 1) bSel.value = girls[1].id;

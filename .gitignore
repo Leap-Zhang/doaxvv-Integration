@@ -6,3 +6,8 @@ dist/
 bromide_dl/
 test-results/
 tools/doax/raw/
+/.edge*/
+/px-fresh/
+# 大图库（本地/服务器部署用，不上传 GitHub 云端）
+public/img/suits/
+public/img/portraits/

@@ -1,6 +1,8 @@
 import { characters } from '../../data/characters.js';
 import { baseStats } from '../../data/stats.js';
 import { communityNotes } from '../../data/community-notes.js';
+import firstSuit from '../../data/girl-first-suit.json';
+import { BROMIDE, suitImage, portraitThumb } from '../lib/img.js';
 import { asset } from '../lib/asset.js';
 import officialGirls from './official-girls.json';
 
@@ -19,7 +21,9 @@ export const girls = characters.map((c) => {
     base,
     note,
     official: officialGirls[c.id] || null,
-    img: asset(`/img/bromide/girls/${c.id}.webp`),
+    img: firstSuit[c.id] ? portraitThumb(firstSuit[c.id]) : '',
+    full: firstSuit[c.id] ? suitImage(firstSuit[c.id]) : '',
+    fullMalf: firstSuit[c.id] ? suitImage(firstSuit[c.id], true) : '',
     type: note.type || deriveType(base)
   };
 });

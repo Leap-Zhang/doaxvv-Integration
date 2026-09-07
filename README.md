@@ -23,7 +23,8 @@ src/
     community.astro            社区攻略
     search/                   全站检索
 public/
-  img/bromide/girls/          角色立绘（33 张，源自 doax.cc 图鉴包）
+  img/portraits/              女孩立绘（33 张，本地生成 webp，3:4 竖版）
+  img/suits/                  泳装图鉴图（6490 张，含走形变体，本地生成 webp）
   data/                       运行时数据（供客户端拉取）
 tools/doax/                   数据抓取/生成脚本（可复现）
 bromide_dl/                   图鉴包源（约 12GB，.gitignore 排除）

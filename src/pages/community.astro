@@ -4,12 +4,37 @@ import Base from '../layouts/Base.astro';
 import SrcBlock from '../components/SrcBlock.astro';
 const root = import.meta.env.BASE_URL || '/';
 
+
+const roadmap = [
+  { n:'1', title:'理解战力构成', desc:'衣服最重，其次饰品/技能/潜力/应援板叠加。', posts:[['简单介绍衣服系统','https://tieba.baidu.com/p/6519750123'],['纯萌新攻略','https://tieba.baidu.com/p/8119453382']], mod:'swimsuits', modLabel:'泳装图鉴' },
+  { n:'2', title:'选主C与定位', desc:'力量/技巧主力各一；先看量化排行与常驻潜力。', posts:[['各角色刷分能力排行','http://jump2.bdimg.com/p/6457976789'],['steam 全角色 SSR 觉醒技能推荐','https://tieba.baidu.com/p/6387901332']], mod:'girls', modLabel:'女孩图鉴' },
+  { n:'3', title:'配装与属性', desc:'3 体力服 + 1 刷分服；A/P/F 三技能；涂油+声援板成型。', posts:[['活动赛通关与大跳指南','https://tieba.baidu.com/p/8969809061'],['入坑日服记录贴三','https://www.tieba.com/p/8244540500']], mod:'tools/panel', modLabel:'面板估算器' },
+  { n:'4', title:'爬山·满破·PP', desc:'满破除“皮肤→首饰”；减体量力爬、PP 配比毕业。', posts:[['第一次爬山该爬什么','https://jump2.bdimg.com/p/6514099383'],['寄服最大化收益爬山方法','http://ent.tieba.com/p/8846280244']], mod:'reference', modLabel:'资料库·潜力PP' },
+  { n:'5', title:'过关·竞技场', desc:'主手正属性攻击得分；沙包玩法与攻/防副分工。', posts:[['学习贴：前排学习 JJC 冠军配置','http://jump2.bdimg.com/p/8770759954'],['为什么我的攻副这么水','https://tieba.baidu.com/p/8864419517']], mod:'guide', modLabel:'系统指南' }
+];
+const faq = [
+  ['为什么说“衣服”最重要？','女孩强度≈裸体+衣服+首饰+技能+潜力+应援板，衣服是大头加成。'],
+  ['开荒先练谁？','力量 / 技巧主力各一个；用工具人开荒攒资源。'],
+  ['刷分服怎么选？','约 5000 正属性的 A/P/F 三技能衣服；力量角色可优先海咲（生日装极品、PP 好凑）。'],
+  ['卡 SS+ 了怎么办？','多在等级/首饰/涂油；先拿攻坚服过渡，借大佬两球凹分，别硬抽流行。'],
+  ['爬山先爬什么？','缺潜力优先爬力量女孩；满破除衣服→首饰，PP 配比毕业。'],
+  ['攻副怎么选？','海咲不适合攻副；换七海+凪咲打双攻更稳；防副可用玛小丽+绫音。'],
+  ['竞技场怎么得分？','只有主手正属性攻击得分；沙包方最大化主手倒转技能收益。']
+];
+const core = [
+  { t:'纯萌新攻略', u:'https://tieba.baidu.com/p/8119453382', a:'贴吧 · 江浦', why:'从战力构成理解“为什么衣服最重要”。' },
+  { t:'简单介绍衣服系统', u:'https://tieba.baidu.com/p/6519750123', a:'贴吧', why:'女孩强度构成的底层公式。' },
+  { t:'第一次爬山该爬什么', u:'https://jump2.bdimg.com/p/6514099383', a:'贴吧', why:'爬塔满破与 PP 首饰的核心机制。' },
+  { t:'活动赛通关与大跳指南', u:'https://tieba.baidu.com/p/8969809061', a:'贴吧', why:'稳定通关活动赛与大跳的基准线。' }
+];
+
 const sections = [
   {
     title: '新手开荒',
     blocks: [
       {
-        title: '纯萌新攻略', url: 'https://tieba.baidu.com/p/8119453382', author: '百度贴吧 · 江浦', flag: '精华',
+        title: '纯萌新攻略',
+        img: root + 'img/hero_day.webp', imgAlt: '实机截图（白昼泳池）', url: 'https://tieba.baidu.com/p/8119453382', author: '百度贴吧 · 江浦', flag: '精华',
         bullets: [
           '女孩战力来源：等级、泳装与饰品、涂油、应援板，其中<b>衣服最为重要</b>。',
           '一个培养毕业的主手女孩至少准备：3 件后缀不同的体力服 + 1 件不错的刷分服（要练的女孩最好已持有其中 2~3 件）。',
@@ -19,7 +44,8 @@ const sections = [
         note: '从战力构成入手，给出角色养成的“底层配置”思路。'
       },
       {
-        title: '简单介绍衣服系统', url: 'https://tieba.baidu.com/p/6519750123', author: '百度贴吧',
+        title: '简单介绍衣服系统',
+        img: root + 'img/swim_platinum.webp', imgAlt: '白金泳装实机截图', url: 'https://tieba.baidu.com/p/6519750123', author: '百度贴吧',
         body: '女孩强度 ≈ 女孩裸体强度 + 衣服强度 + 首饰强度 + 软绵绵技能 + 潜力系统 + 应援板系统（应援板仅为 DMM 服实装）。对萌新来说最直接、最主要的来源是<b>衣服</b>——角色本体基础属性可能只有几百，衣服带来的是大头加成。',
         note: '适合新玩家理解“为什么衣服这么重要”。'
       },
@@ -54,7 +80,8 @@ const sections = [
         note: '选培养对象时可参考的量化排名。'
       },
       {
-        title: 'DOAXVV 打分队（攻略向）', url: 'https://www.bilibili.com/opus/566244485395289268', author: 'Bilibili 专栏',
+        title: 'DOAXVV 打分队（攻略向）',
+        img: root + 'img/promo.webp', imgAlt: 'Misty Lily 泳装宣传图', url: 'https://www.bilibili.com/opus/566244485395289268', author: 'Bilibili 专栏',
         bullets: [
           '<b>力量偏向：</b>环（Tamaki）。',
           '<b>技巧偏向：</b>玛莉萝丝、海莲娜、莫妮卡、绫音、丽凤、霞。',
@@ -83,7 +110,8 @@ const sections = [
     title: '爬山・爬塔与满破',
     blocks: [
       {
-        title: '【萌新向/手把手】第一次爬山该爬什么', url: 'https://jump2.bdimg.com/p/6514099383', author: '百度贴吧',
+        title: '【萌新向/手把手】第一次爬山该爬什么',
+        img: root + 'img/hero_night.webp', imgAlt: '实机截图（夜晚泳池）', url: 'https://jump2.bdimg.com/p/6514099383', author: '百度贴吧',
         body: '<b>满破（最大化利用技能）：</b>用额外 4 件相同的衣服或 4 个觉醒石（可混搭，位置在“套装—技能觉醒”），把某件 SR / SSR 的 P 技能从衣服上取下来，放进头 / 脸 / 手三个首饰后，穿任意衣服都能发动——这是提升女孩战力的最重要途径之一。',
         note: '爬山活动的核心机制：满破与 PP 首饰。'
       },
@@ -154,15 +182,37 @@ const sections = [
       内容整理自百度贴吧《死或生沙滩排球维纳斯假期吧》与 B 站专栏。每块均注明<b class="text-ink">标题、作者与来源链接</b>；文字为本站整理摘要，细节以原帖为准。
     </p>
 
-    <figure class="card-wiki mt-6 overflow-hidden">
-      <img src={root + 'img/hero_night.webp'} alt="DOAXVV 实机截图（夜之泳池）" class="max-h-80 w-full object-cover" />
-      <figcaption class="px-4 py-2 text-xs text-ink-soft">配图：DOAXVV 实机截图，来源 3DMGame 资讯。</figcaption>
-    </figure>
 
-    <figure class="card-wiki mt-4 overflow-hidden">
-      <img src={root + 'img/promo.webp'} alt="Misty Lily 泳装抽卡宣传图" class="max-h-80 w-full object-cover" />
-      <figcaption class="px-4 py-2 text-xs text-ink-soft">配图：DOAXVV 泳装抽卡宣传图，来源 GOTVG 资讯（已本地化）。</figcaption>
-    </figure>
+    <h2 class="sec-h">攻略系统路线（从入坑到毕业）</h2>
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+      {roadmap.map((r) => (
+        <div class="card-wiki p-5">
+          <div class="flex items-center gap-2"><span class="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-pool-500 to-pool-700 text-xs font-bold text-white">{r.n}</span><span class="text-sm font-extrabold">{r.title}</span></div>
+          <p class="mt-1.5 text-xs text-ink-soft">{r.desc}</p>
+          <div class="mt-3 space-y-1 text-xs">
+            {r.posts.map((p) => <a href={p[1]} target="_blank" rel="noopener" class="block truncate font-semibold text-pool-600 no-underline hover:underline">{p[0]} ↗</a>)}
+          </div>
+          <a href={root + r.mod} class="mt-3 inline-block rounded-full bg-pool-50 px-3 py-1 text-xs font-bold text-pool-700 no-underline hover:bg-pool-100">相关站点 · {r.modLabel} →</a>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="sec-h">新手常见问题（FAQ）</h2>
+    <div class="grid gap-3 sm:grid-cols-2">
+      {faq.map((f) => (<div class="glass-card p-4"><p class="font-extrabold text-ink">Q：{f[0]}</p><p class="mt-1 text-sm text-ink-soft">A：{f[1]}</p></div>))}
+    </div>
+
+    <h2 class="sec-h">核心必读（高适用度）</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {core.map((c) => (
+        <div class="glass-card p-5">
+          <span class="badge badge-blush">推荐</span>
+          <a href={c.u} target="_blank" rel="noopener" class="mt-2 block font-extrabold text-ink no-underline hover:underline">{c.t} ↗</a>
+          <p class="mt-1 text-xs text-ink-soft">{c.a}</p>
+          <p class="mt-2 text-xs text-ink-soft">{c.why}</p>
+        </div>
+      ))}
+    </div>
 
     {sections.map((sec) => (
       <section class="mt-10">

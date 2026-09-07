@@ -15,20 +15,53 @@ import Icon from '../components/Icon.astro';
       <div class="card-wiki p-5"><div class="flex items-center justify-between"><span class="flex items-center gap-1.5 text-sm font-semibold"><Icon name="skill" size={16} />技能</span><span id="pgSkill" class="font-bold text-pool-700">0%</span></div><div class="mt-2 h-2 rounded-full bg-pool-50"><div id="pbSkill" class="h-2 rounded-full bg-pool-400" style="width:0%"></div></div><p id="pnSkill" class="mt-2 text-xs text-ink-soft">已收录 0 / 0</p></div>
     </div>
 
+
+    <div class="card-wiki mt-6 p-6">
+      <div class="flex flex-wrap items-center gap-3">
+        <button id="exportBtn" class="badge badge-pool cursor-pointer">导出备份</button>
+        <label class="badge badge-sand cursor-pointer">导入备份 <input id="importFile" type="file" accept="application/json,.json" class="hidden" /></label>
+        <span id="backupMsg" class="text-xs text-ink-soft"></span>
+      </div>
+      <p class="mt-2 text-xs text-ink-soft">导出/导入本地的收藏与备注（JSON，可跨浏览器备份）。仅存本地，不上传。</p>
+    </div>
+
     <div id="coll" class="mt-10 space-y-8"></div>
   </div>
 
   <script>
     import { getFav } from '../lib/fav.js';
+    import { notesAll } from '../lib/notes.js';
     import { suitName, openSuitModal, buildSkillMap, girlDisplayName } from '../lib/suitModal.js';
     (async () => {
       const fav = getFav();
+      const exportBtn = document.getElementById('exportBtn'), importFile = document.getElementById('importFile'), msg = document.getElementById('backupMsg');
+      exportBtn.addEventListener('click', () => {
+        const data = { type: 'doax-backup', version: 1, exported: new Date().toISOString(), fav: getFav(), note: notesAll() };
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'doaxvv-backup-' + new Date().toISOString().slice(0,10) + '.json'; a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+        msg.textContent = '已导出。';
+      });
+      importFile.addEventListener('change', (e) => {
+        const f = e.target.files[0]; if (!f) return;
+        const rd = new FileReader();
+        rd.onload = () => {
+          try {
+            const d = JSON.parse(rd.result);
+            if (d.fav) localStorage.setItem('doax_fav', JSON.stringify(d.fav));
+            if (d.note) localStorage.setItem('doax_note', JSON.stringify(d.note));
+            msg.textContent = '已导入，正在刷新…'; setTimeout(() => location.reload(), 800);
+          } catch (err) { msg.textContent = '导入失败：不是有效的备份文件'; }
+        };
+        rd.readAsText(f);
+        e.target.value = '';
+      });
       const base = document.documentElement.getAttribute('data-base') || '/';
       const [girls, suits, skillData, gnames] = await Promise.all([
-        fetch(base + 'data/doax-girls.json').then((r) => r.json()),
-        fetch(base + 'data/doax-ssr.json').then((r) => r.json()),
-        fetch(base + 'data/doax-skills.json').then((r) => r.json()),
-        fetch(base + 'data/girl-names.json').then((r) => r.json())
+        fetch(base + 'api/doax-girls.json').then((r) => r.json()),
+        fetch(base + 'api/doax-ssr.json').then((r) => r.json()),
+        fetch(base + 'api/doax-skills.json').then((r) => r.json()),
+        fetch(base + 'api/girl-names.json').then((r) => r.json())
       ]).catch(() => [null, null, null, null]);
       const wrap = document.getElementById('coll');
       if (!girls) { wrap.innerHTML = '<p class="text-ink-soft">加载失败。</p>'; return; }
@@ -36,7 +69,7 @@ import Icon from '../components/Icon.astro';
       const skillMap = buildSkillMap(skillData);
       const sname = (s) => (LANG==='en' ? (s.name_en || s.name) : LANG==='ja' ? (s.name_ja || s.name) : s.name);
       const seffect = (s) => (LANG==='en' ? (s.effect_en || s.effect) : LANG==='ja' ? (s.effect_ja || s.effect) : s.effect);
-      const girlImg = Object.fromEntries(girls.map((g) => [g.id, base + 'img/bromide/girls/' + g.id + '.webp']));
+      const girlImg = Object.fromEntries(girls.map((g) => [g.id, g.img]));
       const binds = { girlNames: gnames, girlImg, base };
 
       const favGirls = girls.filter((g) => fav.girls.includes(g.id));

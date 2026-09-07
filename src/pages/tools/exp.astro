@@ -25,8 +25,9 @@ const total100 = levels.reduce((s, l) => s + (+l.need_exp || 0), 0);
 
     <p class="mt-4 text-sm text-ink-soft">Lv1 → 100 总经验约 <b class="text-ink">{total100.toLocaleString()}</b>。</p>
   </div>
+  <div id="levels" hidden>{JSON.stringify(levels)}</div>
   <script>
-    const levels = {LEVEL_JSON};
+    const levels = JSON.parse(document.getElementById('levels').textContent);
     const fmt = (n) => Math.round(n).toLocaleString();
     function range(f, t) { let e = 0, pt = 0, st = 0, at = 0; for (let i = f; i < t; i++) { const l = levels[i - 1]; if (!l) break; e += (+l.need_exp || 0); pt += (+l.pow_tec_up || 0); st += (+l.stm_up || 0); at += (+l.apl_up || 0); } return { e, pt, st, at }; }
     function run() {

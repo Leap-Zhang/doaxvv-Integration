@@ -1,0 +1,53 @@
+{
+  "name": "DOAXVV 攻略站 · 数据接口",
+  "version": 1,
+  "source": "doax.cc / 官方 Game Help / 社区攻略（来源见站点各页）",
+  "snapshot": "2026-09-07",
+  "base": "/api/",
+  "serve": "GitHub Pages 静态数据服务（前后端分离：前端只渲染，数据按需从此拉取）",
+  "endpoints": {
+    "/api/doax-accessory.json": {
+      "count": 2
+    },
+    "/api/doax-banner.json": {
+      "count": 90
+    },
+    "/api/doax-emphasis.json": {
+      "count": 19
+    },
+    "/api/doax-event.json": {
+      "count": 10
+    },
+    "/api/doax-girls.json": {
+      "count": 33
+    },
+    "/api/doax-help.json": {
+      "count": 20
+    },
+    "/api/doax-level.json": {
+      "count": 100
+    },
+    "/api/doax-room.json": {
+      "count": 2
+    },
+    "/api/doax-skills.json": {
+      "count": 401
+    },
+    "/api/doax-ssr-steam.json": {
+      "count": 155
+    },
+    "/api/doax-ssr.json": {
+      "count": 3191
+    },
+    "/api/girl-names.json": {
+      "count": 33
+    },
+    "/api/official-news.json": {
+      "count": 10
+    },
+    "/api/suits/{girl}.json": {
+      "count": 34
+    }
+  },
+  "updated": "2026-09-07T14:37:53.745Z"
+}

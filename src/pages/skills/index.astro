@@ -11,7 +11,7 @@ const skillCount = skills.length;
     <h1 class="mt-1 text-3xl font-black" data-i18n="skill.title">技能一览</h1>
     <p class="mt-2 max-w-3xl text-ink-soft">共 <b class="text-ink">{skillCount}</b> 个技能（数据来源：doax.cc）。A=主动、F=狂热、P=被动/潜力。</p>
 
-    <div class="mt-6 flex flex-wrap items-center gap-3">
+    <div class="mt-6 flex items-center gap-3 overflow-x-auto whitespace-nowrap rounded-xl border border-line bg-white/90 px-3 py-2 shadow-sm">
       <input id="kSearch" type="search" placeholder="搜索技能名 / 效果…" class="w-full max-w-xs rounded-full border border-line bg-white px-4 py-2.5 text-sm outline-none focus:border-pool-400" />
       <div id="kType" class="flex gap-2">
         {types.map((t, i) => (
@@ -31,7 +31,10 @@ const skillCount = skills.length;
   <script>
     import { isFav, toggleFav } from '../../lib/fav.js';
     (async () => {
-      const skills = await fetch((document.documentElement.getAttribute('data-base')||'/')+'data/doax-skills.json').then((r) => r.json());
+      const skills = await fetch((document.documentElement.getAttribute('data-base')||'/')+'api/doax-skills.json').then((r) => r.json());
+      const base = (document.documentElement.getAttribute('data-base') || '/');
+      const suits = await fetch(base + 'api/doax-ssr.json').then((r) => r.json());
+      const used = {}; (suits || []).forEach((su) => (su.skills || []).forEach((k) => { used[k] = (used[k] || 0) + 1; }));
       let LANG = window.__LANG || 'zh';
       const sname = (s) => (LANG === 'en' ? (s.name_en || s.name) : LANG === 'ja' ? (s.name_ja || s.name) : s.name);
       const seffect = (s) => (LANG === 'en' ? (s.effect_en || s.effect) : LANG === 'ja' ? (s.effect_ja || s.effect) : s.effect);
@@ -42,7 +45,7 @@ const skillCount = skills.length;
         var ov = document.createElement('div');
         ov.style.cssText = 'position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;padding:18px;';
         ov.style.background = 'linear-gradient(rgba(20,70,76,.5),rgba(31,111,116,.6)), radial-gradient(50% 40% at 80% 15%, ' + propClr + '66, transparent 60%), linear-gradient(180deg,#14464c,#1f6f74)';
-        ov.innerHTML = '<div style="background:#fffdf7;border-radius:20px;max-width:460px;width:100%;padding:22px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);border:1px dashed rgba(224,138,106,.35)">' +
+        ov.innerHTML = '<div style="background:rgba(255,251,243,.62);border-radius:20px;border:1px solid rgba(224,138,106,.30);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);max-width:460px;width:100%;padding:22px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);border:1px dashed rgba(224,138,106,.35)">' +
           '<button class="x" style="position:absolute;top:12px;right:12px;border:none;background:transparent;font-size:22px;cursor:pointer;color:#5a7288">×</button>' +
           '<div class="flex items-center justify-between"><div class="text-xl font-extrabold">' + sname(sk) + '</div><span class="badge ' + (sk.type==='F'?'badge-blush':sk.type==='P'?'badge-sand':'badge-pool') + '">' + sk.type + '</span></div>' +
           '<p class="mt-2 text-sm text-ink-soft">' + seffect(sk) + '</p>' +
@@ -71,12 +74,13 @@ const skillCount = skills.length;
         list.innerHTML = '';
         f.forEach((s) => {
           const el = document.createElement('div');
-          el.className = 'card-wiki p-4';
+          el.className = 'glass-card p-4';
           el.style.position = 'relative';
           const color = s.type === 'F' ? 'badge-blush' : s.type === 'P' ? 'badge-sand' : 'badge-pool';
           el.innerHTML = '<div class="flex items-center justify-between"><span class="font-extrabold">' + sname(s) + '</span><span class="badge ' + color + '">' + s.type + '</span></div>' +
             '<p class="mt-1.5 text-sm text-ink-soft">' + seffect(s) + '</p>' +
-            (s.property ? '<div class="mt-2 text-xs text-ink-soft"><span class="' + propCls(s.property) + '">' + s.property + '</span>' + (s.pp ? '　PP：' + s.pp : '') + '</div>' : '');
+            (s.property ? '<div class="mt-2 text-xs text-ink-soft"><span class="' + propCls(s.property) + '">' + s.property + '</span>' + (s.pp ? '　PP：' + s.pp : '') + '</div>' : '') +
+            '<a class="mt-2 inline-block text-xs font-semibold text-pool-600 no-underline hover:underline" href="' + base + 'swimsuits?skill=' + encodeURIComponent(s.name) + '" onclick="event.stopPropagation()">相关泳装 ' + (used[s.name] || 0) + '</a>';
           const fb = document.createElement('button');
           fb.className = 'fav-a';
           fb.textContent = isFav('skills', s.name) ? '★' : '☆';
@@ -95,6 +99,8 @@ const skillCount = skills.length;
         typeBox.querySelectorAll('button').forEach((x) => { x.className = 'badge cursor-pointer ' + (x === b ? 'badge-pool' : 'bg-white text-ink-soft border border-line'); });
         render();
       });
+      const urlQ = new URLSearchParams(location.search).get('q');
+      if (urlQ) { search.value = urlQ; qtext = urlQ.trim(); }
       render();
       window.addEventListener('langchange', (e) => { LANG = e.detail; render(); });
     })();

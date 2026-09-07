@@ -12,10 +12,10 @@ const GKEY = { helena: 'elena', marie: 'marierose', meg: 'megu' };
 const types = ['全部', 'pow', 'tec', 'stm', 'apl'];
 const girlNameMap = Object.fromEntries(Object.entries(girlNames).map(([id, n]) => [id, n]));
 Object.entries(GKEY).forEach(([k, v]) => { girlNameMap[k] = girlNames[v]; });
-const girlImg = Object.fromEntries(girls.map((g) => [g.id, root + 'img/bromide/girls/' + g.id + '.webp']));
+const girlImg = Object.fromEntries(girls.map((g) => [g.id, g.img]));
 Object.entries(GKEY).forEach(([k, v]) => { girlImg[k] = girlImg[v]; });
 const skillMap = buildSkillMap(skillData);
-const starIds = new Set(readdirSync('public/img/bromide/star').map((x) => x.replace(/\.(png|webp)$/, '')));
+const starIds = new Set();
 const suitCount = 3191;
 ---
 
@@ -24,6 +24,7 @@ const suitCount = 3191;
     <p class="text-sm font-semibold text-pool-600" data-i18n="admin.swimsuits">泳装图鉴</p>
     <h1 class="mt-1 text-3xl font-black" data-i18n="swim.title">泳装・饰品图鉴</h1>
     <p class="mt-2 max-w-3xl text-ink-soft">共 <b class="text-ink">{suitCount}</b> 件 SSR 泳装（数据来源：doax.cc）。</p>
+    <div class="mt-3 rounded-xl bg-pool-50 p-3 text-sm text-pool-800">按属性选泳装：<b>力量</b>刷分向 / <b>技巧</b>大跳向 / <b>体力</b>耐久·沙包向 / <b>魅力</b>流行加分；点卡片看技能与复刻。去 <a class="font-semibold text-pool-600 hover:underline" href={root + 'tools/panel'}>面板估算器</a> 按数据配装。</div>
 
     <h2 class="sec-h">筛选</h2>
     <div class="flex flex-wrap items-center gap-3">
@@ -39,10 +40,12 @@ const suitCount = 3191;
           </button>
         ))}
       </div>
+      <button id="sImg" class="badge cursor-pointer bg-white/70 text-ink-soft border border-line">仅看有图</button>
+      <button id="sMalf" class="badge cursor-pointer bg-white/70 text-ink-soft border border-line">走形：关</button>
       <span id="sCount" class="text-sm text-ink-soft"></span>
     </div>
 
-    <div class="mt-4 flex flex-wrap items-end gap-3">
+    <div class="mt-4 flex flex-wrap items-center gap-3 overflow-x-auto whitespace-nowrap rounded-xl border border-line bg-white/90 px-3 py-2 shadow-sm">
       <label class="text-xs text-ink-soft">技能 <input id="sSkill" type="search" placeholder="技能关键词…" class="w-36 rounded-full border border-line bg-white/70 px-3 py-2 text-sm outline-none" /></label>
       <label class="text-xs text-ink-soft">最低 POW <input id="sPow" type="number" min="0" placeholder="0" class="w-24 rounded-full border border-line bg-white/70 px-3 py-2 text-sm outline-none" /></label>
       <label class="text-xs text-ink-soft">最低 TEC <input id="sTec" type="number" min="0" placeholder="0" class="w-24 rounded-full border border-line bg-white/70 px-3 py-2 text-sm outline-none" /></label>
@@ -53,7 +56,7 @@ const suitCount = 3191;
       <button id="sReset" class="badge icon cursor-pointer">重置</button>
     </div>
 
-    <div class="stage mt-5">
+    <div class="mt-5">
       <div id="sList" class="grid gap-3 sm:grid-cols-3 lg:grid-cols-4"></div>
       <button id="sMore" class="mt-5 w-full rounded-full border border-white/60 bg-white/60 py-3 text-sm font-semibold text-pool-600 backdrop-blur-xl hover:bg-white/80">加载更多</button>
     </div>
@@ -75,11 +78,22 @@ const suitCount = 3191;
       const NEW_YEAR = new Date().getFullYear() - 1;
       const isNew = (s) => parseInt(String(s.sell || '').slice(0, 4), 10) >= NEW_YEAR;
       const binds = { girlNames, girlImg, base: (document.documentElement.getAttribute('data-base') || '/') };
-      const suits = await fetch((document.documentElement.getAttribute('data-base') || '/') + 'data/doax-ssr.json').then((r) => r.json());
+      const linkBase = document.documentElement.getAttribute('data-base') || '/';
+      const LINKKEY = { helena: 'elena', marie: 'marierose', meg: 'megu' };
+
+      const basePath = document.documentElement.getAttribute('data-base') || '/';
+      const cdnStar = (id, malf) => basePath + 'img/suits/' + id + (malf ? '_m' : '') + '.webp';
+      const suitThumb = (id, malf) => cdnStar(id, malf);
+      const suitImg = (s) => cdnStar(s.id);
+      const suits = await fetch((document.documentElement.getAttribute('data-base') || '/') + 'api/doax-ssr.json').then((r) => r.json());
+      const ymK = (s) => { const p = String(s.sell || '').split('/'); return (+(p[0] || 0)) * 100 + (+(p[1] || 0)); };
+      const newestK = (suits || []).reduce((m, s) => Math.max(m, ymK(s)), 0);
+
       const girlSel = document.getElementById('sGirl'), search = document.getElementById('sSearch'), typeBox = document.getElementById('sType');
       const list = document.getElementById('sList'), more = document.getElementById('sMore'), countEl = document.getElementById('sCount');
       const sSkill = document.getElementById('sSkill'), sPow = document.getElementById('sPow'), sTec = document.getElementById('sTec'), sStm = document.getElementById('sStm'), sApl = document.getElementById('sApl'), sSort = document.getElementById('sSort'), sReset = document.getElementById('sReset'), sYear = document.getElementById('sYear');
       let girl = '全部', type = '全部', qtext = '', shown = 36;
+      let onlyImg = false; let globalMalf = false; const cardMalf = {};
       let skillQ = '', minPow = '', minTec = '', minStm = '', minApl = '', sort = '默认', year = '全部';
       const filtered = () => {
         let arr = suits.filter((s) => {
@@ -92,7 +106,8 @@ const suitCount = 3191;
           const okStm = minStm === '' || s.stm >= Number(minStm);
           const okApl = minApl === '' || s.apl >= Number(minApl);
           const okYear = year === '全部' || String(s.sell || '').slice(0, 4) === year;
-          return okG && okT && okQ && okSk && okPow && okTec && okStm && okApl && okYear;
+          const okImg = true;
+          return okG && okT && okQ && okSk && okPow && okTec && okStm && okApl && okYear && okImg;
         });
         if (sort !== '默认') arr = [...arr].sort((a, b) => b[sort] - a[sort]);
         return arr;
@@ -104,35 +119,59 @@ const suitCount = 3191;
         list.innerHTML = '';
         f.slice(0, shown).forEach((s) => {
           const el = document.createElement('div');
-          el.className = 'glass-card cursor-pointer p-3'; el.style.position = 'relative';
+          el.className = 'card-wiki cursor-pointer p-3'; el.style.position = 'relative';
           const typeChip = { pow: 'chip-pow', tec: 'chip-tec', stm: 'chip-stm', apl: 'chip-apl' }[s.type] || 'badge-pool';
           el.innerHTML =
-            '<div class="flex items-center gap-2"><img src="' + (star.has(s.id) ? (document.documentElement.getAttribute('data-base') || '/') + 'img/bromide/star/' + s.id + '.webp' : (girlImg[s.girl] || '')) + '" alt="' + girlDisplayName(s.girl, girlNames, LANG) + '" loading="lazy" decoding="async" class="h-11 w-11 rounded-lg object-cover" onerror="this.style.display=\'none\'" /><div class="min-w-0 flex-1"><div class="truncate text-sm font-extrabold text-pool-700">' + suitName(s, LANG) + '</div><div class="truncate text-[11px] text-ink-soft">' + (girlNames[s.girl] ? girlDisplayName(s.girl, girlNames, LANG) : '共享泳装') + '</div></div>' + (girlNames[s.girl] ? '' : '<span class="badge badge-blush">共享</span>') + '<span class="badge badge-sand">' + String(s.sell || '').slice(0, 4) + '</span>' + (isNew(s) ? '<span class="badge badge-blush">新</span>' : '') + '<span class="badge ' + typeChip + '">' + (s.type || '').toUpperCase() + '</span></div>' +
-            '<div class="mt-2 grid grid-cols-4 gap-1">' + statTile('P', s.pow, 'attr-pow') + statTile('T', s.tec, 'attr-tec') + statTile('S', s.stm, 'attr-stm') + statTile('A', s.apl, 'attr-apl') + '</div>' +
-            (s.skills.length ? '<div class="mt-2 flex flex-wrap gap-1">' + s.skills.slice(0, 2).map((k) => '<span class="badge ' + skillPropClass((skillMap[k] || {}).property) + '">' + skillText(skillMap, k, LANG).name + '</span>').join('') + '</div>' : '') +
-            '<button class="fav-a" style="position:absolute;top:8px;right:8px;border:none;background:transparent;cursor:pointer;font-size:16px;color:#e6a04c">' + (isFav('suits', s.id) ? '★' : '☆') + '</button>';
-          el.addEventListener('click', () => openSuitModal(s, skillMap, LANG, Object.assign({}, binds, { img: (star.has(s.id) ? (document.documentElement.getAttribute('data-base') || '/') + 'img/bromide/star/' + s.id + '.webp' : (girlImg[s.girl] || '')) })));
-          el.querySelector('.fav-a').addEventListener('click', (e) => { e.stopPropagation(); toggleFav('suits', s.id); e.currentTarget.textContent = isFav('suits', s.id) ? '★' : '☆'; });
+            '<div class="glass-card relative aspect-[3/4] overflow-hidden rounded-[20px]">'+
+            '<img src="' + suitThumb(s.id, cardMalf[s.id] || globalMalf) + '" alt="' + girlDisplayName(s.girl, girlNames, LANG) + '" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" onerror="this.onerror=null;this.src=girlImg[s.girl]" /><button class="malf-a absolute left-2 top-2" style="border:none;background:transparent;cursor:pointer;font-size:15px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.55)">⛤</button>'+
+            '<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"></div>'+
+            '<button class="fav-a absolute right-2 top-2" style="border:none;background:transparent;cursor:pointer;font-size:16px;color:#ffd98a;text-shadow:0 1px 4px rgba(0,0,0,.6)">' + (isFav('suits', s.id) ? '★' : '☆') + '</button>'+
+            '<div class="absolute inset-x-0 bottom-0 p-2 text-white">'+
+            '<div class="line-clamp-2 text-[13px] font-extrabold drop-shadow">' + suitName(s, LANG) + '</div>'+
+            '<div class="truncate text-[10px] text-white/75">' + (girlNames[s.girl] ? '<a href="' + linkBase + 'girls/' + (LINKKEY[s.girl] || s.girl) + '/" class="text-white/90 no-underline hover:underline" onclick="event.stopPropagation()">' + girlDisplayName(s.girl, girlNames, LANG) + '</a>' : '共享泳装') + '</div>'+
+            '<div class="mt-1 grid grid-cols-4 gap-0.5 text-center">'+
+            '<div class="rounded bg-white/15 py-0.5"><div class="text-[9px] text-white/75">POW</div><div class="text-[11px] font-bold" style="color:#ff8aa8">' + s.pow + '</div></div>'+
+            '<div class="rounded bg-white/15 py-0.5"><div class="text-[9px] text-white/75">TEC</div><div class="text-[11px] font-bold" style="color:#63d1a0">' + s.tec + '</div></div>'+
+            '<div class="rounded bg-white/15 py-0.5"><div class="text-[9px] text-white/75">STM</div><div class="text-[11px] font-bold" style="color:#f4c26c">' + s.stm + '</div></div>'+
+            '<div class="rounded bg-white/15 py-0.5"><div class="text-[9px] text-white/75">APL</div><div class="text-[11px] font-bold" style="color:#caa2f0">' + s.apl + '</div></div>'+
+            '</div>'+
+            (s.skills.length ? '<div class="mt-1 space-y-0.5">' + s.skills.map((k) => { const t = skillText(skillMap, k, LANG); const pc = (skillMap[k] || {}).property; return '<div class="rounded bg-black/30 px-1 py-0.5"><div class="flex items-center justify-between gap-1"><span class="truncate text-[10px] font-semibold">' + t.name + '</span><span class="badge shrink-0 ' + (pc ? skillPropClass(pc) : 'badge-sand') + '" style="font-size:9px">' + ((skillMap[k] || {}).property || '').toUpperCase() + '</span></div>' + (t.effect ? '<div class="truncate text-[9px] text-white/65">' + t.effect + '</div>' : '') + '</div>'; }).join('') + '</div>' : '')+
+            '<details class="mt-1"><summary class="cursor-pointer text-[9px] text-white/70">登场 ' + String(s.sell || '').slice(0, 10) + '</summary>' + (s.resell ? '<div class="text-[9px] text-white/70">复刻 ' + s.resell + '</div>' : '<div class="text-[9px] text-white/70">暂不复刻</div>') + '</details>'+
+            '<span class="badge ' + typeChip + ' mt-1" style="font-size:9px">' + (s.type || '').toUpperCase() + '</span>' + (ymK(s) === newestK ? '<span class="badge badge-blush" style="font-size:9px">当期</span>' : '') +
+            '</div></div>';
+          el.addEventListener('click', () => openSuitModal(s, skillMap, LANG, Object.assign({}, binds, { img: cdnStar(s.id, cardMalf[s.id] || globalMalf) })));
+          el.querySelector('.fav-a')?.addEventListener('click', (e) => { e.stopPropagation(); toggleFav('suits', s.id); e.currentTarget.textContent = isFav('suits', s.id) ? '★' : '☆'; });
+          el.querySelector('.malf-a')?.addEventListener('click', (e) => { e.stopPropagation(); cardMalf[s.id] = !cardMalf[s.id]; render(); });
           list.appendChild(el);
         });
         more.classList.toggle('hidden', shown >= f.length);
       }
-      search.addEventListener('input', () => { qtext = search.value.trim().toLowerCase(); shown = 36; render(); });
-      girlSel.addEventListener('change', () => { girl = girlSel.value; shown = 36; render(); });
-      typeBox.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; type = b.dataset.type; typeBox.querySelectorAll('button').forEach((x) => { x.className = 'badge cursor-pointer ' + (x === b ? 'badge-pool' : 'bg-white/70 text-ink-soft border border-line'); }); shown = 36; render(); });
-      more.addEventListener('click', () => { shown += 36; render(); });
-      sSkill.addEventListener('input', () => { skillQ = sSkill.value.trim().toLowerCase(); shown = 36; render(); });
-      sPow.addEventListener('input', () => { minPow = sPow.value; shown = 36; render(); });
-      sTec.addEventListener('input', () => { minTec = sTec.value; shown = 36; render(); });
-      sStm.addEventListener('input', () => { minStm = sStm.value; shown = 36; render(); });
-      sApl.addEventListener('input', () => { minApl = sApl.value; shown = 36; render(); });
-      sSort.addEventListener('change', () => { sort = sSort.value; shown = 36; render(); });
-      sReset.addEventListener('click', () => { sSkill.value = ''; sPow.value = ''; sTec.value = ''; sStm.value = ''; sApl.value = ''; sSort.value = '默认'; sYear.value = '全部'; skillQ = ''; minPow = ''; minTec = ''; minStm = ''; minApl = ''; sort = '默认'; year = '全部'; shown = 36; render(); });
+      search?.addEventListener('input', () => { qtext = search.value.trim().toLowerCase(); shown = 36; render(); });
+      girlSel?.addEventListener('change', () => { girl = girlSel.value; shown = 36; render(); });
+      typeBox?.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; type = b.dataset.type; typeBox.querySelectorAll('button').forEach((x) => { x.className = 'badge cursor-pointer ' + (x === b ? 'badge-pool' : 'bg-white/70 text-ink-soft border border-line'); }); shown = 36; render(); });
+      more?.addEventListener('click', () => { shown += 36; render(); });
+      sSkill?.addEventListener('input', () => { skillQ = sSkill.value.trim().toLowerCase(); shown = 36; render(); });
+      sPow?.addEventListener('input', () => { minPow = sPow.value; shown = 36; render(); });
+      sTec?.addEventListener('input', () => { minTec = sTec.value; shown = 36; render(); });
+      sStm?.addEventListener('input', () => { minStm = sStm.value; shown = 36; render(); });
+      sApl?.addEventListener('input', () => { minApl = sApl.value; shown = 36; render(); });
+      sSort?.addEventListener('change', () => { sort = sSort.value; shown = 36; render(); });
+      sReset?.addEventListener('click', () => { sSkill.value = ''; sPow.value = ''; sTec.value = ''; sStm.value = ''; sApl.value = ''; sSort.value = '默认'; sYear.value = '全部'; skillQ = ''; minPow = ''; minTec = ''; minStm = ''; minApl = ''; sort = '默认'; year = '全部'; shown = 36; render(); });
       const yrYears = [...new Set(suits.map((s) => String(s.sell || '').slice(0, 4)).filter((y) => /^\d{4}$/.test(y)))].sort().reverse();
       yrYears.forEach((y) => { const o = document.createElement('option'); o.value = y; o.textContent = y + ' 年'; sYear.appendChild(o); });
-      sYear.addEventListener('change', () => { year = sYear.value; shown = 36; render(); });
+      sYear?.addEventListener('change', () => { year = sYear.value; shown = 36; render(); });
+      const urlGirl = new URLSearchParams(location.search).get('girl');
+      if (urlGirl && girlSel.querySelector('option[value="' + urlGirl + '"]')) { girl = urlGirl; girlSel.value = urlGirl; }
+      const urlQ = new URLSearchParams(location.search).get('q');
+      if (urlQ) { search.value = urlQ; qtext = urlQ.trim().toLowerCase(); }
+      const urlSkill = new URLSearchParams(location.search).get('skill');
+      if (urlSkill) { sSkill.value = urlSkill; skillQ = urlSkill.trim().toLowerCase(); }
+      const sImg = document.getElementById('sImg');
+      sImg?.addEventListener('click', () => { onlyImg = !onlyImg; sImg.className = onlyImg ? 'badge cursor-pointer badge-pool' : 'badge cursor-pointer bg-white/70 text-ink-soft border border-line'; shown = 36; render(); });
       render();
-      window.addEventListener('langchange', (e) => { window.__LANG = e.detail; render(); });
+      const sMalf = document.getElementById('sMalf');
+    sMalf?.addEventListener('click', () => { globalMalf = !globalMalf; sMalf.textContent = globalMalf ? '走形：开' : '走形：关'; shown = 36; render(); });
+    window.addEventListener('langchange', (e) => { window.__LANG = e.detail; render(); });
     })();
   </script>
 </Base>
