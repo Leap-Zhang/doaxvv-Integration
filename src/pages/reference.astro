@@ -7,7 +7,8 @@ import emphasisData from '../data/doax-emphasis.json';
 import steamData from '../data/doax-ssr-steam.json';
 import accessory from '../data/doax-accessory.json';
 import room from '../data/doax-room.json';
-import officialNews from '../data/official-news.json';
+import official from '../data/official-news.json';
+const officialNews = official.history || [];
 
 const gname = (id) => (girlNames[id] && girlNames[id].zh) || id;
 const typeChip = (t) => ({ pow:'chip-pow', tec:'chip-tec', stm:'chip-stm', apl:'chip-apl' }[t] || 'badge-sand');
@@ -15,6 +16,7 @@ const fmt = (s) => String(s || '').replace(/\s+/g, ' ').trim();
 const today = new Date().toISOString().slice(0, 10);
 const snap = '2026-09-06';
 const root = import.meta.env.BASE_URL || '/';
+const leadText = (n) => { const x = (n.blocks || []).find((y) => y.type === 'text'); return x ? x.text : ''; };
 const catLabel = (c) => ({ gacha:'扭蛋', swimsuit:'泳装', event:'活动', version:'版本', maintenance:'维护', other:'其他' }[c] || c);
 const catChip = (c) => ({ gacha:'badge-blush', swimsuit:'badge-pool', event:'badge-sand', version:'badge-pool', maintenance:'badge-blush', other:'badge-sand' }[c] || 'badge-sand');
 const gid = (id) => ({ marie: 'marierose', helena: 'elena', meg: 'megu' }[id] || id);
@@ -46,7 +48,7 @@ const ptsLabels = ['10分','20分','1小时','3小时','6小时','12小时','20�
             <span class:list={['badge', catChip(n.category)]}>{catLabel(n.category)}</span>
             <span class="text-sm font-semibold text-pool-700">{n.title}</span>
           </summary>
-          <div class="mt-2 text-xs leading-relaxed text-ink-soft">{n.body.slice(0, 500)}{n.body.length > 500 ? '…' : ''}</div>
+          <div class="mt-2 text-xs leading-relaxed text-ink-soft">{leadText(n).slice(0, 500)}{leadText(n).length > 500 ? '…' : ''}</div>
           <a href={n.url} target="_blank" rel="noopener" class="mt-1 inline-block text-[11px] font-semibold text-pool-600 no-underline hover:underline">官网原文 ↗</a>
         </details>
       ))}

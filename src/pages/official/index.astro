@@ -1,6 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import news from '../../data/official-news.json';
+import official from '../../data/official-news.json';
+const news = official.history || [];
+const leadImg = (n) => { const b = (n.blocks || []).find((x) => x.type === 'img'); return b ? b.src : ''; };
+const leadText = (n) => { const x = (n.blocks || []).find((y) => y.type === 'text'); return x ? x.text.slice(0, 80) : ''; };
 const root = import.meta.env.BASE_URL || '/';
 const cats = ['全部', '扭蛋', '泳装', '活动', '版本', '维护', '其他'];
 const slug = (u) => (u || '').replace(/^.*\//, '').split('?')[0].replace(/\.html$/, '');
@@ -24,14 +27,14 @@ const catChip = (c) => ({ gacha: 'badge-blush', swimsuit: 'badge-pool', event: '
       {news.map((n) => (
         <a href={`${root}official/${slug(n.url)}/`} data-cat={catLabel(n.category)} class="glass-card card-postcard group block overflow-hidden rounded-2xl bg-white no-underline">
           <div class="relative h-32 w-full overflow-hidden bg-pool-50">
-            {n.images && n.images[0]
-              ? <img src={root + n.images[0]} alt={n.title} loading="lazy" class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            {leadImg(n)
+              ? <img src={root + leadImg(n)} alt={n.title} loading="lazy" class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105" />
               : <div class="grid h-32 place-items-center text-pool-300">暂无图</div>}
           </div>
           <div class="p-4">
             <div class="flex items-center gap-2"><span class:list={['badge', catChip(n.category)]}>{catLabel(n.category)}</span><span class="text-xs tabular-nums text-ink-soft">{n.date}</span></div>
             <h2 class="mt-2 line-clamp-2 text-sm font-extrabold text-pool-700">{n.title}</h2>
-            <p class="mt-1 line-clamp-2 text-xs text-ink-soft">{n.body.slice(0, 80)}</p>
+            <p class="mt-1 line-clamp-2 text-xs text-ink-soft">{leadText(n)}</p>
             <span class="mt-2 inline-block text-xs font-semibold text-pool-600">查看详情 →</span>
           </div>
         </a>
