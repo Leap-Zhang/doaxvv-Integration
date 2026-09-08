@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import news from '../../data/official-news.json';
+const root = import.meta.env.BASE_URL || '/';
+const cats = ['全部', '扭蛋', '泳装', '活动', '版本', '维护', '其他'];
+const slug = (u) => (u || '').replace(/^.*\//, '').split('?')[0].replace(/\.html$/, '');
+const catLabel = (c) => ({ gacha: '扭蛋', swimsuit: '泳装', event: '活动', version: '版本', maintenance: '维护', other: '其他' }[c] || c);
+const catChip = (c) => ({ gacha: 'badge-blush', swimsuit: 'badge-pool', event: 'badge-sand', version: 'badge-pool', maintenance: 'badge-blush', other: 'badge-sand' }[c] || 'badge-sand');
+---
+
+<Base title="官方公告 · DOAXVV 攻略站" desc="官网公告全量整合，图文本地化，每类保留最新 6 条。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">官方公告</p>
+    <h1 class="mt-1 text-3xl font-black">官方公告</h1>
+    <p class="mt-2 max-w-3xl text-ink-soft">抓取自 DOAXVV 官网并本地化（正文 + 图片）；按类别保留最新 6 条，超出入归档。来源：<a href="https://game.doaxvv.com" target="_blank" rel="noopener" class="font-semibold text-pool-600">DOAXVV 官网</a>。</p>
+
+    <div id="filters" class="mt-5 flex flex-wrap gap-2">
+      {cats.map((c, i) => (
+        <button data-cat={c} class:list={['badge cursor-pointer', i === 0 ? 'badge-pool' : 'bg-white/80 text-ink-soft border border-line']}>{c}</button>
+      ))}
+    </div>
+
+    <div id="list" class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {news.map((n) => (
+        <a href={`${root}official/${slug(n.url)}/`} data-cat={catLabel(n.category)} class="glass-card card-postcard group block overflow-hidden rounded-2xl bg-white no-underline">
+          <div class="relative h-32 w-full overflow-hidden bg-pool-50">
+            {n.images && n.images[0]
+              ? <img src={root + n.images[0]} alt={n.title} loading="lazy" class="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              : <div class="grid h-32 place-items-center text-pool-300">暂无图</div>}
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2"><span class:list={['badge', catChip(n.category)]}>{catLabel(n.category)}</span><span class="text-xs tabular-nums text-ink-soft">{n.date}</span></div>
+            <h2 class="mt-2 line-clamp-2 text-sm font-extrabold text-pool-700">{n.title}</h2>
+            <p class="mt-1 line-clamp-2 text-xs text-ink-soft">{n.body.slice(0, 80)}</p>
+            <span class="mt-2 inline-block text-xs font-semibold text-pool-600">查看详情 →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    const filters = document.getElementById('filters');
+    const cards = [...document.querySelectorAll('#list > a')];
+    filters.addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      const c = b.dataset.cat;
+      filters.querySelectorAll('button').forEach((x) => { x.className = 'badge cursor-pointer ' + (x === b ? 'badge-pool' : 'bg-white/80 text-ink-soft border border-line'); });
+      cards.forEach((el) => el.classList.toggle('hidden', c !== '全部' && el.dataset.cat !== c));
+    });
+  </script>
+</Base>

@@ -6,7 +6,7 @@ export const LANG_FULL = { zh: '中文', en: 'English', ja: '日本語' };
 
 export const UI = {
   zh: {
-    'admin.home': '首页', 'admin.girls': '女孩图鉴', 'admin.swimsuits': '泳装图鉴', 'admin.skills': '技能图鉴', 'admin.tools': '工具', 'admin.guide': '系统指南', 'admin.community': '社区攻略', 'admin.reference': '资料库', 'admin.help': '帮助中心',
+    'admin.home': '首页', 'admin.girls': '女孩图鉴', 'admin.swimsuits': '泳装图鉴', 'admin.skills': '技能图鉴', 'admin.tools': '工具', 'admin.guide': '系统指南', 'admin.community': '社区攻略', 'admin.reference': '资料库', 'admin.help': '帮助中心', 'admin.official': '官方公告', 'admin.manage': '后台管理',
     'brand': 'DOAXVV 攻略站', 'brand.sub': '维纳斯群岛度假攻略',
     'search.placeholder': '搜索…',
     'common.all': '全部', 'common.allGirls': '全部角色', 'common.allType': '全部类型', 'common.loadMore': '加载更多', 'common.items': '件/个',
@@ -34,7 +34,7 @@ export const UI = {
     'footer.note': '内容整理自官方帮助文档与社区公开资料；图片与攻略版权归原作者。'
   },
   en: {
-    'admin.home': 'Home', 'admin.girls': 'Girls', 'admin.swimsuits': 'Swimsuits', 'admin.skills': 'Skills', 'admin.tools': 'Tools', 'admin.guide': 'Guides', 'admin.community': 'Community', 'admin.reference': 'Database', 'admin.help': 'Help',
+    'admin.home': 'Home', 'admin.girls': 'Girls', 'admin.swimsuits': 'Swimsuits', 'admin.skills': 'Skills', 'admin.tools': 'Tools', 'admin.guide': 'Guides', 'admin.community': 'Community', 'admin.reference': 'Database', 'admin.help': 'Help', 'admin.official': 'Official', 'admin.manage': 'Admin',
     'brand': 'DOAXVV Guide', 'brand.sub': 'Venus Islands Resort Guide',
     'search.placeholder': 'Search…',
     'common.all': 'All', 'common.allGirls': 'All Girls', 'common.allType': 'All Types', 'common.loadMore': 'Load more', 'common.items': '',
@@ -58,7 +58,7 @@ export const UI = {
     'footer.note': 'Compiled from official docs & community sources; images & guides belong to their authors.'
   },
   ja: {
-    'admin.home': 'ホーム', 'admin.girls': 'ガールズ', 'admin.swimsuits': '水着図鑑', 'admin.skills': 'スキル図鑑', 'admin.tools': 'ツール', 'admin.guide': 'ガイド', 'admin.community': 'コミュニティ', 'admin.reference': 'データ集', 'admin.help': 'ヘルプ',
+    'admin.home': 'ホーム', 'admin.girls': 'ガールズ', 'admin.swimsuits': '水着図鑑', 'admin.skills': 'スキル図鑑', 'admin.tools': 'ツール', 'admin.guide': 'ガイド', 'admin.community': 'コミュニティ', 'admin.reference': 'データ集', 'admin.help': 'ヘルプ', 'admin.official': '公式情報', 'admin.manage': '管理',
     'brand': 'DOAXVV 攻略', 'brand.sub': 'ヴィーナス諸島リゾートガイド',
     'search.placeholder': '検索…',
     'common.all': 'すべて', 'common.allGirls': '全キャラ', 'common.allType': '全タイプ', 'common.loadMore': 'もっと見る', 'common.items': '',

@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import pending from '../../../admin/pending.json';
+const root = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="后台管理 · 待上传建档 · DOAXVV 攻略站" desc="流行泳装待上传列表与上传建档。">
+  <div class="container-wiki py-10">
+    <p class="text-sm font-semibold text-pool-600">后台管理</p>
+    <h1 class="mt-1 text-3xl font-black">待上传建档</h1>
+    <div class="mt-2 rounded-xl border border-sand-300 bg-sand-200/40 p-4 text-sm text-ink-soft">
+      静态站无后端：本页为<b>本地管理</b>。扫描候选来自公告（<code>admin/pending.json</code>）；确认后写入浏览器 `localStorage`，并通过「导出/合并」进入 <code>src/data/trend-suits.json</code>（构建后并入泳装图鉴）。上传建档：选图 → 自动扫描数据 → 确认表单 → 建档移出。
+    </div>
+
+    <div class="mt-6 flex flex-wrap items-center gap-3">
+      <input id="upfile" type="file" accept="image/*" class="file:rounded-full file:border-pool-300 file:bg-pool-50 file:px-3 file:py-1.5 file:text-sm file:font-semibold file:text-pool-700 text-sm" />
+      <span id="upHint" class="text-xs text-ink-soft">选择图片后自动扫描建档</span>
+    </div>
+
+    <h2 class="sec-h">待上传列表（{pending.length}）</h2>
+    <div id="pending" class="grid gap-4 md:grid-cols-2"></div>
+    <h2 class="sec-h">已确认（本月会话）</h2>
+    <div id="confirmed" class="grid gap-4 md:grid-cols-2"></div>
+    <div class="mt-6 flex flex-wrap gap-3 text-sm">
+      <button id="export" class="btn-primary">导出已确认 → trend-suits.json</button>
+      <button id="clear" class="rounded-full border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink-soft">清空已确认</button>
+    </div>
+  </div>
+
+  <div id="pendingData" hidden>{JSON.stringify(pending)}</div>
+  <div id="rootPath" hidden>{root}</div>
+  <script>
+    const pending = JSON.parse(document.getElementById('pendingData').textContent);
+    const rootPath = document.getElementById('rootPath').textContent || '/';
+    const pbox = document.getElementById('pending');
+    const cbox = document.getElementById('confirmed');
+    const KEY = 'trend_confirmed';
+    const load = () => JSON.parse(localStorage.getItem(KEY) || '[]');
+    const save = (a) => localStorage.setItem(KEY, JSON.stringify(a));
+    let confirmed = load();
+    const norm = (s) => (s || '').replace(/[（(].*?[)）]/g, '').trim().toLowerCase();
+
+    function card(obj, isConfirmed) {
+      const el = document.createElement('div');
+      el.className = 'card-wiki p-4';
+      el.innerHTML =
+        '<div class="flex items-start gap-3">' + (obj.image ? '<img src="' + rootPath + obj.image + '" alt="' + obj.name + '" class="h-16 w-16 rounded-lg object-cover" onerror="this.style.display=\'none\'" />' : '<div class="grid h-16 w-16 place-items-center rounded-lg bg-pool-50 text-pool-300">图</div>') +
+        '<div class="min-w-0 flex-1"><div class="truncate font-extrabold text-pool-700">' + obj.name + '</div><div class="truncate text-xs text-ink-soft">' + (obj.source ? (obj.source.title || obj.source.url || '') : '') + '</div><div class="mt-1 text-xs text-ink-soft">' + (obj.date || '') + '</div></div></div>' +
+        (isConfirmed ? '<p class="mt-2 text-xs text-ink-soft">详情：' + (Object.keys(obj.details || {}).length ? '已补' : '空置(待补)') + '</p>' : '<div class="mt-3 flex gap-2"><button class="btn-primary text-xs" data-confirm>' + obj.id + '</button>') +
+        (isConfirmed ? '' : '</div>');
+      el.querySelector('[data-confirm]')?.addEventListener('click', () => confirmOne(obj));
+      return el;
+    }
+
+    function render() {
+      pbox.innerHTML = ''; cbox.innerHTML = '';
+      const pids = new Set(confirmed.map((x) => x.id));
+      pending.filter((p) => !pids.has(p.id)).forEach((p) => pbox.appendChild(card(p, false)));
+      confirmed.forEach((c) => cbox.appendChild(card(c, true)));
+    }
+
+    function confirmOne(obj) {
+      if (confirm('确认建档：' + obj.name + ' ?')) {
+        if (!confirmed.some((c) => c.id === obj.id)) confirmed.push({ ...obj, details: {}, status: 'confirmed' });
+        save(confirmed); render();
+      }
+    }
+
+    async function scanFile(file) {
+      const name = file.name.replace(/\.(png|jpe?g|webp)$/i, '').trim();
+      const suits = await fetch(rootPath + 'data/doax-ssr.json').then((r) => r.json());
+      const hit = suits.find((s) => norm(s.name) === norm(name) || (s.name || '').toLowerCase().includes(name.toLowerCase()) || name.toLowerCase().includes(norm(s.name)));
+      const base = { id: 'up-' + Date.now(), name, jp: name, image: '', source: { title: '后台上传', url: '' }, date: new Date().toISOString().slice(0, 10), details: {} };
+      if (hit) base.details = { pow: hit.pow, tec: hit.tec, stm: hit.stm, apl: hit.apl };
+      const nm = prompt('确认泳装名（可改）：', base.name); if (nm === null) return; base.name = nm.trim() || base.name;
+      if (hit) confirm('自动扫描命中图鉴：' + hit.name + '，已填数值。确定？') && (confirmed = confirmed.filter((x) => x.id !== base.id).concat([base]), save(confirmed), render());
+      else { if (!confirm('未命中图鉴，按“详情空置”建档？')) return; confirmed = confirmed.filter((x) => x.id !== base.id).concat([base]); save(confirmed); render(); }
+    }
+
+    document.getElementById('upfile').addEventListener('change', (e) => { const f = e.target.files[0]; if (f) scanFile(f); });
+    document.getElementById('export').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify({ snapshot: new Date().toISOString().slice(0, 10), suits: confirmed }, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'trend-suits-export.json'; a.click();
+    });
+    document.getElementById('clear').addEventListener('click', () => { if (confirm('清空已确认？')) { confirmed = []; save(confirmed); render(); } });
+    render();
+  </script>
+</Base>
