@@ -119,14 +119,14 @@ const suitCount = 3191;
         list.innerHTML = '';
         f.slice(0, shown).forEach((s) => {
           const el = document.createElement('div');
-          el.className = 'card-wiki cursor-pointer p-3'; el.style.position = 'relative';
+          el.className = 'cursor-pointer';
           const typeChip = { pow: 'chip-pow', tec: 'chip-tec', stm: 'chip-stm', apl: 'chip-apl' }[s.type] || 'badge-pool';
           el.innerHTML =
-            '<div class="glass-card relative aspect-[3/4] overflow-hidden rounded-[20px]">'+
+            '<div class="glass-card relative overflow-hidden rounded-[20px]">'+
             '<img src="' + suitThumb(s.id, cardMalf[s.id] || globalMalf) + '" alt="' + girlDisplayName(s.girl, girlNames, LANG) + '" loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" onerror="this.onerror=null;this.src=girlImg[s.girl]" /><button class="malf-a absolute left-2 top-2" style="border:none;background:transparent;cursor:pointer;font-size:15px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.55)">⛤</button>'+
             '<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"></div>'+
             '<button class="fav-a absolute right-2 top-2" style="border:none;background:transparent;cursor:pointer;font-size:16px;color:#ffd98a;text-shadow:0 1px 4px rgba(0,0,0,.6)">' + (isFav('suits', s.id) ? '★' : '☆') + '</button>'+
-            '<div class="absolute inset-x-0 bottom-0 p-2 text-white">'+
+            '<div class="relative z-10 flex min-h-[260px] flex-col justify-end p-2 text-white">'+
             '<div class="line-clamp-2 text-[13px] font-extrabold drop-shadow">' + suitName(s, LANG) + '</div>'+
             '<div class="truncate text-[10px] text-white/75">' + (girlNames[s.girl] ? '<a href="' + linkBase + 'girls/' + (LINKKEY[s.girl] || s.girl) + '/" class="text-white/90 no-underline hover:underline" onclick="event.stopPropagation()">' + girlDisplayName(s.girl, girlNames, LANG) + '</a>' : '共享泳装') + '</div>'+
             '<div class="mt-1 grid grid-cols-4 gap-0.5 text-center">'+
@@ -135,7 +135,7 @@ const suitCount = 3191;
             '<div class="rounded bg-white/15 py-0.5"><div class="text-[9px] text-white/75">STM</div><div class="text-[11px] font-bold" style="color:#f4c26c">' + s.stm + '</div></div>'+
             '<div class="rounded bg-white/15 py-0.5"><div class="text-[9px] text-white/75">APL</div><div class="text-[11px] font-bold" style="color:#caa2f0">' + s.apl + '</div></div>'+
             '</div>'+
-            (s.skills.length ? '<div class="mt-1 space-y-0.5">' + s.skills.map((k) => { const t = skillText(skillMap, k, LANG); const pc = (skillMap[k] || {}).property; return '<div class="rounded bg-black/30 px-1 py-0.5"><div class="flex items-center justify-between gap-1"><span class="truncate text-[10px] font-semibold">' + t.name + '</span><span class="badge shrink-0 ' + (pc ? skillPropClass(pc) : 'badge-sand') + '" style="font-size:9px">' + ((skillMap[k] || {}).property || '').toUpperCase() + '</span></div>' + (t.effect ? '<div class="truncate text-[9px] text-white/65">' + t.effect + '</div>' : '') + '</div>'; }).join('') + '</div>' : '')+
+            (s.skills.length ? '<div class="mt-1 flex flex-wrap gap-1">' + s.skills.slice(0,3).map((k) => { const t = skillText(skillMap, k, LANG); const pc = (skillMap[k] || {}).property; return '<span class="rounded bg-black/40 px-1.5 py-0.5"><span class="truncate text-[10px] font-semibold">' + t.name + '</span>' + (pc ? '<span class="ml-1 text-[9px] whitespace-nowrap">' + pc.toUpperCase() + '</span>' : '') + '</span>'; }).join('') + (s.skills.length > 3 ? '<span class="rounded bg-black/40 px-1.5 py-0.5 text-[9px] text-white/70">+' + (s.skills.length - 3) + '</span>' : '') + '</div>' : '')+
             '<details class="mt-1"><summary class="cursor-pointer text-[9px] text-white/70">登场 ' + String(s.sell || '').slice(0, 10) + '</summary>' + (s.resell ? '<div class="text-[9px] text-white/70">复刻 ' + s.resell + '</div>' : '<div class="text-[9px] text-white/70">暂不复刻</div>') + '</details>'+
             '<span class="badge ' + typeChip + ' mt-1" style="font-size:9px">' + (s.type || '').toUpperCase() + '</span>' + (ymK(s) === newestK ? '<span class="badge badge-blush" style="font-size:9px">当期</span>' : '') +
             '</div></div>';

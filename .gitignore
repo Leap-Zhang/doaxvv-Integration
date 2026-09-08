@@ -3,9 +3,12 @@ dist/
 .astro/
 .DS_Store
 *.log
+*.out
+*.err
+pv.*
 bromide_dl/
 test-results/
-tools/doax/raw/
+tools/doax/raw/
 /.edge*/
 /px-fresh/
 # 大图库（本地/服务器部署用，不上传 GitHub 云端）

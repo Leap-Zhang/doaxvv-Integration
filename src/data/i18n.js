@@ -20,6 +20,7 @@ export const UI = {
     'home.about': '关于本作', 'home.aboutBody': '《DEAD OR ALIVE Xtreme Venus Vacation》是光荣特库摩推出的沙滩排球养成游戏。舞台是四季如夏的维纳斯群岛，你担任新任岛主，与助手海咲一起参加“维纳斯挑战赛”，让受邀女孩以“维纳斯”的身份绽放光彩。',
     'home.one': '玩法一句话', 'home.oneBody': '组建二女海滩排球队伍，通过泳装与饰品提升属性，在比赛中赢取“魅力值”评价并培养女孩。',
     'home.quick': '快速上手',
+    'home.schedule': '游戏日程', 'home.changelog': '网站更新日志',
     'home.q1': '你是指挥官，真正上场的是女孩。', 'home.q2': 'POW（力量）／TEC（技巧）／STM（体力），由女孩＋泳装＋饰品叠加。', 'home.q3': '先拿规定得分者胜；杀球比 POW、假动作比 TEC。', 'home.q4': '把“魅力值”评价刷高，S 首胜大量奖励。',
     'home.card.girls': '女孩图鉴', 'home.card.girlsD': '全部女孩资料、基础数值与培养笔记。',
     'home.card.swim': '泳装图鉴', 'home.card.swimD': '游泳系统讲解与全量泳装目录。',
@@ -29,7 +30,7 @@ export const UI = {
     'home.card.tools': '工具', 'home.card.toolsD': '面板估算、PP规划、经验计算、属性对比。',
     'home.card.reference': '资料库', 'home.card.referenceD': '等级/月度/活动/潜力PP/饰品/亲密度与官方公告。',
     'home.card.collection': '我的收藏', 'home.card.collectionD': '收藏进度与本地备份导出/导入。',
-    'ed.note': '本篇正文为中文，数据与界面已支持多语言。',
+'ed.note': '本篇正文为中文，数据与界面已支持多语言。',
     'footer.note': '内容整理自官方帮助文档与社区公开资料；图片与攻略版权归原作者。'
   },
   en: {
@@ -47,12 +48,13 @@ export const UI = {
     'home.about': 'About', 'home.aboutBody': 'Dead or Alive Xtreme Venus Vacation is a beach volleyball game by Koei Tecmo. On the ever-summer Venus Islands, you act as the new owner and join assistant Misaki in the Venus Festival.',
     'home.one': 'In one line', 'home.oneBody': 'Build a two-girl beach volleyball team, boost stats with swimsuits & accessories, win Appeal points and raise girls.',
     'home.quick': 'Quick start',
+    'home.schedule': 'Game Schedule', 'home.changelog': 'Site Changelog',
     'home.q1': 'You are the coach; the girls play.', 'home.q2': 'POW / TEC / STM come from girl + swimsuit + accessories.', 'home.q3': 'Reach the target points first; Spike vs POW, Feint vs TEC.', 'home.q4': 'Push your Appeal rating; first S-rank gives big rewards.',
     'home.card.girls': 'Girls', 'home.card.girlsD': 'Profiles, base stats and growth notes for every girl.',
     'home.card.swim': 'Swimsuits', 'home.card.swimD': 'Swimsuit system and full catalog.',
     'home.card.guide': 'Guides', 'home.card.guideD': 'Matches, swimsuits, growth and economy.',
     'home.card.community': 'Community', 'home.card.communityD': 'Tieba / Bilibili builds by section with sources.',
-    'ed.note': 'This article is in Chinese; data & UI support multiple languages.',
+'ed.note': 'This article is in Chinese; data & UI support multiple languages.',
     'footer.note': 'Compiled from official docs & community sources; images & guides belong to their authors.'
   },
   ja: {
@@ -70,6 +72,7 @@ export const UI = {
     'home.about': 'このゲームについて', 'home.aboutBody': 'DEAD OR ALIVE Xtreme Venus Vacationはコーエーテクモのビーチバレー育成ゲーム。常夏のヴィーナス諸島でオーナーとなり、助手のみさきとヴィーナスフェスに挑みます。',
     'home.one': 'ひとことで', 'home.oneBody': '二人のビーチバレー部を編成し、水着・アクセでステータスを上げ、アピールで女の子を育成。',
     'home.quick': 'クイックスタート',
+    'home.schedule': 'ゲームスケジュール', 'home.changelog': 'サイト更新履歴',
     'home.q1': '指揮するのはあなた、プレイするのは女の子。', 'home.q2': 'POW／TEC／STMは女の子＋水着＋アクセで決まる。', 'home.q3': '規定得点先取。スパイクはPOW、フェイントはTEC。', 'home.q4': 'アピール評価を上げ、初のS評価で大量報酬。',
     'home.card.girls': 'ガールズ', 'home.card.girlsD': '全キャラのプロフィール・数値・育成メモ。',
     'home.card.swim': '水着', 'home.card.swimD': '水着システムと全カタログ。',
@@ -79,7 +82,7 @@ export const UI = {
     'home.card.tools': 'ツール', 'home.card.toolsD': 'パネル・PP・経験・属性比較。',
     'home.card.reference': 'データ集', 'home.card.referenceD': 'レベル・バナー・PP・アクセサリ・親密度・公式告知。',
     'home.card.collection': 'コレクション', 'home.card.collectionD': '進捗とローカルバックアップ。',
-    'ed.note': '本文は中国語です。データとUIは多言語対応。',
+'ed.note': '本文は中国語です。データとUIは多言語対応。',
     'footer.note': '公式資料とコミュニティ資料をもとに整理。画像・攻略の権利は各作者に帰属。'
   }
 };

@@ -1,15 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
-const snapshot = '2026-09-06';
+import { changelog, snapshot } from '../data/changelog.js';
 const stat = [
   ['泳装 SSR', '3191'], ['Steam 泳装', '155'], ['技能', '401'], ['角色', '33'],
   ['等级 / 经验表', '100'], ['月度纪念', '90'], ['活动', '10'], ['潜力 / PP', '19'],
   ['饰品升级素材', '8'], ['亲密度等级', '60']
-];
-const log = [
-  ['v0.3', '2026-09-06', '资料库：等级/月度/活动/潜力PP/Steam泳装/饰品/亲密度全量接入；新增工具：等级经验计算器、属性对比'],
-  ['v0.2', '2026-09-06', '泳装/女孩/技能图鉴、搜索、面板估算/PP规划、收藏、留言、三语、明暗、海岸视觉'],
-  ['v0.1', '2026-09-06', '站点搭建：Astro 静态站、数据本地化、GitHub Pages 部署']
 ];
 ---
 
@@ -66,7 +61,7 @@ const log = [
 
     <h2 class="sec-h">更新日志</h2>
     <div class="space-y-3">
-      {log.map((l) => (
+      {changelog.map((l) => (
         <div class="rounded-2xl border border-line bg-white p-4">
           <div class="flex items-center gap-2"><span class="badge badge-pool">{l[0]}</span><span class="text-xs text-ink-soft">{l[1]}</span></div>
           <p class="mt-1 text-sm text-ink">{l[2]}</p>
